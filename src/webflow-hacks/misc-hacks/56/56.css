@@ -1,0 +1,7 @@
+/*  if browser is IE10 or IE11,
+ show "IE not supported" popup */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  [fs-hacks-element='upgrade-browser-popup'] {
+    display: block;
+  }
+}
