@@ -1,7 +1,7 @@
 import { greetUser } from '$utils/greet';
 
 window.Webflow ||= [];
-window.Webflow.push(() => {
+window.Webflow.push(async () => {
   const CODE_LISTING_ATTRIBUTE_URL =
     'https://cdn.jsdelivr.net/npm/@finsweet/attributes-codehighlight@1/codehighlight.js';
   const COPY_ATTRIBUTE_URL =
@@ -12,15 +12,15 @@ window.Webflow.push(() => {
 
   const url = codeListing.getAttribute('url');
   if (!url) return;
-  fetch(url)
-    .then((response) => response.text())
-    .then((code) => {
-      eval(code);
-      codeListing.innerHTML = formatCode(code);
-      appendHeadScript(CODE_LISTING_ATTRIBUTE_URL);
 
-      appendHeadScript(COPY_ATTRIBUTE_URL);
-    });
+  const resp = await fetch(url);
+  const code = await resp.text();
+
+  eval(code);
+
+  codeListing.innerHTML = formatCode(code);
+  appendHeadScript(CODE_LISTING_ATTRIBUTE_URL);
+  appendHeadScript(COPY_ATTRIBUTE_URL);
 });
 
 const formatCode = (code: string) => {

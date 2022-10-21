@@ -19,7 +19,6 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!customSuccessMessage) return;
     successText.innerText = `Thank you! We'll focus on ${customSuccessMessage} for future F'in sweet Webflow Hacks!`;
 
-    event.stopPropagation();
     interestSelectField.focus();
   });
 });
