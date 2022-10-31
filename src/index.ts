@@ -1,36 +1,38 @@
-import { greetUser } from '$utils/greet';
+import { cloneNode } from '@finsweet/ts-utils';
+
+import { SELECTORS } from '$utils/constants';
+import { formatCode, appendHeadScript } from '$utils/domUtils';
 
 window.Webflow ||= [];
 window.Webflow.push(async () => {
-  const CODE_LISTING_ATTRIBUTE_URL =
-    'https://cdn.jsdelivr.net/npm/@finsweet/attributes-codehighlight@1/codehighlight.js';
-  const COPY_ATTRIBUTE_URL =
-    'https://cdn.jsdelivr.net/npm/@finsweet/attributes-copyclip@1/copyclip.js';
-  const CODE_LISTING_SELECTOR = '[fs-codehighlight-element]';
-  const codeListing = document.querySelector<HTMLDivElement>(CODE_LISTING_SELECTOR);
-  if (!codeListing) return;
+  const codeListings = document.querySelectorAll<HTMLDivElement>(SELECTORS.CODE_LISTING);
 
-  const url = codeListing.getAttribute('url');
-  if (!url) return;
+  codeListings.forEach(async (codeListing) => {
+    const url = codeListing.getAttribute('url');
+    const codeType = codeListing.getAttribute('code-type');
+    const copyTrigger = codeListing.parentElement?.querySelector<HTMLAnchorElement>(
+      '[fs-copyclip-element="click"]'
+    );
+    if (!url || !codeType || !copyTrigger) return;
 
-  const resp = await fetch(url);
-  const code = await resp.text();
+    const resp = await fetch(url);
+    const code = await resp.text();
 
-  eval(code);
+    if (codeType === 'js') eval(code);
 
-  codeListing.innerHTML = formatCode(code);
-  appendHeadScript(CODE_LISTING_ATTRIBUTE_URL);
-  appendHeadScript(COPY_ATTRIBUTE_URL);
+    copyTrigger.addEventListener('click', () => {
+      const previousButton = cloneNode(copyTrigger);
+
+      copyTrigger.innerText = 'Copied!';
+      setTimeout(() => {
+        copyTrigger.replaceWith(previousButton);
+      }, 2000);
+
+      navigator.clipboard.writeText(code);
+    });
+
+    codeListing.innerHTML = formatCode(code);
+
+    appendHeadScript(SELECTORS.CODE_HIGHLIGHT_ATTR_URL);
+  });
 });
-
-const formatCode = (code: string) => {
-  const script = `<script>\n${code}</script>`.replace(/</g, '&lt;');
-  return `<pre><code>${script}</pre></code>`;
-};
-
-const appendHeadScript = (url: string) => {
-  const script = document.createElement('script');
-  script.type = 'text/javascript';
-  script.src = url;
-  document.head.appendChild(script);
-};
