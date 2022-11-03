@@ -1,5 +1,3 @@
-import { cloneNode } from '@finsweet/ts-utils';
-
 import { SELECTORS } from '$utils/constants';
 import { formatCode, appendHeadScript } from '$utils/domUtils';
 
