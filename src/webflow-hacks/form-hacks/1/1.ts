@@ -12,13 +12,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   interestSelectField.addEventListener('change', () => {
     customSuccessMessage = interestSelectField.value;
-  });
-
-  // change the success message when the form is submitted
-  emailForm.addEventListener('submit', (event) => {
-    if (!customSuccessMessage) return;
     successText.innerText = `Thank you! We'll focus on ${customSuccessMessage} for future F'in sweet Webflow Hacks!`;
-
-    interestSelectField.focus();
   });
 });
