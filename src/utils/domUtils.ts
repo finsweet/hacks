@@ -1,9 +1,10 @@
 /**
- * Replace arrows with html encoded chars
+ * Prepare code for display on DOM
  * @param code string
  * @returns string
  */
 export const formatCode = (code: string) => {
+  code = code.replace(/ /g, '&nbsp;');
   const script = `<script>\n${code}</script>`.replace(/</g, '&lt;');
   return `<pre><code>${script}</pre></code>`;
 };
