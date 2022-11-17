@@ -1,0 +1,209 @@
+{
+  "type": "@webflow/XscpData",
+  "payload": {
+    "nodes": [
+      {
+        "_id": "7350ca48-0033-c2f3-ebd5-ef102ce282a9",
+        "type": "Block",
+        "tag": "div",
+        "classes": ["4a44386d-cf38-1623-cdcd-312d92de0e1a"],
+        "children": ["50fcf053-ca15-1c7c-c80d-0f5af912c303"],
+        "data": {
+          "search": { "exclude": false },
+          "xattr": [],
+          "text": false,
+          "displayName": "",
+          "attr": { "id": "" },
+          "visibility": { "conditions": [] },
+          "tag": "div"
+        }
+      },
+      {
+        "_id": "50fcf053-ca15-1c7c-c80d-0f5af912c303",
+        "type": "Block",
+        "tag": "div",
+        "classes": ["00fada22-f5aa-7fb7-e28b-1b644ce56ff9"],
+        "children": ["50fcf053-ca15-1c7c-c80d-0f5af912c304"],
+        "data": {
+          "search": { "exclude": false },
+          "xattr": [],
+          "text": false,
+          "displayName": "",
+          "attr": { "id": "" },
+          "visibility": { "conditions": [] },
+          "tag": "div"
+        }
+      },
+      {
+        "_id": "50fcf053-ca15-1c7c-c80d-0f5af912c304",
+        "type": "Block",
+        "tag": "div",
+        "classes": ["00fada22-f5aa-7fb7-e28b-1b644ce56ffa"],
+        "children": [
+          "50fcf053-ca15-1c7c-c80d-0f5af912c305",
+          "50fcf053-ca15-1c7c-c80d-0f5af912c308",
+          "50fcf053-ca15-1c7c-c80d-0f5af912c30c"
+        ],
+        "data": {
+          "search": { "exclude": false },
+          "xattr": [],
+          "text": false,
+          "displayName": "",
+          "attr": { "id": "content" },
+          "visibility": { "conditions": [] },
+          "tag": "div"
+        }
+      },
+      {
+        "_id": "50fcf053-ca15-1c7c-c80d-0f5af912c305",
+        "type": "Heading",
+        "tag": "h2",
+        "classes": [],
+        "children": ["50fcf053-ca15-1c7c-c80d-0f5af912c306"],
+        "data": {
+          "tag": "h2",
+          "displayName": "",
+          "attr": { "id": "" },
+          "xattr": [],
+          "search": { "exclude": false },
+          "visibility": { "conditions": [] }
+        }
+      },
+      {
+        "_id": "50fcf053-ca15-1c7c-c80d-0f5af912c306",
+        "text": true,
+        "v": "Click this button to load the Success page with a #content anchor link"
+      },
+      {
+        "_id": "50fcf053-ca15-1c7c-c80d-0f5af912c308",
+        "type": "Link",
+        "tag": "a",
+        "classes": ["00fada22-f5aa-7fb7-e28b-1b644ce56ffb"],
+        "children": ["50fcf053-ca15-1c7c-c80d-0f5af912c309"],
+        "data": {
+          "search": { "exclude": false },
+          "xattr": [],
+          "block": "inline",
+          "displayName": "",
+          "attr": { "id": "" },
+          "visibility": { "conditions": [] },
+          "button": false,
+          "link": {
+            "mode": "external",
+            "url": "https://www.finsweet.com/hacks-typescript//success/remove-anchor-link-id-tag-and-on-urls-when-loading-a-page#content"
+          }
+        }
+      },
+      {
+        "_id": "50fcf053-ca15-1c7c-c80d-0f5af912c309",
+        "type": "Block",
+        "tag": "div",
+        "classes": [],
+        "children": ["50fcf053-ca15-1c7c-c80d-0f5af912c30a"],
+        "data": {
+          "search": { "exclude": false },
+          "xattr": [],
+          "text": true,
+          "displayName": "",
+          "attr": { "id": "" },
+          "visibility": { "conditions": [] },
+          "tag": "div"
+        }
+      },
+      {
+        "_id": "50fcf053-ca15-1c7c-c80d-0f5af912c30a",
+        "text": true,
+        "v": "url-of-this-page/#content"
+      },
+      {
+        "_id": "50fcf053-ca15-1c7c-c80d-0f5af912c30c",
+        "type": "Block",
+        "tag": "div",
+        "classes": [],
+        "children": ["50fcf053-ca15-1c7c-c80d-0f5af912c30d"],
+        "data": {
+          "search": { "exclude": false },
+          "xattr": [],
+          "text": true,
+          "displayName": "",
+          "attr": { "id": "" },
+          "visibility": { "conditions": [] },
+          "tag": "div"
+        }
+      },
+      { "_id": "50fcf053-ca15-1c7c-c80d-0f5af912c30d", "text": true, "v": "bye bye anchor link!" }
+    ],
+    "styles": [
+      {
+        "_id": "4a44386d-cf38-1623-cdcd-312d92de0e1a",
+        "fake": false,
+        "type": "class",
+        "name": "example_block",
+        "namespace": "",
+        "comb": "",
+        "styleLess": "display: grid; width: 100%; padding-top: 3rem; padding-right: 3rem; padding-bottom: 3rem; padding-left: 3rem; grid-auto-columns: 1fr; grid-column-gap: 2rem; grid-row-gap: 2rem; grid-template-columns: 1fr; grid-template-rows: auto; border-top-style: solid; border-top-width: 1rem; border-top-color: hsla(219.99999999999997, 4.68%, 7.18%, 1.00); border-right-style: solid; border-right-width: 1rem; border-right-color: hsla(219.99999999999997, 4.68%, 7.18%, 1.00); border-bottom-style: solid; border-bottom-width: 1rem; border-bottom-color: hsla(219.99999999999997, 4.68%, 7.18%, 1.00); border-left-style: solid; border-left-width: 1rem; border-left-color: hsla(219.99999999999997, 4.68%, 7.18%, 1.00); border-top-left-radius: 0.25rem; border-top-right-radius: 0.25rem; border-bottom-left-radius: 0.25rem; border-bottom-right-radius: 0.25rem; background-color: hsla(219.99999999999997, 5.66%, 10.39%, 1.00);",
+        "variants": {
+          "small": {
+            "styleLess": "padding-top: 1.5rem; padding-right: 1.5rem; padding-bottom: 1.5rem; padding-left: 1.5rem;"
+          },
+          "tiny": {
+            "styleLess": "padding-top: 1.5rem; padding-right: 1.5rem; padding-bottom: 1.5rem; padding-left: 1.5rem;"
+          }
+        },
+        "children": [],
+        "createdBy": "57380bb111b9c4825e447f0d",
+        "selector": null
+      },
+      {
+        "_id": "00fada22-f5aa-7fb7-e28b-1b644ce56ff9",
+        "fake": false,
+        "type": "class",
+        "name": "demo-9_component",
+        "namespace": "",
+        "comb": "",
+        "styleLess": "width: 100%;",
+        "variants": {},
+        "children": [],
+        "selector": null
+      },
+      {
+        "_id": "00fada22-f5aa-7fb7-e28b-1b644ce56ffa",
+        "fake": false,
+        "type": "class",
+        "name": "demo-9_section",
+        "namespace": "",
+        "comb": "",
+        "styleLess": "display: grid; min-height: 25rem; justify-content: center; justify-items: center; align-items: center; align-content: center; grid-auto-columns: 1fr; grid-column-gap: 1rem; grid-row-gap: 1rem; grid-template-columns: 1fr; grid-template-rows: auto; text-align: center;",
+        "variants": { "tiny": { "styleLess": "height: 25rem;" } },
+        "children": [],
+        "selector": null
+      },
+      {
+        "_id": "00fada22-f5aa-7fb7-e28b-1b644ce56ffb",
+        "fake": false,
+        "type": "class",
+        "name": "demo-9_button",
+        "namespace": "",
+        "comb": "",
+        "styleLess": "display: block; margin-right: auto; margin-left: auto; padding-top: 0.75rem; padding-right: 5rem; padding-bottom: 0.75rem; padding-left: 5rem; background-color: #3898ec; transition-property: background-color; transition-duration: 100ms; transition-timing-function: ease; color: hsla(0, 0.00%, 100.00%, 1.00);",
+        "variants": {
+          "main_hover": { "styleLess": "color: hsla(177.88235294117646, 0.00%, 100.00%, 1.00);" },
+          "small": { "styleLess": "padding-right: 1.875rem; padding-left: 1.875rem;" },
+          "main_active": { "styleLess": "transform: translate(0rem, 0.0625rem);" }
+        },
+        "children": [],
+        "selector": null
+      }
+    ],
+    "assets": [],
+    "ix1": [],
+    "ix2": { "interactions": [], "events": [], "actionLists": [] }
+  },
+  "meta": {
+    "unlinkedSymbolCount": 0,
+    "droppedLinks": 0,
+    "dynBindRemovedCount": 0,
+    "dynListBindRemovedCount": 0,
+    "paginationRemovedCount": 0
+  }
+}

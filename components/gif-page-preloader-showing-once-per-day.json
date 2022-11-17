@@ -1,0 +1,227 @@
+{
+  "type": "@webflow/XscpData",
+  "payload": {
+    "nodes": [
+      {
+        "_id": "7350ca48-0033-c2f3-ebd5-ef102ce282a9",
+        "type": "Block",
+        "tag": "div",
+        "classes": ["4a44386d-cf38-1623-cdcd-312d92de0e1a"],
+        "children": ["2359334b-48a3-7924-d69b-70496cca3576"],
+        "data": {
+          "search": { "exclude": false },
+          "xattr": [],
+          "text": false,
+          "displayName": "",
+          "attr": { "id": "" },
+          "visibility": { "conditions": [] },
+          "tag": "div"
+        }
+      },
+      {
+        "_id": "2359334b-48a3-7924-d69b-70496cca3576",
+        "type": "Block",
+        "tag": "div",
+        "classes": ["3ae6c044-f517-db62-7755-0e5f156e7651"],
+        "children": [
+          "4154f51c-78f2-2362-9aea-db2de60d90b9",
+          "44b67e41-a583-5ee0-6579-dab62f034646",
+          "1f3f1e64-e6a7-d67d-7bd8-d41305d26101",
+          "c567527b-b5bd-400e-0a3a-e3e8c6baca24"
+        ],
+        "data": {
+          "search": { "exclude": false },
+          "xattr": [],
+          "text": false,
+          "displayName": "",
+          "attr": { "id": "" },
+          "visibility": { "conditions": [] },
+          "tag": "div"
+        }
+      },
+      {
+        "_id": "4154f51c-78f2-2362-9aea-db2de60d90b9",
+        "type": "Block",
+        "tag": "div",
+        "classes": ["9a4e11cb-f46a-6e5f-2ae4-e152a82bf6cd"],
+        "children": ["4154f51c-78f2-2362-9aea-db2de60d90ba"],
+        "data": {
+          "search": { "exclude": false },
+          "xattr": [{ "name": "fs-hacks-element", "value": "loading-wrapper" }],
+          "text": false,
+          "displayName": "",
+          "attr": { "id": "" },
+          "visibility": { "conditions": [] },
+          "tag": "div"
+        }
+      },
+      {
+        "_id": "4154f51c-78f2-2362-9aea-db2de60d90ba",
+        "type": "Image",
+        "tag": "img",
+        "classes": ["9a4e11cb-f46a-6e5f-2ae4-e152a82bf6ce"],
+        "children": [],
+        "data": {
+          "attr": {
+            "src": "https://uploads-ssl.webflow.com/632496634e5210c242d6d6c0/635ae35b469f1361f690d577_loading.gif",
+            "width": "auto",
+            "height": "auto",
+            "loading": "auto",
+            "id": ""
+          },
+          "displayName": "",
+          "xattr": [{ "name": "fs-hacks-element", "value": "gif" }],
+          "search": { "exclude": false },
+          "visibility": { "conditions": [] },
+          "img": { "id": "635ae35b469f1361f690d577" }
+        }
+      },
+      {
+        "_id": "44b67e41-a583-5ee0-6579-dab62f034646",
+        "type": "Link",
+        "tag": "a",
+        "classes": [],
+        "children": ["44b67e41-a583-5ee0-6579-dab62f034647"],
+        "data": {
+          "search": { "exclude": true },
+          "xattr": [],
+          "block": "",
+          "displayName": "",
+          "attr": { "id": "", "href": "#" },
+          "visibility": { "conditions": [] },
+          "button": true,
+          "link": { "mode": "external" }
+        }
+      },
+      { "_id": "44b67e41-a583-5ee0-6579-dab62f034647", "text": true, "v": "Reload page" },
+      {
+        "_id": "1f3f1e64-e6a7-d67d-7bd8-d41305d26101",
+        "type": "Link",
+        "tag": "a",
+        "classes": [],
+        "children": ["1f3f1e64-e6a7-d67d-7bd8-d41305d26102"],
+        "data": {
+          "search": { "exclude": true },
+          "xattr": [{ "name": "fs-hacks-element", "value": "clear-cookie" }],
+          "block": "",
+          "displayName": "",
+          "attr": { "id": "" },
+          "visibility": { "conditions": [] },
+          "button": true,
+          "link": { "mode": "external", "url": "#" }
+        }
+      },
+      {
+        "_id": "1f3f1e64-e6a7-d67d-7bd8-d41305d26102",
+        "text": true,
+        "v": "Clear my 24 hours cookie"
+      },
+      {
+        "_id": "c567527b-b5bd-400e-0a3a-e3e8c6baca24",
+        "type": "Block",
+        "tag": "div",
+        "classes": [],
+        "children": ["c567527b-b5bd-400e-0a3a-e3e8c6baca25"],
+        "data": {
+          "search": { "exclude": false },
+          "xattr": [],
+          "text": true,
+          "displayName": "",
+          "attr": { "id": "" },
+          "visibility": { "conditions": [] },
+          "tag": "div"
+        }
+      },
+      {
+        "_id": "c567527b-b5bd-400e-0a3a-e3e8c6baca25",
+        "text": true,
+        "v": "If you don't clear your 1 hour cookie, you won't see another loading animation for 24 hours!"
+      }
+    ],
+    "styles": [
+      {
+        "_id": "4a44386d-cf38-1623-cdcd-312d92de0e1a",
+        "fake": false,
+        "type": "class",
+        "name": "example_block",
+        "namespace": "",
+        "comb": "",
+        "styleLess": "display: grid; width: 100%; padding-top: 3rem; padding-right: 3rem; padding-bottom: 3rem; padding-left: 3rem; grid-auto-columns: 1fr; grid-column-gap: 2rem; grid-row-gap: 2rem; grid-template-columns: 1fr; grid-template-rows: auto; border-top-style: solid; border-top-width: 1rem; border-top-color: hsla(219.99999999999997, 4.68%, 7.18%, 1.00); border-right-style: solid; border-right-width: 1rem; border-right-color: hsla(219.99999999999997, 4.68%, 7.18%, 1.00); border-bottom-style: solid; border-bottom-width: 1rem; border-bottom-color: hsla(219.99999999999997, 4.68%, 7.18%, 1.00); border-left-style: solid; border-left-width: 1rem; border-left-color: hsla(219.99999999999997, 4.68%, 7.18%, 1.00); border-top-left-radius: 0.25rem; border-top-right-radius: 0.25rem; border-bottom-left-radius: 0.25rem; border-bottom-right-radius: 0.25rem; background-color: hsla(219.99999999999997, 5.66%, 10.39%, 1.00);",
+        "variants": {
+          "small": {
+            "styleLess": "padding-top: 1.5rem; padding-right: 1.5rem; padding-bottom: 1.5rem; padding-left: 1.5rem;"
+          },
+          "tiny": {
+            "styleLess": "padding-top: 1.5rem; padding-right: 1.5rem; padding-bottom: 1.5rem; padding-left: 1.5rem;"
+          }
+        },
+        "children": [],
+        "createdBy": "57380bb111b9c4825e447f0d",
+        "selector": null
+      },
+      {
+        "_id": "3ae6c044-f517-db62-7755-0e5f156e7651",
+        "fake": false,
+        "type": "class",
+        "name": "demo-3_wrapper",
+        "namespace": "",
+        "comb": "",
+        "styleLess": "position: relative; display: grid; justify-items: stretch; align-items: center; grid-auto-flow: row; grid-auto-columns: 1fr; grid-column-gap: 16px; grid-row-gap: 16px; grid-template-columns: 1fr; grid-template-rows: auto; box-shadow: 0 10px 3.125rem -0.125rem hsla(265.7142857142856, 33.33%, 9.00%, 0.40); text-align: center; cursor: move;",
+        "variants": { "small": { "styleLess": "font-size: 1rem; line-height: 1.375rem;" } },
+        "children": [],
+        "selector": null
+      },
+      {
+        "_id": "9a4e11cb-f46a-6e5f-2ae4-e152a82bf6cd",
+        "fake": false,
+        "type": "class",
+        "name": "demo-3_preloader",
+        "namespace": "",
+        "comb": "",
+        "styleLess": "position: fixed; left: 0rem; top: 0rem; right: 0rem; bottom: 0rem; z-index: 99999; display: none; justify-content: center; align-items: center; background-color: hsla(210, 7.69%, 94.90%, 1.00);",
+        "variants": {},
+        "children": [],
+        "selector": null
+      },
+      {
+        "_id": "9a4e11cb-f46a-6e5f-2ae4-e152a82bf6ce",
+        "fake": false,
+        "type": "class",
+        "name": "demo-3_gif",
+        "namespace": "",
+        "comb": "",
+        "styleLess": "",
+        "variants": {},
+        "children": [],
+        "selector": null
+      }
+    ],
+    "assets": [
+      {
+        "cdnUrl": "https://uploads-ssl.webflow.com/632496634e5210c242d6d6c0/635ae35b469f1361f690d577_loading.gif",
+        "siteId": "632496634e5210c242d6d6c0",
+        "isHD": false,
+        "fileName": "635ae35b469f1361f690d577_loading.gif",
+        "createdOn": "2022-10-27T20:00:27.386Z",
+        "origFileName": "loading.gif",
+        "fileHash": "ef5d4538fe9b1d2b673b05360aa0739f",
+        "variants": [],
+        "mimeType": "image/gif",
+        "s3Url": "https://s3.amazonaws.com/webflow-prod-assets/632496634e5210c242d6d6c0/635ae35b469f1361f690d577_loading.gif",
+        "thumbUrl": "https://daks2k3a4ib2z.cloudfront.net/632496634e5210c242d6d6c0/635ae35b469f1361f690d577_loading-p-130x130q80.jpeg",
+        "_id": "635ae35b469f1361f690d577",
+        "updatedOn": "2022-10-27T22:35:21.367Z",
+        "fileSize": 81047
+      }
+    ],
+    "ix1": [],
+    "ix2": { "interactions": [], "events": [], "actionLists": [] }
+  },
+  "meta": {
+    "unlinkedSymbolCount": 0,
+    "droppedLinks": 1,
+    "dynBindRemovedCount": 0,
+    "dynListBindRemovedCount": 0,
+    "paginationRemovedCount": 0
+  }
+}

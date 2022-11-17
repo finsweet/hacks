@@ -1,0 +1,330 @@
+{
+  "type": "@webflow/XscpData",
+  "payload": {
+    "nodes": [
+      {
+        "_id": "7350ca48-0033-c2f3-ebd5-ef102ce282a9",
+        "type": "Block",
+        "tag": "div",
+        "classes": ["4a44386d-cf38-1623-cdcd-312d92de0e1a"],
+        "children": ["b8c6c602-043f-c712-2081-5215f45c3f0a"],
+        "data": {
+          "search": { "exclude": false },
+          "xattr": [],
+          "text": false,
+          "displayName": "",
+          "attr": { "id": "" },
+          "visibility": { "conditions": [] },
+          "tag": "div"
+        }
+      },
+      {
+        "_id": "b8c6c602-043f-c712-2081-5215f45c3f0a",
+        "type": "TabsWrapper",
+        "tag": "div",
+        "classes": ["af3fb4f3-4f7b-0824-a294-cc5c2a87436e"],
+        "children": [
+          "b8c6c602-043f-c712-2081-5215f45c3f0b",
+          "b8c6c602-043f-c712-2081-5215f45c3f15"
+        ],
+        "data": {
+          "displayName": "",
+          "attr": { "id": "" },
+          "xattr": [],
+          "search": { "exclude": false },
+          "visibility": { "conditions": [] },
+          "tabs": {
+            "type": "wrapper",
+            "current": "Tab 2",
+            "easing": "ease",
+            "fadeIn": 300,
+            "fadeOut": 100
+          }
+        }
+      },
+      {
+        "_id": "b8c6c602-043f-c712-2081-5215f45c3f0b",
+        "type": "TabsMenu",
+        "tag": "div",
+        "classes": [],
+        "children": [
+          "b8c6c602-043f-c712-2081-5215f45c3f0c",
+          "b8c6c602-043f-c712-2081-5215f45c3f0f",
+          "b8c6c602-043f-c712-2081-5215f45c3f12"
+        ],
+        "data": {
+          "search": { "exclude": false },
+          "xattr": [],
+          "displayName": "",
+          "attr": { "id": "" },
+          "visibility": { "conditions": [] },
+          "tag": "div",
+          "tabs": { "type": "menu" }
+        }
+      },
+      {
+        "_id": "b8c6c602-043f-c712-2081-5215f45c3f0c",
+        "type": "TabsLink",
+        "tag": "a",
+        "classes": [],
+        "children": ["b8c6c602-043f-c712-2081-5215f45c3f0d"],
+        "data": {
+          "search": { "exclude": false },
+          "xattr": [],
+          "block": "inline",
+          "displayName": "",
+          "attr": { "id": "", "data-w-tab": "Tab 1" },
+          "visibility": { "conditions": [] },
+          "tabs": { "type": "link" }
+        }
+      },
+      {
+        "_id": "b8c6c602-043f-c712-2081-5215f45c3f0d",
+        "type": "Block",
+        "tag": "div",
+        "classes": [],
+        "children": ["b8c6c602-043f-c712-2081-5215f45c3f0e"],
+        "data": {
+          "search": { "exclude": false },
+          "xattr": [],
+          "text": true,
+          "displayName": "",
+          "attr": { "id": "" },
+          "visibility": { "conditions": [] },
+          "tag": "div"
+        }
+      },
+      { "_id": "b8c6c602-043f-c712-2081-5215f45c3f0e", "text": true, "v": "Tab 1" },
+      {
+        "_id": "b8c6c602-043f-c712-2081-5215f45c3f0f",
+        "type": "TabsLink",
+        "tag": "a",
+        "classes": [],
+        "children": ["b8c6c602-043f-c712-2081-5215f45c3f10"],
+        "data": {
+          "search": { "exclude": false },
+          "xattr": [],
+          "block": "inline",
+          "displayName": "",
+          "attr": { "id": "", "data-w-tab": "Tab 2" },
+          "visibility": { "conditions": [] },
+          "tabs": { "type": "link" }
+        }
+      },
+      {
+        "_id": "b8c6c602-043f-c712-2081-5215f45c3f10",
+        "type": "Block",
+        "tag": "div",
+        "classes": [],
+        "children": ["b8c6c602-043f-c712-2081-5215f45c3f11"],
+        "data": {
+          "search": { "exclude": false },
+          "xattr": [],
+          "text": true,
+          "displayName": "",
+          "attr": { "id": "" },
+          "visibility": { "conditions": [] },
+          "tag": "div"
+        }
+      },
+      { "_id": "b8c6c602-043f-c712-2081-5215f45c3f11", "text": true, "v": "Tab 2" },
+      {
+        "_id": "b8c6c602-043f-c712-2081-5215f45c3f12",
+        "type": "TabsLink",
+        "tag": "a",
+        "classes": [],
+        "children": ["b8c6c602-043f-c712-2081-5215f45c3f13"],
+        "data": {
+          "search": { "exclude": false },
+          "xattr": [],
+          "block": "inline",
+          "displayName": "",
+          "attr": { "id": "", "data-w-tab": "Tab 3" },
+          "visibility": { "conditions": [] },
+          "tabs": { "type": "link" }
+        }
+      },
+      {
+        "_id": "b8c6c602-043f-c712-2081-5215f45c3f13",
+        "type": "Block",
+        "tag": "div",
+        "classes": [],
+        "children": ["b8c6c602-043f-c712-2081-5215f45c3f14"],
+        "data": {
+          "search": { "exclude": false },
+          "xattr": [],
+          "text": true,
+          "displayName": "",
+          "attr": { "id": "" },
+          "visibility": { "conditions": [] },
+          "tag": "div"
+        }
+      },
+      { "_id": "b8c6c602-043f-c712-2081-5215f45c3f14", "text": true, "v": "Tab 3" },
+      {
+        "_id": "b8c6c602-043f-c712-2081-5215f45c3f15",
+        "type": "TabsContent",
+        "tag": "div",
+        "classes": [],
+        "children": [
+          "b8c6c602-043f-c712-2081-5215f45c3f16",
+          "b8c6c602-043f-c712-2081-5215f45c3f19",
+          "b8c6c602-043f-c712-2081-5215f45c3f1c"
+        ],
+        "data": {
+          "search": { "exclude": false },
+          "xattr": [],
+          "displayName": "",
+          "attr": { "id": "" },
+          "visibility": { "conditions": [] },
+          "tag": "div",
+          "tabs": { "type": "content" }
+        }
+      },
+      {
+        "_id": "b8c6c602-043f-c712-2081-5215f45c3f16",
+        "type": "TabsPane",
+        "tag": "div",
+        "classes": [],
+        "children": ["b8c6c602-043f-c712-2081-5215f45c3f17"],
+        "data": {
+          "search": { "exclude": false },
+          "xattr": [],
+          "displayName": "",
+          "attr": { "id": "", "data-w-tab": "Tab 1" },
+          "visibility": { "conditions": [] },
+          "tag": "div",
+          "tabs": { "type": "pane" }
+        }
+      },
+      {
+        "_id": "b8c6c602-043f-c712-2081-5215f45c3f17",
+        "type": "Block",
+        "tag": "div",
+        "classes": [],
+        "children": ["b8c6c602-043f-c712-2081-5215f45c3f18"],
+        "data": {
+          "search": { "exclude": false },
+          "xattr": [],
+          "text": true,
+          "displayName": "",
+          "attr": { "id": "" },
+          "visibility": { "conditions": [] },
+          "tag": "div"
+        }
+      },
+      { "_id": "b8c6c602-043f-c712-2081-5215f45c3f18", "text": true, "v": "I'm Tab 1" },
+      {
+        "_id": "b8c6c602-043f-c712-2081-5215f45c3f19",
+        "type": "TabsPane",
+        "tag": "div",
+        "classes": [],
+        "children": ["b8c6c602-043f-c712-2081-5215f45c3f1a"],
+        "data": {
+          "search": { "exclude": false },
+          "xattr": [],
+          "displayName": "",
+          "attr": { "id": "", "data-w-tab": "Tab 2" },
+          "visibility": { "conditions": [] },
+          "tag": "div",
+          "tabs": { "type": "pane" }
+        }
+      },
+      {
+        "_id": "b8c6c602-043f-c712-2081-5215f45c3f1a",
+        "type": "Block",
+        "tag": "div",
+        "classes": [],
+        "children": ["b8c6c602-043f-c712-2081-5215f45c3f1b"],
+        "data": {
+          "search": { "exclude": false },
+          "xattr": [],
+          "text": true,
+          "displayName": "",
+          "attr": { "id": "" },
+          "visibility": { "conditions": [] },
+          "tag": "div"
+        }
+      },
+      { "_id": "b8c6c602-043f-c712-2081-5215f45c3f1b", "text": true, "v": "I'm Tab 2" },
+      {
+        "_id": "b8c6c602-043f-c712-2081-5215f45c3f1c",
+        "type": "TabsPane",
+        "tag": "div",
+        "classes": [],
+        "children": ["b8c6c602-043f-c712-2081-5215f45c3f1d"],
+        "data": {
+          "search": { "exclude": false },
+          "xattr": [],
+          "displayName": "",
+          "attr": { "id": "", "data-w-tab": "Tab 3" },
+          "visibility": { "conditions": [] },
+          "tag": "div",
+          "tabs": { "type": "pane" }
+        }
+      },
+      {
+        "_id": "b8c6c602-043f-c712-2081-5215f45c3f1d",
+        "type": "Block",
+        "tag": "div",
+        "classes": [],
+        "children": ["b8c6c602-043f-c712-2081-5215f45c3f1e"],
+        "data": {
+          "search": { "exclude": false },
+          "xattr": [],
+          "text": true,
+          "displayName": "",
+          "attr": { "id": "" },
+          "visibility": { "conditions": [] },
+          "tag": "div"
+        }
+      },
+      { "_id": "b8c6c602-043f-c712-2081-5215f45c3f1e", "text": true, "v": "I'm Tab 3" }
+    ],
+    "styles": [
+      {
+        "_id": "4a44386d-cf38-1623-cdcd-312d92de0e1a",
+        "fake": false,
+        "type": "class",
+        "name": "example_block",
+        "namespace": "",
+        "comb": "",
+        "styleLess": "display: grid; width: 100%; padding-top: 3rem; padding-right: 3rem; padding-bottom: 3rem; padding-left: 3rem; grid-auto-columns: 1fr; grid-column-gap: 2rem; grid-row-gap: 2rem; grid-template-columns: 1fr; grid-template-rows: auto; border-top-style: solid; border-top-width: 1rem; border-top-color: hsla(219.99999999999997, 4.68%, 7.18%, 1.00); border-right-style: solid; border-right-width: 1rem; border-right-color: hsla(219.99999999999997, 4.68%, 7.18%, 1.00); border-bottom-style: solid; border-bottom-width: 1rem; border-bottom-color: hsla(219.99999999999997, 4.68%, 7.18%, 1.00); border-left-style: solid; border-left-width: 1rem; border-left-color: hsla(219.99999999999997, 4.68%, 7.18%, 1.00); border-top-left-radius: 0.25rem; border-top-right-radius: 0.25rem; border-bottom-left-radius: 0.25rem; border-bottom-right-radius: 0.25rem; background-color: hsla(219.99999999999997, 5.66%, 10.39%, 1.00);",
+        "variants": {
+          "small": {
+            "styleLess": "padding-top: 1.5rem; padding-right: 1.5rem; padding-bottom: 1.5rem; padding-left: 1.5rem;"
+          },
+          "tiny": {
+            "styleLess": "padding-top: 1.5rem; padding-right: 1.5rem; padding-bottom: 1.5rem; padding-left: 1.5rem;"
+          }
+        },
+        "children": [],
+        "createdBy": "57380bb111b9c4825e447f0d",
+        "selector": null
+      },
+      {
+        "_id": "af3fb4f3-4f7b-0824-a294-cc5c2a87436e",
+        "fake": false,
+        "type": "class",
+        "name": "demo-14_tab",
+        "namespace": "",
+        "comb": "",
+        "styleLess": "display: grid; grid-auto-columns: 1fr; grid-column-gap: 2rem; grid-row-gap: 2rem; grid-template-columns: 1fr; grid-template-rows: auto; text-align: center;",
+        "variants": {},
+        "children": [],
+        "createdBy": "54441c96b0981db6504faf03",
+        "selector": null
+      }
+    ],
+    "assets": [],
+    "ix1": [],
+    "ix2": { "interactions": [], "events": [], "actionLists": [] }
+  },
+  "meta": {
+    "unlinkedSymbolCount": 0,
+    "droppedLinks": 0,
+    "dynBindRemovedCount": 0,
+    "dynListBindRemovedCount": 0,
+    "paginationRemovedCount": 0
+  }
+}

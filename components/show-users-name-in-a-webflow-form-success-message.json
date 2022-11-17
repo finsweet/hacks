@@ -1,0 +1,282 @@
+{
+  "type": "@webflow/XscpData",
+  "payload": {
+    "nodes": [
+      {
+        "_id": "7350ca48-0033-c2f3-ebd5-ef102ce282a9",
+        "type": "Block",
+        "tag": "div",
+        "classes": ["4a44386d-cf38-1623-cdcd-312d92de0e1a"],
+        "children": ["b3ba0d75-78ab-4932-2658-b91b16aa26f3"],
+        "data": {
+          "search": { "exclude": false },
+          "xattr": [],
+          "text": false,
+          "displayName": "",
+          "attr": { "id": "" },
+          "visibility": { "conditions": [] },
+          "tag": "div"
+        }
+      },
+      {
+        "_id": "b3ba0d75-78ab-4932-2658-b91b16aa26f3",
+        "type": "FormWrapper",
+        "tag": "div",
+        "classes": ["384d2300-75d6-efbd-3bc9-daeb99e7c2bf"],
+        "children": [
+          "b3ba0d75-78ab-4932-2658-b91b16aa26f4",
+          "b3ba0d75-78ab-4932-2658-b91b16aa26f7",
+          "b3ba0d75-78ab-4932-2658-b91b16aa26fa"
+        ],
+        "data": {
+          "form": { "type": "wrapper" },
+          "displayName": "",
+          "attr": { "id": "" },
+          "xattr": [],
+          "search": { "exclude": true },
+          "visibility": { "conditions": [] }
+        }
+      },
+      {
+        "_id": "b3ba0d75-78ab-4932-2658-b91b16aa26f4",
+        "type": "FormForm",
+        "tag": "form",
+        "classes": ["47902e44-d50d-5130-8811-ea77ac5d89af"],
+        "children": [
+          "b3ba0d75-78ab-4932-2658-b91b16aa26f5",
+          "b3ba0d75-78ab-4932-2658-b91b16aa26f6"
+        ],
+        "data": {
+          "form": { "type": "form", "name": "Email Form" },
+          "search": { "exclude": false },
+          "xattr": [
+            { "name": "autocomplete", "value": "off" },
+            { "name": "fs-hacks-element", "value": "form" }
+          ],
+          "displayName": "",
+          "attr": {
+            "data-name": "Email Form",
+            "name": "email-form",
+            "id": "email-form",
+            "redirect": "",
+            "data-redirect": "",
+            "action": "",
+            "method": "get"
+          },
+          "visibility": { "conditions": [] },
+          "Source": { "tag": "Default form", "val": {} }
+        }
+      },
+      {
+        "_id": "b3ba0d75-78ab-4932-2658-b91b16aa26f5",
+        "type": "FormTextInput",
+        "tag": "input",
+        "classes": ["47902e44-d50d-5130-8811-ea77ac5d89b0"],
+        "children": [],
+        "data": {
+          "attr": {
+            "autofocus": false,
+            "maxlength": 256,
+            "name": "name",
+            "data-name": "Name",
+            "placeholder": "Name",
+            "type": "text",
+            "id": "hack29-name-input",
+            "disabled": false,
+            "required": false
+          },
+          "form": { "type": "input", "name": "name", "passwordPage": false },
+          "xattr": [{ "name": "fs-hacks-element", "value": "name-input" }],
+          "displayName": "",
+          "search": { "exclude": false },
+          "visibility": { "conditions": [] }
+        }
+      },
+      {
+        "_id": "b3ba0d75-78ab-4932-2658-b91b16aa26f6",
+        "type": "FormButton",
+        "tag": "input",
+        "classes": ["b6bc7ed9-2bbb-0453-5825-2b64b25ecce8"],
+        "children": [],
+        "data": {
+          "attr": { "type": "submit", "value": "Submit", "data-wait": "Please wait...", "id": "" },
+          "form": { "type": "button", "wait": "Please wait..." },
+          "displayName": "",
+          "xattr": [],
+          "search": { "exclude": false },
+          "visibility": { "conditions": [] }
+        }
+      },
+      {
+        "_id": "b3ba0d75-78ab-4932-2658-b91b16aa26f7",
+        "type": "FormSuccessMessage",
+        "tag": "div",
+        "classes": ["48a68aee-73ec-bf53-2048-a55440aea8e2"],
+        "children": ["b3ba0d75-78ab-4932-2658-b91b16aa26f8"],
+        "data": {
+          "form": { "type": "msg-done" },
+          "xattr": [{ "name": "fs-hacks-element", "value": "custom-message" }],
+          "displayName": "",
+          "attr": { "id": "" },
+          "search": { "exclude": false },
+          "visibility": { "conditions": [] }
+        }
+      },
+      {
+        "_id": "b3ba0d75-78ab-4932-2658-b91b16aa26f8",
+        "type": "Block",
+        "tag": "div",
+        "classes": [],
+        "children": ["b3ba0d75-78ab-4932-2658-b91b16aa26f9"],
+        "data": {
+          "search": { "exclude": false },
+          "xattr": [],
+          "text": true,
+          "displayName": "",
+          "attr": { "id": "" },
+          "visibility": { "conditions": [] },
+          "tag": "div"
+        }
+      },
+      {
+        "_id": "b3ba0d75-78ab-4932-2658-b91b16aa26f9",
+        "text": true,
+        "v": "Thank you.! Your submission has been received!"
+      },
+      {
+        "_id": "b3ba0d75-78ab-4932-2658-b91b16aa26fa",
+        "type": "FormErrorMessage",
+        "tag": "div",
+        "classes": [],
+        "children": ["b3ba0d75-78ab-4932-2658-b91b16aa26fb"],
+        "data": {
+          "form": { "type": "msg-fail" },
+          "displayName": "",
+          "attr": { "id": "" },
+          "xattr": [],
+          "search": { "exclude": false },
+          "visibility": { "conditions": [] }
+        }
+      },
+      {
+        "_id": "b3ba0d75-78ab-4932-2658-b91b16aa26fb",
+        "type": "Block",
+        "tag": "div",
+        "classes": [],
+        "children": ["b3ba0d75-78ab-4932-2658-b91b16aa26fc"],
+        "data": {
+          "search": { "exclude": false },
+          "xattr": [],
+          "text": true,
+          "displayName": "",
+          "attr": { "id": "" },
+          "visibility": { "conditions": [] },
+          "tag": "div"
+        }
+      },
+      {
+        "_id": "b3ba0d75-78ab-4932-2658-b91b16aa26fc",
+        "text": true,
+        "v": "Oops! Something went wrong while submitting the form."
+      }
+    ],
+    "styles": [
+      {
+        "_id": "4a44386d-cf38-1623-cdcd-312d92de0e1a",
+        "fake": false,
+        "type": "class",
+        "name": "example_block",
+        "namespace": "",
+        "comb": "",
+        "styleLess": "display: grid; width: 100%; padding-top: 3rem; padding-right: 3rem; padding-bottom: 3rem; padding-left: 3rem; grid-auto-columns: 1fr; grid-column-gap: 2rem; grid-row-gap: 2rem; grid-template-columns: 1fr; grid-template-rows: auto; border-top-style: solid; border-top-width: 1rem; border-top-color: hsla(219.99999999999997, 4.68%, 7.18%, 1.00); border-right-style: solid; border-right-width: 1rem; border-right-color: hsla(219.99999999999997, 4.68%, 7.18%, 1.00); border-bottom-style: solid; border-bottom-width: 1rem; border-bottom-color: hsla(219.99999999999997, 4.68%, 7.18%, 1.00); border-left-style: solid; border-left-width: 1rem; border-left-color: hsla(219.99999999999997, 4.68%, 7.18%, 1.00); border-top-left-radius: 0.25rem; border-top-right-radius: 0.25rem; border-bottom-left-radius: 0.25rem; border-bottom-right-radius: 0.25rem; background-color: hsla(219.99999999999997, 5.66%, 10.39%, 1.00);",
+        "variants": {
+          "small": {
+            "styleLess": "padding-top: 1.5rem; padding-right: 1.5rem; padding-bottom: 1.5rem; padding-left: 1.5rem;"
+          },
+          "tiny": {
+            "styleLess": "padding-top: 1.5rem; padding-right: 1.5rem; padding-bottom: 1.5rem; padding-left: 1.5rem;"
+          }
+        },
+        "children": [],
+        "createdBy": "57380bb111b9c4825e447f0d",
+        "selector": null
+      },
+      {
+        "_id": "384d2300-75d6-efbd-3bc9-daeb99e7c2bf",
+        "fake": false,
+        "type": "class",
+        "name": "demo-13_component",
+        "namespace": "",
+        "comb": "",
+        "styleLess": "",
+        "variants": {},
+        "children": [],
+        "createdBy": "54441c96b0981db6504faf03",
+        "selector": null
+      },
+      {
+        "_id": "47902e44-d50d-5130-8811-ea77ac5d89af",
+        "fake": false,
+        "type": "class",
+        "name": "demo-13_form",
+        "namespace": "",
+        "comb": "",
+        "styleLess": "",
+        "variants": {},
+        "children": [],
+        "selector": null
+      },
+      {
+        "_id": "47902e44-d50d-5130-8811-ea77ac5d89b0",
+        "fake": false,
+        "type": "class",
+        "name": "demo-13_input",
+        "namespace": "",
+        "comb": "",
+        "styleLess": "border-top-width: 0rem; border-right-width: 0rem; border-bottom-style: solid; border-bottom-width: 0.125rem; border-bottom-color: #240c2e; border-left-width: 0rem; border-top-left-radius: 0rem; border-top-right-radius: 0rem; border-bottom-left-radius: 0rem; border-bottom-right-radius: 0rem; transition-property: border-color; transition-duration: 100ms; transition-timing-function: ease;",
+        "variants": {
+          "main_placeholder": { "styleLess": "color: rgba(36, 12, 46, 0.9); font-size: 0.875rem;" },
+          "main_focus": { "styleLess": "border-bottom-color: #e9e6ed;" }
+        },
+        "children": [],
+        "selector": null
+      },
+      {
+        "_id": "b6bc7ed9-2bbb-0453-5825-2b64b25ecce8",
+        "fake": false,
+        "type": "class",
+        "name": "demo-13_submit",
+        "namespace": "",
+        "comb": "",
+        "styleLess": "",
+        "variants": {},
+        "children": [],
+        "createdBy": "54441c96b0981db6504faf03",
+        "selector": null
+      },
+      {
+        "_id": "48a68aee-73ec-bf53-2048-a55440aea8e2",
+        "fake": false,
+        "type": "class",
+        "name": "Success Message",
+        "namespace": "",
+        "comb": "",
+        "styleLess": "color: hsla(219.99999999999997, 4.68%, 7.18%, 1.00);",
+        "variants": {},
+        "children": [],
+        "createdBy": "5f85f8d1e466777548de0e17",
+        "selector": null
+      }
+    ],
+    "assets": [],
+    "ix1": [],
+    "ix2": { "interactions": [], "events": [], "actionLists": [] }
+  },
+  "meta": {
+    "unlinkedSymbolCount": 0,
+    "droppedLinks": 0,
+    "dynBindRemovedCount": 0,
+    "dynListBindRemovedCount": 0,
+    "paginationRemovedCount": 0
+  }
+}
