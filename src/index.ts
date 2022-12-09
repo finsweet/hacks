@@ -1,78 +1,42 @@
-import { SELECTORS } from '$utils/constants';
-import { formatCode, appendHeadScript } from '$utils/domUtils';
-
 window.Webflow ||= [];
-window.Webflow.push(async () => {
-  const codeListings = document.querySelectorAll<HTMLDivElement>(SELECTORS.CODE_LISTING);
-  const componentCopyButtons = document.querySelectorAll<HTMLAnchorElement>(
-    `[${SELECTORS.COPY_COMPONENT}]`
-  );
+window.Webflow.push(() => {
+  const hackName = document.querySelector('[fs-element="hack_name"]').innerHTML;
 
-  componentCopyButtons.forEach(async (componentCopyButton) => {
-    componentCopyButton.addEventListener('click', async () => {
-      const url = componentCopyButton.getAttribute(SELECTORS.COPY_COMPONENT);
-      if (!url) return;
+  async function fetchTsCode() {
+    if (!hackName) return;
+    const res = await fetch(
+      `https://cdn.jsdelivr.net/gh/finsweet/hacks@63328a66ee8745471271deb49fea87106073fff4/src/webflow-hacks/${hackName}/${hackName}.ts`
+    );
+    if (res.status === 200) {
+      const tsCodeString = await res.text();
+      console.log(tsCodeString);
 
-      const resp = await fetch(url);
-      const wfJson = await resp.json();
+      const tsWrapper = document.querySelector('[fs-element="ts_wrapper"]');
+      console.log(tsWrapper);
+      tsWrapper.setAttribute('style', 'white-space: pre;');
+      tsWrapper.innerHTML = tsCodeString;
+    } else {
+      throw new Error('Error fetching TS code');
+    }
+  }
 
-      try {
-        document.addEventListener('copy', (e) => {
-          copyButtonClicked(e, wfJson);
-        });
-        document.execCommand('copy');
-      } catch (e) {
-      } finally {
-        document.removeEventListener('copy', (e) => {
-          copyButtonClicked(e, wfJson);
-        });
-      }
+  fetchTsCode();
+  async function fetchJsCode() {
+    if (!hackName) return;
+    const res = await fetch(
+      `https://cdn.jsdelivr.net/gh/finsweet/hacks@63328a66ee8745471271deb49fea87106073fff4/src/webflow-hacks/${hackName}/${hackName}.js`
+    );
+    if (res.status === 200) {
+      const jsCodeString = await res.text();
+      console.log(jsCodeString);
 
-      const textDiv = componentCopyButton.lastChild as HTMLDivElement;
-      const previousText = textDiv.innerText;
-      textDiv.innerText = 'Copied!';
-
-      setTimeout(() => {
-        textDiv.innerText = previousText;
-      }, 2000);
-    });
-  });
-
-  await Promise.all(
-    [...codeListings].map(async (codeListing) => {
-      const url = codeListing.getAttribute('url');
-      const copyTrigger = codeListing.parentElement?.querySelector<HTMLAnchorElement>(
-        '[fs-copyclip-element="click"]'
-      );
-      if (!url || !copyTrigger) return;
-
-      const resp = await fetch(url);
-      const code = await resp.text();
-
-      copyTrigger.addEventListener('click', function (e) {
-        e.preventDefault();
-
-        const textDiv = copyTrigger.lastChild as HTMLDivElement;
-        if (!textDiv) return;
-
-        const previousText = textDiv.innerText;
-        textDiv.innerText = 'Copied!';
-
-        setTimeout(() => {
-          textDiv.innerText = previousText;
-        }, 2000);
-
-        navigator.clipboard.writeText(code);
-      });
-
-      codeListing.innerHTML = formatCode(code);
-    })
-  );
-
-  appendHeadScript(SELECTORS.CODE_HIGHLIGHT_ATTR_URL);
+      const jsWrapper = document.querySelector('[fs-element="js_wrapper"]');
+      console.log(jsWrapper);
+      jsWrapper.setAttribute('style', 'white-space: pre;');
+      jsWrapper.innerHTML = jsCodeString;
+    } else {
+      throw new Error('Error fetching JS code');
+    }
+  }
+  fetchJsCode();
 });
-
-const copyButtonClicked = (event: ClipboardEvent, wfJson: JSON) => {
-  event.clipboardData?.setData('application/json', JSON.stringify(wfJson));
-  event.preventDefault();
-};
