@@ -1,18 +1,21 @@
 window.Webflow ||= [];
 window.Webflow.push(() => {
-  const hackName = document.querySelector('[fs-element="hack_name"]').innerHTML;
+  const hackNameElement = document.querySelector('[fs-element="hack_name"]');
+  const hackName = hackNameElement?.innerHTML;
 
+  if (!hackName) return;
   async function fetchTsCode() {
-    if (!hackName) return;
+    if (!hackNameElement) return;
     const res = await fetch(
       `https://cdn.jsdelivr.net/gh/finsweet/hacks@63328a66ee8745471271deb49fea87106073fff4/src/webflow-hacks/${hackName}/${hackName}.ts`
     );
-    if (res.status === 200) {
+    if (res.ok) {
       const tsCodeString = await res.text();
-      console.log(tsCodeString);
 
       const tsWrapper = document.querySelector('[fs-element="ts_wrapper"]');
-      console.log(tsWrapper);
+      if (!tsWrapper) {
+        throw new Error('Error selecting TS wrapper');
+      }
       tsWrapper.setAttribute('style', 'white-space: pre;');
       tsWrapper.innerHTML = tsCodeString;
     } else {
@@ -26,12 +29,12 @@ window.Webflow.push(() => {
     const res = await fetch(
       `https://cdn.jsdelivr.net/gh/finsweet/hacks@63328a66ee8745471271deb49fea87106073fff4/src/webflow-hacks/${hackName}/${hackName}.js`
     );
-    if (res.status === 200) {
+    if (res.ok) {
       const jsCodeString = await res.text();
-      console.log(jsCodeString);
-
       const jsWrapper = document.querySelector('[fs-element="js_wrapper"]');
-      console.log(jsWrapper);
+      if (!jsWrapper) {
+        throw new Error('Error selecting TS wrapper');
+      }
       jsWrapper.setAttribute('style', 'white-space: pre;');
       jsWrapper.innerHTML = jsCodeString;
     } else {
