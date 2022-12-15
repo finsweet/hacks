@@ -33,9 +33,6 @@ window.Webflow.push(() => {
       throw new Error('Could not fetch demo component');
     }
   }
-
-  fetchDemoComponent();
-
   async function fetchTsCode() {
     const res = await fetch(
       `https://cdn.jsdelivr.net/gh/finsweet/hacks@63328a66ee8745471271deb49fea87106073fff4/src/webflow-hacks/${hackName}/${hackName}.ts`
@@ -66,11 +63,26 @@ window.Webflow.push(() => {
       }
       const formattedCode = formatCode(jsCode);
       jsWrapper.innerHTML = formattedCode;
-    } else {
+      // wait for demo component to render appending JS code
+      await fetchDemoComponent();
+      return jsCode;
+    }
+    {
       throw new Error('Error fetching JS code');
     }
   }
 
-  fetchJsCode();
+  // append js code to make the demo component functional
+  const appendJsCode = (jsCode: string) => {
+    const script = document.createElement('script');
+    script.innerHTML = jsCode;
+    document.body.appendChild(script);
+
+    // Dispatch the DOMContentLoaded event to trigger hack JS
+    const event = new Event('DOMContentLoaded');
+    document.dispatchEvent(event);
+  };
+
+  fetchJsCode().then(appendJsCode);
 });
 appendHeadScript(SELECTORS.CODE_HIGHLIGHT_ATTR_URL);
