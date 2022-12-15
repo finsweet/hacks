@@ -4,7 +4,10 @@ import { formatCode, appendHeadScript } from '$utils/domUtils';
 window.Webflow ||= [];
 window.Webflow.push(() => {
   const hackNameElement = document.querySelector('[fs-element="hack_name"]');
-  const hackName = hackNameElement?.innerHTML;
+  if (!hackNameElement) {
+    throw new Error('Error retrieving hack name');
+  }
+  const hackName = hackNameElement.innerHTML;
   if (!hackName) {
     throw new Error('Error retrieving hack name');
   }
@@ -22,7 +25,6 @@ window.Webflow.push(() => {
       const parser = new DOMParser();
       // Insert the HTML code into the page
       const doc = parser.parseFromString(html, 'text/html');
-
       // Get the demo component
       const demoComponent = doc.querySelector(`[fs-component-name="${hackName}"]`);
       if (!demoComponent) {
@@ -82,7 +84,6 @@ window.Webflow.push(() => {
     const event = new Event('DOMContentLoaded');
     document.dispatchEvent(event);
   };
-
   fetchJsCode().then(appendJsCode);
 });
 appendHeadScript(SELECTORS.CODE_HIGHLIGHT_ATTR_URL);
