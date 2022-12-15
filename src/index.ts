@@ -8,6 +8,34 @@ window.Webflow.push(() => {
   if (!hackName) {
     throw new Error('Error retrieving hack name');
   }
+
+  async function fetchDemoComponent() {
+    const demoContainer = document.querySelector('[fs-element="demo_container"]');
+    if (!demoContainer) {
+      throw new Error('Could not fetch demo container on template page');
+    }
+    const res = await fetch(
+      'https://hacks-in-ts-ae00034f9e8a6fd53d30a742748.webflow.io/components'
+    );
+    if (res.ok) {
+      const html = await res.text();
+      const parser = new DOMParser();
+      // Insert the HTML code into the page
+      const doc = parser.parseFromString(html, 'text/html');
+
+      // Get the demo component
+      const demoComponent = doc.querySelector(`[fs-component-name="${hackName}"]`);
+      if (!demoComponent) {
+        throw new Error('Could not fetch demo component from components page');
+      }
+      demoContainer.prepend(demoComponent);
+    } else {
+      throw new Error('Could not fetch demo component');
+    }
+  }
+
+  fetchDemoComponent();
+
   async function fetchTsCode() {
     const res = await fetch(
       `https://cdn.jsdelivr.net/gh/finsweet/hacks@63328a66ee8745471271deb49fea87106073fff4/src/webflow-hacks/${hackName}/${hackName}.ts`
@@ -24,8 +52,8 @@ window.Webflow.push(() => {
       throw new Error('Error fetching TS code');
     }
   }
-
   fetchTsCode();
+
   async function fetchJsCode() {
     const res = await fetch(
       `https://cdn.jsdelivr.net/gh/finsweet/hacks@63328a66ee8745471271deb49fea87106073fff4/src/webflow-hacks/${hackName}/${hackName}.js`
@@ -42,6 +70,7 @@ window.Webflow.push(() => {
       throw new Error('Error fetching JS code');
     }
   }
+
   fetchJsCode();
 });
 appendHeadScript(SELECTORS.CODE_HIGHLIGHT_ATTR_URL);
