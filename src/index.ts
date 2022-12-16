@@ -5,7 +5,7 @@ window.Webflow ||= [];
 window.Webflow.push(() => {
   const hackNameElement = document.querySelector('[fs-element="hack_name"]');
   if (!hackNameElement) {
-    throw new Error('Error retrieving hack name');
+    throw new Error('Error retrieving hack name element');
   }
   const hackName = hackNameElement.innerHTML;
   if (!hackName) {
