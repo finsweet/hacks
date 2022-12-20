@@ -1,3 +1,5 @@
+import { CopyJSONButton } from '@finsweet/ts-utils';
+
 import { SELECTORS } from '$utils/constants';
 import { formatCode, appendHeadScript } from '$utils/domUtils';
 
@@ -65,7 +67,6 @@ window.Webflow.push(() => {
       if (!tsWrapper) {
         throw new Error('Error selecting TS wrapper');
       }
-
       tsWrapper.innerHTML = formattedCode;
     } catch (error) {
       console.error(error);
@@ -111,6 +112,28 @@ window.Webflow.push(() => {
       console.error(error);
     }
   }
+  const element = document.querySelector('div') as HTMLElement;
+  const componentCopyButton = document.querySelector('[fs-copy-component]');
+  if (!componentCopyButton) return;
+
+  const fetchComponentJSON = async () => {
+    // !! TO DO: dynamically fetch the latest commit version, i.e. text after the @
+    const url = `https://cdn.jsdelivr.net/gh/finsweet/hacks@e497915603641fbca41c80a50666b1023dd8056d/src/webflow-hacks/${hackName}/${hackName}.json`;
+    try {
+      const componentJSON = await fetch(url);
+      return componentJSON.json();
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  componentCopyButton.addEventListener('click', async () => {
+    const copyData = await fetchComponentJSON();
+    new CopyJSONButton({
+      element,
+      copyData,
+    });
+  });
 
   fetchAllElements();
 });
