@@ -35,55 +35,82 @@ window.Webflow.push(() => {
       throw new Error('Could not fetch demo component');
     }
   }
+
+  type Code = {
+    unformattedCode: string;
+    formattedCode: string;
+  };
+  // utility function to handle the fetching the TS and JS code
+  async function fetchCode(url: string) {
+    try {
+      const res = await fetch(url);
+      if (res.ok) {
+        // will be used to append to make the demo component functional
+        const unformattedCode = await res.text();
+        // will be used to display the code in the hacks page as visible text
+        const formattedCode = formatCode(unformattedCode);
+        return { unformattedCode, formattedCode };
+      }
+      throw new Error('Error fetching and/or formatting code');
+    } catch (error) {
+      console.error(error);
+    }
+  }
   async function fetchTsCode() {
-    const res = await fetch(
-      `https://cdn.jsdelivr.net/gh/finsweet/hacks@63328a66ee8745471271deb49fea87106073fff4/src/webflow-hacks/${hackName}/${hackName}.ts`
-    );
-    if (res.ok) {
-      const tsCode = await res.text();
-      const tsWrapper = document.querySelector('[fs-element="ts_wrapper"]');
+    try {
+      const url = `https://cdn.jsdelivr.net/gh/finsweet/hacks@63328a66ee8745471271deb49fea87106073fff4/src/webflow-hacks/${hackName}/${hackName}.ts`;
+      const code = (await fetchCode(url)) as Code;
+      const tsCode = code.formattedCode;
+      const tsWrapper = document.querySelector('[fs-element="ts_wrapper"]') as HTMLElement;
       if (!tsWrapper) {
         throw new Error('Error selecting TS wrapper');
       }
-      const formattedCode = formatCode(tsCode);
-      tsWrapper.innerHTML = formattedCode;
-    } else {
-      throw new Error('Error fetching TS code');
+
+      tsWrapper.innerHTML = tsCode;
+    } catch (error) {
+      console.error(error);
     }
   }
-  fetchTsCode();
 
   async function fetchJsCode() {
-    const res = await fetch(
-      `https://cdn.jsdelivr.net/gh/finsweet/hacks@63328a66ee8745471271deb49fea87106073fff4/src/webflow-hacks/${hackName}/${hackName}.js`
-    );
-    if (res.ok) {
-      const jsCode = await res.text();
-      const jsWrapper = document.querySelector('[fs-element="js_wrapper"]');
+    try {
+      const url = `https://cdn.jsdelivr.net/gh/finsweet/hacks@63328a66ee8745471271deb49fea87106073fff4/src/webflow-hacks/${hackName}/${hackName}.js`;
+      const code = (await fetchCode(url)) as Code;
+      const { formattedCode } = code;
+      const { unformattedCode } = code;
+      const jsWrapper = document.querySelector('[fs-element="js_wrapper"]') as HTMLElement;
       if (!jsWrapper) {
         throw new Error('Error selecting JS wrapper');
       }
-      const formattedCode = formatCode(jsCode);
       jsWrapper.innerHTML = formattedCode;
-      // wait for demo component to render appending JS code
-      await fetchDemoComponent();
-      return jsCode;
-    }
-    {
-      throw new Error('Error fetching JS code');
+      return unformattedCode;
+    } catch (error) {
+      console.error(error);
     }
   }
 
   // append js code to make the demo component functional
-  const appendJsCode = (jsCode: string) => {
+  const appendJsCode = (formattedCode: string) => {
     const script = document.createElement('script');
-    script.innerHTML = jsCode;
+    script.innerHTML = formattedCode;
     document.body.appendChild(script);
 
     // Dispatch the DOMContentLoaded event to trigger hack JS
     const event = new Event('DOMContentLoaded');
     document.dispatchEvent(event);
   };
-  fetchJsCode().then(appendJsCode);
+
+  async function fetchAllElements() {
+    try {
+      await fetchDemoComponent();
+      await fetchTsCode();
+      const formattedCode = (await fetchJsCode()) as string;
+      appendJsCode(formattedCode);
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
+  fetchAllElements();
 });
 appendHeadScript(SELECTORS.CODE_HIGHLIGHT_ATTR_URL);
