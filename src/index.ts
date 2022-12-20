@@ -112,10 +112,10 @@ window.Webflow.push(() => {
       console.error(error);
     }
   };
-  const element = document.querySelector('div') as HTMLElement;
-  const componentCopyButton = document.querySelector('[fs-copy-component]');
-  if (!componentCopyButton) return;
-
+  const copyComponentButton = document.querySelector('[fs-copy-component]') as HTMLElement;
+  if (!copyComponentButton) {
+    throw new Error('Could not select component copy button');
+  }
   const fetchComponentJSON = async () => {
     // !! TO DO: dynamically fetch the latest commit version, i.e. text after the @
     const url = `https://cdn.jsdelivr.net/gh/finsweet/hacks@e497915603641fbca41c80a50666b1023dd8056d/src/webflow-hacks/${hackName}/${hackName}.json`;
@@ -127,13 +127,15 @@ window.Webflow.push(() => {
     }
   };
 
-  componentCopyButton.addEventListener('click', async () => {
+  const copyComponentJSON = async () => {
     const copyData = await fetchComponentJSON();
+    const copyComponentButton = document.querySelector('.copy-button_component') as HTMLElement;
     new CopyJSONButton({
-      element,
+      element: copyComponentButton,
       copyData,
     });
-  });
+  };
+  copyComponentJSON();
 
   fetchAllElements();
 });
