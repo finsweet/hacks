@@ -60,13 +60,13 @@ window.Webflow.push(() => {
     try {
       const url = `https://cdn.jsdelivr.net/gh/finsweet/hacks@63328a66ee8745471271deb49fea87106073fff4/src/webflow-hacks/${hackName}/${hackName}.ts`;
       const code = (await fetchCode(url)) as Code;
-      const tsCode = code.formattedCode;
+      const { formattedCode } = code;
       const tsWrapper = document.querySelector('[fs-element="ts_wrapper"]') as HTMLElement;
       if (!tsWrapper) {
         throw new Error('Error selecting TS wrapper');
       }
 
-      tsWrapper.innerHTML = tsCode;
+      tsWrapper.innerHTML = formattedCode;
     } catch (error) {
       console.error(error);
     }
@@ -94,7 +94,6 @@ window.Webflow.push(() => {
     const script = document.createElement('script');
     script.innerHTML = formattedCode;
     document.body.appendChild(script);
-
     // Dispatch the DOMContentLoaded event to trigger hack JS
     const event = new Event('DOMContentLoaded');
     document.dispatchEvent(event);
@@ -104,8 +103,10 @@ window.Webflow.push(() => {
     try {
       await fetchDemoComponent();
       await fetchTsCode();
-      const formattedCode = (await fetchJsCode()) as string;
-      appendJsCode(formattedCode);
+      const unformattedCode = (await fetchJsCode()) as string;
+      appendJsCode(unformattedCode);
+      // highlight code
+      appendHeadScript(SELECTORS.CODE_HIGHLIGHT_ATTR_URL);
     } catch (error) {
       console.error(error);
     }
@@ -113,4 +114,3 @@ window.Webflow.push(() => {
 
   fetchAllElements();
 });
-appendHeadScript(SELECTORS.CODE_HIGHLIGHT_ATTR_URL);
