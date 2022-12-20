@@ -14,7 +14,7 @@ window.Webflow.push(() => {
     throw new Error('Error retrieving hack name');
   }
 
-  async function fetchDemoComponent() {
+  const fetchDemoComponent = async () => {
     const demoContainer = document.querySelector('[fs-element="demo_container"]');
     if (!demoContainer) {
       throw new Error('Could not fetch demo container on template page');
@@ -36,14 +36,14 @@ window.Webflow.push(() => {
     } else {
       throw new Error('Could not fetch demo component');
     }
-  }
+  };
 
   type Code = {
     unformattedCode: string;
     formattedCode: string;
   };
   // utility function to handle the fetching the TS and JS code
-  async function fetchCode(url: string) {
+  const fetchCode = async (url: string) => {
     try {
       const res = await fetch(url);
       if (res.ok) {
@@ -57,8 +57,8 @@ window.Webflow.push(() => {
     } catch (error) {
       console.error(error);
     }
-  }
-  async function fetchTsCode() {
+  };
+  const fetchTsCode = async () => {
     try {
       const url = `https://cdn.jsdelivr.net/gh/finsweet/hacks@63328a66ee8745471271deb49fea87106073fff4/src/webflow-hacks/${hackName}/${hackName}.ts`;
       const code = (await fetchCode(url)) as Code;
@@ -71,9 +71,9 @@ window.Webflow.push(() => {
     } catch (error) {
       console.error(error);
     }
-  }
+  };
 
-  async function fetchJsCode() {
+  const fetchJsCode = async () => {
     try {
       const url = `https://cdn.jsdelivr.net/gh/finsweet/hacks@63328a66ee8745471271deb49fea87106073fff4/src/webflow-hacks/${hackName}/${hackName}.js`;
       const code = (await fetchCode(url)) as Code;
@@ -88,7 +88,7 @@ window.Webflow.push(() => {
     } catch (error) {
       console.error(error);
     }
-  }
+  };
 
   // append js code to make the demo component functional
   const appendJsCode = (formattedCode: string) => {
@@ -100,7 +100,7 @@ window.Webflow.push(() => {
     document.dispatchEvent(event);
   };
 
-  async function fetchAllElements() {
+  const fetchAllElements = async () => {
     try {
       await fetchDemoComponent();
       await fetchTsCode();
@@ -111,7 +111,7 @@ window.Webflow.push(() => {
     } catch (error) {
       console.error(error);
     }
-  }
+  };
   const element = document.querySelector('div') as HTMLElement;
   const componentCopyButton = document.querySelector('[fs-copy-component]');
   if (!componentCopyButton) return;
