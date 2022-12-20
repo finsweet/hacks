@@ -19,3 +19,30 @@ export const appendHeadScript = async (url: string) => {
   script.src = url;
   await document.head.appendChild(script);
 };
+
+// utility function to handle the fetching the TS and JS code
+export const fetchCode = async (url: string) => {
+  try {
+    const res = await fetch(url);
+    if (res.ok) {
+      // will be used to append to make the demo component functional
+      const unformattedCode = await res.text();
+      // will be used to display the code in the hacks page as visible text
+      const formattedCode = formatCode(unformattedCode);
+      return { unformattedCode, formattedCode };
+    }
+    throw new Error('Error fetching and/or formatting code');
+  } catch (error) {
+    console.error(error);
+  }
+};
+
+// append js code to make the demo component functional
+export const appendJsCode = (formattedCode: string) => {
+  const script = document.createElement('script');
+  script.innerHTML = formattedCode;
+  document.body.appendChild(script);
+  // Dispatch the DOMContentLoaded event to trigger hack JS
+  const event = new Event('DOMContentLoaded');
+  document.dispatchEvent(event);
+};

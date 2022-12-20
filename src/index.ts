@@ -1,7 +1,7 @@
 import { CopyJSONButton } from '@finsweet/ts-utils';
 
 import { SELECTORS } from '$utils/constants';
-import { formatCode, appendHeadScript } from '$utils/domUtils';
+import { appendHeadScript, fetchCode, appendJsCode } from '$utils/domUtils';
 
 window.Webflow ||= [];
 window.Webflow.push(() => {
@@ -42,22 +42,7 @@ window.Webflow.push(() => {
     unformattedCode: string;
     formattedCode: string;
   };
-  // utility function to handle the fetching the TS and JS code
-  const fetchCode = async (url: string) => {
-    try {
-      const res = await fetch(url);
-      if (res.ok) {
-        // will be used to append to make the demo component functional
-        const unformattedCode = await res.text();
-        // will be used to display the code in the hacks page as visible text
-        const formattedCode = formatCode(unformattedCode);
-        return { unformattedCode, formattedCode };
-      }
-      throw new Error('Error fetching and/or formatting code');
-    } catch (error) {
-      console.error(error);
-    }
-  };
+
   const fetchTsCode = async () => {
     try {
       const url = `https://cdn.jsdelivr.net/gh/finsweet/hacks@63328a66ee8745471271deb49fea87106073fff4/src/webflow-hacks/${hackName}/${hackName}.ts`;
@@ -90,16 +75,6 @@ window.Webflow.push(() => {
     }
   };
 
-  // append js code to make the demo component functional
-  const appendJsCode = (formattedCode: string) => {
-    const script = document.createElement('script');
-    script.innerHTML = formattedCode;
-    document.body.appendChild(script);
-    // Dispatch the DOMContentLoaded event to trigger hack JS
-    const event = new Event('DOMContentLoaded');
-    document.dispatchEvent(event);
-  };
-
   const fetchAllElements = async () => {
     try {
       await fetchDemoComponent();
@@ -108,10 +83,12 @@ window.Webflow.push(() => {
       appendJsCode(unformattedCode);
       // highlight code
       appendHeadScript(SELECTORS.CODE_HIGHLIGHT_ATTR_URL);
+      copyComponentJSON();
     } catch (error) {
       console.error(error);
     }
   };
+
   const copyComponentButton = document.querySelector('[fs-copy-component]') as HTMLElement;
   if (!copyComponentButton) {
     throw new Error('Could not select component copy button');
@@ -135,7 +112,6 @@ window.Webflow.push(() => {
       copyData,
     });
   };
-  copyComponentJSON();
 
   fetchAllElements();
 });
