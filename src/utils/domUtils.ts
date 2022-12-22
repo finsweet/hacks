@@ -1,5 +1,8 @@
 import { CopyJSONButton } from '@finsweet/ts-utils';
 
+import { hackName, copyComponentButton } from '$utils/constants';
+import type { Code } from '$utils/types';
+
 /**
  * Prepare code for display on DOM
  * @param code string
@@ -49,20 +52,12 @@ export const appendJsCode = async (formattedCode: string) => {
   document.dispatchEvent(event);
 };
 
-const hackNameElement = document.querySelector('[fs-element="hack_name"]');
-if (!hackNameElement) {
-  throw new Error('Error retrieving hack name element');
-}
-const hackName = hackNameElement.innerHTML;
-if (!hackName) {
-  throw new Error('Error retrieving hack name');
-}
-
 export const fetchDemoComponent = async () => {
   const demoContainer = document.querySelector('[fs-element="demo_container"]');
   if (!demoContainer) {
     throw new Error('Could not fetch demo container on template page');
   }
+
   const res = await fetch('https://hacks-in-ts-ae00034f9e8a6fd53d30a742748.webflow.io/components');
   if (res.ok) {
     const html = await res.text();
@@ -80,12 +75,10 @@ export const fetchDemoComponent = async () => {
   }
 };
 
-type Code = {
-  unformattedCode: string;
-  formattedCode: string;
-};
-
 export const fetchTsCode = async () => {
+  if (!hackName) {
+    throw new Error('Error retrieving hack name');
+  }
   try {
     const url = `https://cdn.jsdelivr.net/gh/finsweet/hacks@63328a66ee8745471271deb49fea87106073fff4/src/webflow-hacks/${hackName}/${hackName}.ts`;
     const code = (await fetchCode(url)) as Code;
@@ -117,11 +110,10 @@ export const fetchJsCode = async () => {
   }
 };
 
-const copyComponentButton = document.querySelector('[fs-copy-component]') as HTMLElement;
-if (!copyComponentButton) {
-  throw new Error('Could not select component copy button');
-}
 const fetchComponentJSON = async () => {
+  if (!hackName) {
+    throw new Error('Error retrieving hack name');
+  }
   // !! TO DO: dynamically fetch the latest commit version, i.e. text after the @
   const url = `https://cdn.jsdelivr.net/gh/finsweet/hacks@e497915603641fbca41c80a50666b1023dd8056d/src/webflow-hacks/${hackName}/${hackName}.json`;
   try {
@@ -134,7 +126,9 @@ const fetchComponentJSON = async () => {
 
 export const copyComponentJSON = async () => {
   const copyData = await fetchComponentJSON();
-  const copyComponentButton = document.querySelector('.copy-button_component') as HTMLElement;
+  if (!copyComponentButton) {
+    throw new Error('Could not select component copy button');
+  }
   new CopyJSONButton({
     element: copyComponentButton,
     copyData,
