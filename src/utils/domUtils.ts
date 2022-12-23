@@ -134,3 +134,42 @@ export const copyComponentJSON = async () => {
     copyData,
   });
 };
+
+// notify the user that the code has been copied
+const changeCopyButtonText = (buttonElement: HTMLElement) => {
+  const previousText = buttonElement.innerText;
+  buttonElement.innerText = 'Copied!';
+  setTimeout(() => {
+    buttonElement.innerText = previousText;
+  }, 2000);
+};
+
+export const copySpanText = () => {
+  const copyButtons = document.querySelectorAll('[fs-copyclip-element="click"]');
+  copyButtons.forEach((button) => {
+    // listen to ts and js copy buttons
+    button.addEventListener('click', () => {
+      const activeTab = document.querySelector('.w--tab-active');
+      if (!activeTab) return;
+      // Get code of active tab (TS or JS)
+      const code = activeTab.getElementsByTagName('code')[0].innerText;
+      const copyText = code;
+
+      // Create a temporary element for the text
+      const tempInput = document.createElement('textarea');
+      tempInput.innerHTML = copyText;
+
+      // Add the temporary element to the DOM and select it
+      document.body.appendChild(tempInput);
+      tempInput.select();
+
+      // Copy the text to the clipboard
+      document.execCommand('copy');
+
+      // Remove the temporary element from the DOM
+      document.body.removeChild(tempInput);
+      const buttonElement = button.lastChild as HTMLDivElement;
+      changeCopyButtonText(buttonElement);
+    });
+  });
+};
