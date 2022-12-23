@@ -144,7 +144,7 @@ const changeCopyButtonText = (buttonElement: HTMLElement) => {
   }, 2000);
 };
 
-export const copySpanText = () => {
+export const copyCode = () => {
   const copyButtons = document.querySelectorAll('[fs-copyclip-element="click"]');
   copyButtons.forEach((button) => {
     // listen to ts and js copy buttons

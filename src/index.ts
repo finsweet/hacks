@@ -6,7 +6,7 @@ import {
   fetchTsCode,
   fetchJsCode,
   copyComponentJSON,
-  copySpanText,
+  copyCode,
 } from '$utils/domUtils';
 
 window.Webflow ||= [];
@@ -22,7 +22,8 @@ window.Webflow.push(() => {
       appendHeadScript(SELECTORS.CODE_HIGHLIGHT_ATTR_URL);
       // copy JSON function
       copyComponentJSON();
-      copySpanText();
+      // copy JS/TS code function
+      copyCode();
     } catch (error) {
       console.error(error);
     }
