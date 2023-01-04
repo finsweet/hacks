@@ -19,11 +19,11 @@ const formatCode = (code: string) => {
  * Add sript tag to head of document.
  * @param url the src string
  */
-export const appendHeadScript = async (url: string) => {
+export const appendHeadScript = (url: string) => {
   const script = document.createElement('script');
   script.type = 'text/javascript';
   script.src = url;
-  await document.head.appendChild(script);
+  document.head.appendChild(script);
 };
 
 // utility function to handle the fetching the TS and JS code
@@ -40,7 +40,7 @@ const fetchCode = async (url: string) => {
 };
 
 // append js code to make the demo component functional
-export const appendJsCode = async (formattedCode: string) => {
+export const appendJsCode = (formattedCode: string) => {
   const script = document.createElement('script');
   script.innerHTML = formattedCode;
   document.body.appendChild(script);
