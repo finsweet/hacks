@@ -15,7 +15,7 @@ window.Webflow.push(() => {
     try {
       await fetchDemoComponent();
       await fetchTsCode();
-      const javascript = (await fetchJsCode()) as string;
+      const javascript = await fetchJsCode();
       // append js code to make the demo component functional
       appendJsCode(javascript);
       // highlight code

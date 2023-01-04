@@ -1,4 +1,4 @@
-export type Code = {
-  unformattedCode: string;
-  formattedCode: string;
-};
+// export type Code = {
+//   unformattedCode: string;
+//   formattedCode: string;
+// };

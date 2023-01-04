@@ -1,7 +1,8 @@
 import { CopyJSONButton } from '@finsweet/ts-utils';
 
 import { hackName, copyComponentButton } from '$utils/constants';
-import type { Code } from '$utils/types';
+
+// import type { Code } from '$utils/types';
 
 /**
  * Prepare code for display on DOM
@@ -27,19 +28,15 @@ export const appendHeadScript = async (url: string) => {
 
 // utility function to handle the fetching the TS and JS code
 const fetchCode = async (url: string) => {
-  try {
-    const res = await fetch(url);
-    if (res.ok) {
-      // will be used to append to make the demo component functional
-      const unformattedCode = await res.text();
-      // will be used to display the code in the hacks page as visible text
-      const formattedCode = formatCode(unformattedCode);
-      return { unformattedCode, formattedCode };
-    }
-    throw new Error('Error fetching and/or formatting code');
-  } catch (error) {
-    console.error(error);
+  const res = await fetch(url);
+  if (res.ok) {
+    // will be used to append to make the demo component functional
+    const unformattedCode = await res.text();
+    // will be used to display the code in the hacks page as visible text
+    const formattedCode = formatCode(unformattedCode);
+    return { unformattedCode, formattedCode };
   }
+  throw new Error('Error fetching and/or formatting code');
 };
 
 // append js code to make the demo component functional
@@ -79,35 +76,27 @@ export const fetchTsCode = async () => {
   if (!hackName) {
     throw new Error('Error retrieving hack name');
   }
-  try {
-    const url = `https://cdn.jsdelivr.net/gh/finsweet/hacks@63328a66ee8745471271deb49fea87106073fff4/src/webflow-hacks/${hackName}/${hackName}.ts`;
-    const code = (await fetchCode(url)) as Code;
-    const { formattedCode } = code;
-    const tsWrapper = document.querySelector('[fs-element="ts_wrapper"]') as HTMLElement;
-    if (!tsWrapper) {
-      throw new Error('Error selecting TS wrapper');
-    }
-    tsWrapper.innerHTML = formattedCode;
-  } catch (error) {
-    console.error(error);
+  const url = `https://cdn.jsdelivr.net/gh/finsweet/hacks@63328a66ee8745471271deb49fea87106073fff4/src/webflow-hacks/${hackName}/${hackName}.ts`;
+  const code = await fetchCode(url);
+  const { formattedCode } = code;
+  const tsWrapper = document.querySelector('[fs-element="ts_wrapper"]') as HTMLElement;
+  if (!tsWrapper) {
+    throw new Error('Error selecting TS wrapper');
   }
+  tsWrapper.innerHTML = formattedCode;
 };
 
 export const fetchJsCode = async () => {
-  try {
-    const url = `https://cdn.jsdelivr.net/gh/finsweet/hacks@63328a66ee8745471271deb49fea87106073fff4/src/webflow-hacks/${hackName}/${hackName}.js`;
-    const code = (await fetchCode(url)) as Code;
-    const { formattedCode } = code;
-    const { unformattedCode } = code;
-    const jsWrapper = document.querySelector('[fs-element="js_wrapper"]') as HTMLElement;
-    if (!jsWrapper) {
-      throw new Error('Error selecting JS wrapper');
-    }
-    jsWrapper.innerHTML = formattedCode;
-    return unformattedCode;
-  } catch (error) {
-    console.error(error);
+  const url = `https://cdn.jsdelivr.net/gh/finsweet/hacks@63328a66ee8745471271deb49fea87106073fff4/src/webflow-hacks/${hackName}/${hackName}.js`;
+  const code = await fetchCode(url);
+  const { formattedCode } = code;
+  const { unformattedCode } = code;
+  const jsWrapper = document.querySelector('[fs-element="js_wrapper"]') as HTMLElement;
+  if (!jsWrapper) {
+    throw new Error('Error selecting JS wrapper');
   }
+  jsWrapper.innerHTML = formattedCode;
+  return unformattedCode;
 };
 
 const fetchComponentJSON = async () => {
@@ -116,12 +105,9 @@ const fetchComponentJSON = async () => {
   }
   // !! TO DO: dynamically fetch the latest commit version, i.e. text after the @
   const url = `https://cdn.jsdelivr.net/gh/finsweet/hacks@e497915603641fbca41c80a50666b1023dd8056d/src/webflow-hacks/${hackName}/${hackName}.json`;
-  try {
-    const componentJSON = await fetch(url);
-    return componentJSON.json();
-  } catch (error) {
-    console.error(error);
-  }
+
+  const componentJSON = await fetch(url);
+  return componentJSON.json();
 };
 
 export const copyComponentJSON = async () => {
