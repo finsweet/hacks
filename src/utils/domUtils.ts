@@ -159,3 +159,42 @@ export const copyCode = () => {
     });
   });
 };
+
+export const storeUserPreference = () => {
+  // when the user clicks on JS or TS, store the preference in local storage
+  const tabButtons = document.querySelectorAll('[fs-button-element="tab_button"]');
+  tabButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+      const attributeValue = button.getAttribute('fs-type-element');
+      if (!attributeValue) return;
+      const getUserPreference = () => {
+        if (attributeValue === 'js') {
+          const preference = 'js';
+          return preference;
+        }
+        {
+          const preference = 'ts';
+          return preference;
+        }
+      };
+      const preference = getUserPreference();
+      localStorage.setItem('userPreference', preference);
+    });
+  });
+};
+export const getUserPreference = () => {
+  function setDefaultTab() {
+    // code to set default tab goes here
+    const pref = localStorage.getItem('userPreference');
+    if (pref === 'js') {
+      const jsTab = document.querySelector('[fs-type-element="js"]');
+      if (!jsTab) return;
+      jsTab.click();
+    } else {
+      const tsTab = document.querySelector('[fs-type-element="ts"]');
+      if (!tsTab) return;
+      tsTab.click();
+    }
+  }
+  setDefaultTab();
+};

@@ -7,10 +7,14 @@ import {
   fetchJsCode,
   copyComponentJSON,
   copyCode,
+  storeUserPreference,
+  getUserPreference,
 } from '$utils/domUtils';
 
 window.Webflow ||= [];
 window.Webflow.push(() => {
+  getUserPreference();
+
   const fetchAllElements = async () => {
     try {
       await Promise.all([
@@ -29,6 +33,8 @@ window.Webflow.push(() => {
       copyComponentJSON();
       // copy JS/TS code function
       copyCode();
+      //store user preferences to set JS or TS code as default
+      storeUserPreference();
     } catch (error) {
       console.error(error);
     }
