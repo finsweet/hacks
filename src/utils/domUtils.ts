@@ -161,8 +161,9 @@ export const copyCode = () => {
 };
 
 export const storeUserPreference = () => {
-  // when the user clicks on JS or TS, store the preference in local storage
   const tabButtons = document.querySelectorAll('[fs-button-element="tab_button"]');
+
+  // when the user clicks on JS or TS, store the preference in local storage
   tabButtons.forEach((button) => {
     button.addEventListener('click', () => {
       const attributeValue = button.getAttribute('fs-type-element');
@@ -182,15 +183,20 @@ export const storeUserPreference = () => {
     });
   });
 };
-export const getUserPreference = () => {
-  function setDefaultTab() {
-    // code to set default tab goes here
-    const pref = localStorage.getItem('userPreference');
-    if (pref === 'js') {
-      const jsTab = document.querySelector('[fs-type-element="js"]');
-      if (!jsTab) return;
-      jsTab.click();
-    }
+export const setDefaultTab = () => {
+  // code to set default tab goes here
+  const pref = localStorage.getItem('userPreference');
+  if (pref === 'js') {
+    const jsTab = document.querySelector('[fs-type-element="js"]');
+    if (!jsTab) return;
+    jsTab.click();
   }
-  setDefaultTab();
+};
+
+export const displayCodeWrapper = () => {
+  const codeWrapper = document.querySelector('[fs-div-element="code_tab_wrapper"]');
+  console.log(codeWrapper);
+  // make the code wrapper visible after user preferense was retrieved
+
+  codeWrapper?.setAttribute('style', 'display: block');
 };
