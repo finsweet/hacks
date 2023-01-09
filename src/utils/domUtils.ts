@@ -190,10 +190,6 @@ export const getUserPreference = () => {
       const jsTab = document.querySelector('[fs-type-element="js"]');
       if (!jsTab) return;
       jsTab.click();
-    } else {
-      const tsTab = document.querySelector('[fs-type-element="ts"]');
-      if (!tsTab) return;
-      tsTab.click();
     }
   }
   setDefaultTab();

@@ -13,13 +13,12 @@ import {
 
 window.Webflow ||= [];
 window.Webflow.push(() => {
-  getUserPreference();
-
+  console.log('Script loads!');
   const fetchAllElements = async () => {
     try {
-      await Promise.all([
-        fetchDemoComponent(),
-        fetchTsCode(),
+      Promise.all([
+        await fetchDemoComponent(),
+        await fetchTsCode(),
         (async () => {
           const javascript = await fetchJsCode();
           // append js code to make the demo component functional
@@ -33,6 +32,8 @@ window.Webflow.push(() => {
       copyComponentJSON();
       // copy JS/TS code function
       copyCode();
+      getUserPreference();
+
       //store user preferences to set JS or TS code as default
       storeUserPreference();
     } catch (error) {
