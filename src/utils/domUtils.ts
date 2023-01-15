@@ -112,9 +112,7 @@ const fetchComponentJSON = async () => {
 
 export const copyComponentJSON = async () => {
   const copyData = await fetchComponentJSON();
-  if (!copyComponentButton) {
-    throw new Error('Could not select component copy button');
-  }
+  if (!copyComponentButton) return;
   new CopyJSONButton({
     element: copyComponentButton,
     copyData,
@@ -195,8 +193,7 @@ export const setDefaultTab = () => {
 
 export const displayCodeWrapper = () => {
   const codeWrapper = document.querySelector('[fs-div-element="code_tab_wrapper"]');
-  console.log(codeWrapper);
+  //console.log(codeWrapper);
   // make the code wrapper visible after user preferense was retrieved
-
   codeWrapper?.setAttribute('style', 'display: block');
 };
