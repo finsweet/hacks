@@ -39,8 +39,7 @@ function setCokie(cname, cvalue, exdays) {
  * @see https://stackoverflow.com/a/25490531/104380
  */
 function getCokie(name) {
-    var _a;
-    return ((_a = document.cookie.match('(^|;)\\s*' + name + '\\s*=\\s*([^;]+)')) === null || _a === void 0 ? void 0 : _a.pop()) || null;
+    return document.cookie.match('(^|;)\\s*' + name + '\\s*=\\s*([^;]+)')?.pop() || null;
 }
 /**
  * Remove a cookie by setting it to an empty value and setting its expiration date in the past.

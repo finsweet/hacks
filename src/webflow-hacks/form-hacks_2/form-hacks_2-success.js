@@ -14,6 +14,5 @@ document.addEventListener('DOMContentLoaded', () => {
  * @see https://stackoverflow.com/a/25490531/104380
  */
 function getCookieValue(name) {
-    var _a;
-    return ((_a = document.cookie.match('(^|;)\\s*' + name + '\\s*=\\s*([^;]+)')) === null || _a === void 0 ? void 0 : _a.pop()) || '';
+    return document.cookie.match('(^|;)\\s*' + name + '\\s*=\\s*([^;]+)')?.pop() || '';
 }

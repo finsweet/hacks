@@ -1,5 +1,5 @@
 "use strict";
-window.Webflow || (window.Webflow = []);
+window.Webflow ||= [];
 window.Webflow.push(() => {
     const STORAGE_KEY = 'previousTabId';
     const tabLinks = document.querySelectorAll('.w-tab-link');
