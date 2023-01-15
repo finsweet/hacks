@@ -36,7 +36,8 @@ const fetchCode = async (url: string) => {
     const formattedCode = formatCode(unformattedCode);
     return { unformattedCode, formattedCode };
   }
-  throw new Error('Error fetching and/or formatting code');
+  //throw new Error('Error fetching and/or formatting code');
+  return;
 };
 
 // append js code to make the demo component functional
@@ -51,9 +52,7 @@ export const appendJsCode = (formattedCode: string) => {
 
 export const fetchDemoComponent = async () => {
   const demoContainer = document.querySelector('[fs-element="demo_container"]');
-  if (!demoContainer) {
-    throw new Error('Could not fetch demo container on template page');
-  }
+  if (!demoContainer) return;
 
   const res = await fetch('https://hacks-in-ts-ae00034f9e8a6fd53d30a742748.webflow.io/components');
   if (res.ok) {
@@ -63,26 +62,21 @@ export const fetchDemoComponent = async () => {
     const doc = parser.parseFromString(html, 'text/html');
     // Get the demo component
     const demoComponent = doc.querySelector(`[fs-component-name="${hackName}"]`);
-    if (!demoComponent) {
-      throw new Error('Could not fetch demo component from components page');
-    }
+    if (!demoComponent) return;
     demoContainer.prepend(demoComponent);
   } else {
-    throw new Error('Could not fetch demo component');
+    //throw new Error('Could not fetch demo component');
+    return;
   }
 };
 
 export const fetchTsCode = async () => {
-  if (!hackName) {
-    throw new Error('Error retrieving hack name');
-  }
+  if (!hackName) return;
   const url = `https://cdn.jsdelivr.net/gh/finsweet/hacks@63328a66ee8745471271deb49fea87106073fff4/src/webflow-hacks/${hackName}/${hackName}.ts`;
   const code = await fetchCode(url);
   const { formattedCode } = code;
   const tsWrapper = document.querySelector('[fs-element="ts_wrapper"]') as HTMLElement;
-  if (!tsWrapper) {
-    throw new Error('Error selecting TS wrapper');
-  }
+  if (!tsWrapper) return;
   tsWrapper.innerHTML = formattedCode;
 };
 
@@ -92,17 +86,13 @@ export const fetchJsCode = async () => {
   const { formattedCode } = code;
   const { unformattedCode } = code;
   const jsWrapper = document.querySelector('[fs-element="js_wrapper"]') as HTMLElement;
-  if (!jsWrapper) {
-    throw new Error('Error selecting JS wrapper');
-  }
+  if (!jsWrapper) return;
   jsWrapper.innerHTML = formattedCode;
   return unformattedCode;
 };
 
 const fetchComponentJSON = async () => {
-  if (!hackName) {
-    throw new Error('Error retrieving hack name');
-  }
+  if (!hackName) return;
   // !! TO DO: dynamically fetch the latest commit version, i.e. text after the @
   const url = `https://cdn.jsdelivr.net/gh/finsweet/hacks@e497915603641fbca41c80a50666b1023dd8056d/src/webflow-hacks/${hackName}/${hackName}.json`;
 
@@ -185,7 +175,7 @@ export const setDefaultTab = () => {
   // code to set default tab goes here
   const pref = localStorage.getItem('userPreference');
   if (pref === 'js') {
-    const jsTab = document.querySelector('[fs-type-element="js"]');
+    const jsTab = document.querySelector('[fs-type-element="js"]') as HTMLElement;
     if (!jsTab) return;
     jsTab.click();
   }
