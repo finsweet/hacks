@@ -17,7 +17,9 @@ window.Webflow.push(() => {
   console.log('Script loads!');
   const fetchAllElements = async () => {
     try {
-      Promise.all([
+      // await before promise prevents highlight code function from running improperly
+      await Promise.all([
+        // await inside the promise prevents some functions to run before the DOM is ready
         await fetchDemoComponent(),
         await fetchTsCode(),
         (async () => {

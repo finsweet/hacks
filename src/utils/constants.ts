@@ -7,5 +7,5 @@ export const SELECTORS = {
 
 export const copyComponentButton = document.querySelector('[fs-copy-component]') as HTMLElement;
 
-const hackNameElement = document.querySelector('[fs-element="hack_name"]') as HTMLElement;
+const hackNameElement = document.querySelector('[fs-div-element="hack_name"]') as HTMLElement;
 export const hackName = hackNameElement.innerHTML;

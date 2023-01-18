@@ -51,10 +51,21 @@ export const appendJsCode = (formattedCode: string) => {
 };
 
 export const fetchDemoComponent = async () => {
-  const demoContainer = document.querySelector('[fs-element="demo_container"]');
+  const demoContainer = document.querySelector('[fs-div-element="demo_container"]');
   if (!demoContainer) return;
 
-  const res = await fetch('https://hacks-in-ts-ae00034f9e8a6fd53d30a742748.webflow.io/components');
+  const currentUrl = window.location.href;
+  const isProduction = currentUrl.includes('finsweet.com') ? true : false;
+
+  console.log('isProduction', isProduction);
+
+  const componentsURL = isProduction
+    ? 'https://finsweet.com/hacks-typescript/components'
+    : 'https://hacks-in-ts.webflow.io/components';
+
+  const res = await fetch(componentsURL);
+  //const res = await fetch('https://hacks-in-ts-ae00034f9e8a6fd53d30a742748.webflow.io/components');
+
   if (res.ok) {
     const html = await res.text();
     const parser = new DOMParser();
@@ -75,7 +86,7 @@ export const fetchTsCode = async () => {
   const url = `https://cdn.jsdelivr.net/gh/finsweet/hacks@63328a66ee8745471271deb49fea87106073fff4/src/webflow-hacks/${hackName}/${hackName}.ts`;
   const code = await fetchCode(url);
   const { formattedCode } = code;
-  const tsWrapper = document.querySelector('[fs-element="ts_wrapper"]') as HTMLElement;
+  const tsWrapper = document.querySelector('[fs-div-element="ts_wrapper"]') as HTMLElement;
   if (!tsWrapper) return;
   tsWrapper.innerHTML = formattedCode;
 };
@@ -85,7 +96,7 @@ export const fetchJsCode = async () => {
   const code = await fetchCode(url);
   const { formattedCode } = code;
   const { unformattedCode } = code;
-  const jsWrapper = document.querySelector('[fs-element="js_wrapper"]') as HTMLElement;
+  const jsWrapper = document.querySelector('[fs-div-element="js_wrapper"]') as HTMLElement;
   if (!jsWrapper) return;
   jsWrapper.innerHTML = formattedCode;
   return unformattedCode;
@@ -93,7 +104,7 @@ export const fetchJsCode = async () => {
 
 const fetchComponentJSON = async () => {
   if (!hackName) return;
-  // !! TO DO: dynamically fetch the latest commit version, i.e. text after the @
+  // !! TO DO: if possible, dynamically fetch the latest commit version, i.e. text after the @
   const url = `https://cdn.jsdelivr.net/gh/finsweet/hacks@e497915603641fbca41c80a50666b1023dd8056d/src/webflow-hacks/${hackName}/${hackName}.json`;
 
   const componentJSON = await fetch(url);
