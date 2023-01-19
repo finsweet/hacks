@@ -1,0 +1,9 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "target": "ESNext",
+    "rootDir": "./src/webflow-hacks",
+    "removeComments": false
+  },
+  "include": ["src/webflow-hacks/**/*.ts"]
+}
