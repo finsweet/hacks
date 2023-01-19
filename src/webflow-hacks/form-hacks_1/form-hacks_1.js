@@ -1,4 +1,3 @@
-'use strict';
 // when the DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
   const SELECT_FIELD_SELECTOR = '[fs-hacks-element="interest-select-field"]';

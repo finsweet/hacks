@@ -1,4 +1,3 @@
-'use strict';
 document.addEventListener('DOMContentLoaded', () => {
   const STORAGE_KEY = 'previousTabId';
   const tabLinks = document.querySelectorAll('.w-tab-link');

@@ -1,4 +1,3 @@
-'use strict';
 document.addEventListener('DOMContentLoaded', function () {
   if (!location.search) return;
   // put params in DOM elements

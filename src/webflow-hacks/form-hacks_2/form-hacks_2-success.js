@@ -1,4 +1,3 @@
-'use strict';
 document.addEventListener('DOMContentLoaded', () => {
   const SUCCESS_DIV_SELECTOR = '[fs-hacks-element="success-text"]';
   const successDiv = document.querySelector(SUCCESS_DIV_SELECTOR);

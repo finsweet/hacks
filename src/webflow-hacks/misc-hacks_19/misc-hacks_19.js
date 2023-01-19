@@ -1,4 +1,3 @@
-'use strict';
 // when DOM is ready, run the function
 document.addEventListener('DOMContentLoaded', function () {
   // if the page url lacks a query string

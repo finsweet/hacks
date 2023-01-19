@@ -1,4 +1,3 @@
-'use strict';
 // when dom is ready
 document.addEventListener('DOMContentLoaded', function () {
   const CHECKBOX_SELECTOR = '[fs-hacks-element="checkbox"]';

@@ -1,4 +1,3 @@
-'use strict';
 // when the DOM is ready
 document.addEventListener('DOMContentLoaded', function () {
   const SHOW_PAGE_URL_SELECTOR = '[fs-hacks-element="show-page-url"]';

@@ -1,4 +1,3 @@
-'use strict';
 /* put all of this code in <head> of Site Settings if you want to
 gate every page on your site until the age gate is filled out! */
 const AGE_GATE_URL = '/success/21-age-gate';

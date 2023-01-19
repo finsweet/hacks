@@ -1,4 +1,3 @@
-'use strict';
 document.addEventListener('DOMContentLoaded', () => {
   const JOBS_COUNTER_SELECTOR = '[fs-hacks-element="cms-jobs-counter"]';
   const JOB_COUNT_SELECTOR = '[fs-hacks-element="hack3-job-count"]';

@@ -1,4 +1,3 @@
-'use strict';
 document.addEventListener('DOMContentLoaded', function () {
   const UL_SELECTOR = '[fs-hacks-element="unordered-list"]';
   const OL_SELECTOR = '[fs-hacks-element="ordered-list"]';

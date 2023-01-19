@@ -1,4 +1,3 @@
-'use strict';
 document.addEventListener('DOMContentLoaded', function () {
   const MENU_BUTTON_SELECTOR = '[fs-hacks-element="menu-button"]';
   const menuBtns = document.querySelectorAll(MENU_BUTTON_SELECTOR);

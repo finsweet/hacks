@@ -1,4 +1,3 @@
-'use strict';
 // on DOM ready
 document.addEventListener('DOMContentLoaded', function () {
   // selectors

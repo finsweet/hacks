@@ -1,4 +1,3 @@
-'use strict';
 // uses HTML5 history API to manipulate the location bar
 history.replaceState(
   '',

@@ -1,4 +1,3 @@
-'use strict';
 document.addEventListener('DOMContentLoaded', function () {
   const BUTTON_SELECTOR = '[fs-hacks-element="hack-button"]';
   const TEXT_SELECTOR = '[fs-hacks-element="hack-text"]';

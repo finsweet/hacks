@@ -1,4 +1,3 @@
-'use strict';
 /**
  * HACK 43 instructions:
  * 1. Add the radio group names correctly to each radio using the native Radio Group field in Webflow.

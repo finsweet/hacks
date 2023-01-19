@@ -1,4 +1,3 @@
-'use strict';
 document.addEventListener('DOMContentLoaded', function () {
   const WAIT_TIME = 4500;
   const COOKIE_NAME = 'seenGif';

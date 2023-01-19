@@ -1,4 +1,3 @@
-'use strict';
 // when DOM is ready
 document.addEventListener('DOMContentLoaded', function () {
   const CMS_LIST_SELECTOR = '[fs-hacks-selector="cms-list"]';

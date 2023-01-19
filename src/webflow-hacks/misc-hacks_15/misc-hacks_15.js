@@ -1,4 +1,3 @@
-'use strict';
 // when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
   // define selector constants

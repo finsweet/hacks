@@ -3,7 +3,8 @@
   "compilerOptions": {
     "target": "ESNext",
     "rootDir": "./src/webflow-hacks",
-    "removeComments": false
+    "removeComments": false,
+    "alwaysStrict": false
   },
   "include": ["src/webflow-hacks/**/*.ts"]
 }

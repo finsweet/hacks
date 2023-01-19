@@ -1,4 +1,3 @@
-'use strict';
 document.addEventListener('DOMContentLoaded', function () {
   const CHECKBOX_FIELD_SELECTOR = '[fs-hacks-element="checkbox-field"]';
   const checkBoxDivs = document.querySelectorAll(CHECKBOX_FIELD_SELECTOR);

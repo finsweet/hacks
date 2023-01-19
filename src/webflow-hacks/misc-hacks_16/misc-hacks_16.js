@@ -1,4 +1,3 @@
-'use strict';
 /**
  * This function will inject a script tag into the head section of a page.
  * @param {string} src - The source of the script tag.

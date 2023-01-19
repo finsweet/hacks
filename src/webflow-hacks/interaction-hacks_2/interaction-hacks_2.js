@@ -1,4 +1,3 @@
-'use strict';
 document.addEventListener('DOMContentLoaded', () => {
   const FORM_SELECTOR = '[fs-hacks-element="hack38-form"]';
   const SUCCESS_TRIGGER_SELECTOR = '[fs-hacks-element="hack38-form-success-trigger"]';

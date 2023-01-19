@@ -1,4 +1,3 @@
-'use strict';
 document.addEventListener('DOMContentLoaded', () => {
   const FORM_SELECTOR = '[fs-hacks-element="age-gate"]';
   const YEAR_SELECTOR = '[fs-hacks-element="year"]';

@@ -1,4 +1,3 @@
-'use strict';
 // when the DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
   const BACK_ONE_SELECTOR = '[fs-hacks-element="hack13-back-1"]';

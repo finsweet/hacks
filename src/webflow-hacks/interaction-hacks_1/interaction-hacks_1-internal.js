@@ -1,4 +1,3 @@
-'use strict';
 document.addEventListener('DOMContentLoaded', function () {
   // This is for the "Clear my 24 hour cookie" button on this Hacks template
   // this is not needed on your live site

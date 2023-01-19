@@ -1,4 +1,3 @@
-'use strict';
 // on DOM ready
 document.addEventListener('DOMContentLoaded', function () {
   const TIME_VERSION_ONE_SELECTOR = '[fs-hacks-element="time-version1"]';

@@ -1,4 +1,3 @@
-'use strict';
 const COLUMN_SELECTORS = [
   {
     type: '[fs-hacks-element="design-column"]',

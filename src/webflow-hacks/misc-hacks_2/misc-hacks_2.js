@@ -1,4 +1,3 @@
-'use strict';
 // when the DOM is ready
 document.addEventListener('DOMContentLoaded', function () {
   const FAVICON_URL =
