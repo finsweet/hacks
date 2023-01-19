@@ -1,3 +1,5 @@
+import { restartWebflow } from '@finsweet/ts-utils';
+
 import { SELECTORS } from '$utils/constants';
 import {
   appendHeadScript,
@@ -27,6 +29,8 @@ window.Webflow.push(() => {
           // append js code to make the demo component functional
           appendJsCode(javascript);
         })(),
+        // restart webflow to process appended forms (only needed for hacks with forms)
+        restartWebflow(),
       ]);
 
       // highlight code
