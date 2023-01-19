@@ -1,27 +1,24 @@
-"use strict";
+'use strict';
 document.addEventListener('DOMContentLoaded', function () {
-    const PAGE_WRAPPER_SELECTOR = '[fs-hacks-element="page-wrapper"]';
-    const LOADING_WRAPPER_SELECTOR = '[fs-hacks-element="hack10-loading-wrapper"]';
-    const pageWrapper = document.querySelector(PAGE_WRAPPER_SELECTOR);
-    if (!pageWrapper)
-        return;
-    pageWrapper.style.display = 'none';
-    const loadingWrapper = document.querySelector(LOADING_WRAPPER_SELECTOR);
-    if (!loadingWrapper)
-        return;
-    // get the 'seenAnimation' cookie
-    const seenAnimation = getCookie('seenAnimation');
-    if (!seenAnimation) {
-        loadingWrapper.style.display = 'flex';
-        setTimeout(() => {
-            pageWrapper.style.display = 'block';
-        }, 3000);
-        setCookie('seenAnimation', '1', 1);
-    }
-    else {
-        loadingWrapper.style.visibility = 'hidden';
-        pageWrapper.style.display = 'block';
-    }
+  const PAGE_WRAPPER_SELECTOR = '[fs-hacks-element="page-wrapper"]';
+  const LOADING_WRAPPER_SELECTOR = '[fs-hacks-element="hack10-loading-wrapper"]';
+  const pageWrapper = document.querySelector(PAGE_WRAPPER_SELECTOR);
+  if (!pageWrapper) return;
+  pageWrapper.style.display = 'none';
+  const loadingWrapper = document.querySelector(LOADING_WRAPPER_SELECTOR);
+  if (!loadingWrapper) return;
+  // get the 'seenAnimation' cookie
+  const seenAnimation = getCookie('seenAnimation');
+  if (!seenAnimation) {
+    loadingWrapper.style.display = 'flex';
+    setTimeout(() => {
+      pageWrapper.style.display = 'block';
+    }, 3000);
+    setCookie('seenAnimation', '1', 1);
+  } else {
+    loadingWrapper.style.visibility = 'hidden';
+    pageWrapper.style.display = 'block';
+  }
 });
 /**
  * Set a cookie.
@@ -30,10 +27,10 @@ document.addEventListener('DOMContentLoaded', function () {
  * @param exdays The number of days until the cookie expires.
  */
 function setCookie(cname, cvalue, exdays) {
-    const d = new Date();
-    d.setTime(d.getTime() + exdays * 24 * 60 * 60 * 1000);
-    const expires = 'expires=' + d.toUTCString();
-    document.cookie = cname + '=' + cvalue + ';' + expires + ';path=/';
+  const d = new Date();
+  d.setTime(d.getTime() + exdays * 24 * 60 * 60 * 1000);
+  const expires = 'expires=' + d.toUTCString();
+  document.cookie = cname + '=' + cvalue + ';' + expires + ';path=/';
 }
 /**
  * Get a cookie by name.
@@ -42,5 +39,5 @@ function setCookie(cname, cvalue, exdays) {
  * @see https://stackoverflow.com/a/25490531/104380
  */
 function getCookie(name) {
-    return document.cookie.match('(^|;)\\s*' + name + '\\s*=\\s*([^;]+)')?.pop() || null;
+  return document.cookie.match('(^|;)\\s*' + name + '\\s*=\\s*([^;]+)')?.pop() || null;
 }

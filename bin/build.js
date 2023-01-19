@@ -26,7 +26,11 @@ if (production) {
   esbuild.build(defaultSettings);
 
   // Transpile and format webflow-hacks
-  exec('tsc --project tsconfig.hacks.json', () => exec('prettier --write ./src/webflow-hacks'));
+  exec('tsc --project tsconfig.hacks.json', () => {
+    exec('eslint --ignore-path .gitignore ./src/webflow-hacks --fix', () => {
+      exec('prettier --write ./src/webflow-hacks');
+    });
+  });
 }
 
 // Files serving

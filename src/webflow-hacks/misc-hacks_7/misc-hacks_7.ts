@@ -14,5 +14,9 @@ document.addEventListener('DOMContentLoaded', function () {
  * Remove the hash from the URL.
  */
 function removeHash() {
-  history.replaceState('', document.title, window.location.origin + window.location.pathname + window.location.search);
+  history.replaceState(
+    '',
+    document.title,
+    window.location.origin + window.location.pathname + window.location.search
+  );
 }

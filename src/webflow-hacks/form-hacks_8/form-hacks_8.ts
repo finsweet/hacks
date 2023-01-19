@@ -17,6 +17,24 @@ document.addEventListener('DOMContentLoaded', function () {
   );
   if (!totalValueDiv || !hiddenTotalInput) return;
 
+  /***
+   * This function updates the totals div and the hidden input
+   * @param total
+   * @param totalValueDiv
+   * @param hiddenTotalInput
+   */
+  const updateTotals = (
+    total: number,
+    totalValueDiv: HTMLDivElement,
+    hiddenTotalInput: HTMLInputElement
+  ) => {
+    // format sum e.g. 3500 to 3,500
+    const formattedSum = new Intl.NumberFormat().format(total);
+    totalValueDiv.innerText = formattedSum;
+    // add the sum value to the hidden input
+    hiddenTotalInput.value = formattedSum;
+  };
+
   let brandingTotal = 0;
   let developmentTotal = 0;
 
@@ -40,17 +58,3 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 });
-
-/***
- * This function updates the totals div and the hidden input
- * @param total
- * @param totalValueDiv
- * @param hiddenTotalInput
- */
-const updateTotals = (total: number, totalValueDiv: HTMLDivElement, hiddenTotalInput: HTMLInputElement) => {
-  // format sum e.g. 3500 to 3,500
-  const formattedSum = new Intl.NumberFormat().format(total);
-  totalValueDiv.innerText = formattedSum;
-  // add the sum value to the hidden input
-  hiddenTotalInput.value = formattedSum;
-};

@@ -1,11 +1,11 @@
-"use strict";
+'use strict';
 document.addEventListener('DOMContentLoaded', () => {
-    const SUCCESS_DIV_SELECTOR = '[fs-hacks-element="success-text"]';
-    const successDiv = document.querySelector(SUCCESS_DIV_SELECTOR);
-    if (!successDiv)
-        return;
-    const customSuccessMessage = getCookieValue('successTextCookie');
-    successDiv.innerText = "We'll focus on " + customSuccessMessage + " for future F'in sweet Webflow Hacks!";
+  const SUCCESS_DIV_SELECTOR = '[fs-hacks-element="success-text"]';
+  const successDiv = document.querySelector(SUCCESS_DIV_SELECTOR);
+  if (!successDiv) return;
+  const customSuccessMessage = getCookieValue('successTextCookie');
+  successDiv.innerText =
+    "We'll focus on " + customSuccessMessage + " for future F'in sweet Webflow Hacks!";
 });
 /**
  * Get a cookie by name.
@@ -14,5 +14,5 @@ document.addEventListener('DOMContentLoaded', () => {
  * @see https://stackoverflow.com/a/25490531/104380
  */
 function getCookieValue(name) {
-    return document.cookie.match('(^|;)\\s*' + name + '\\s*=\\s*([^;]+)')?.pop() || '';
+  return document.cookie.match('(^|;)\\s*' + name + '\\s*=\\s*([^;]+)')?.pop() || '';
 }

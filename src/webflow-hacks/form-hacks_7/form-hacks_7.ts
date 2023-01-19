@@ -7,7 +7,27 @@ document.addEventListener('DOMContentLoaded', function () {
   const totalValueDiv = document.querySelector<HTMLDivElement>(TOTAL_SELECTOR);
   const hiddenTotalInput = document.querySelector<HTMLInputElement>(HIDDEN_INPUT_SELECTOR);
   if (checkboxes.length === 0 || !totalValueDiv || !hiddenTotalInput) return;
+
+  /***
+   * This function updates the totals div and the hidden input
+   * @param total
+   * @param totalValueDiv
+   * @param hiddenTotalInput
+   */
+  const updateTotals = (
+    total: number,
+    totalValueDiv: HTMLDivElement,
+    hiddenTotalInput: HTMLInputElement
+  ) => {
+    // format sum e.g. 3500 to 3,500
+    const formattedSum = new Intl.NumberFormat().format(total);
+    totalValueDiv.innerText = formattedSum;
+    // add the sum value to the hidden input
+    hiddenTotalInput.value = formattedSum;
+  };
+
   let sum = 0;
+
   for (const checkbox of checkboxes) {
     // find initial totals on page load
     const amountToBeAdded = Number(checkbox.getAttribute('add-value'));
@@ -28,17 +48,3 @@ document.addEventListener('DOMContentLoaded', function () {
   // update totals on page load
   updateTotals(sum, totalValueDiv, hiddenTotalInput);
 });
-
-/***
- * This function updates the totals div and the hidden input
- * @param total
- * @param totalValueDiv
- * @param hiddenTotalInput
- */
-const updateTotals = (total: number, totalValueDiv: HTMLDivElement, hiddenTotalInput: HTMLInputElement) => {
-  // format sum e.g. 3500 to 3,500
-  const formattedSum = new Intl.NumberFormat().format(total);
-  totalValueDiv.innerText = formattedSum;
-  // add the sum value to the hidden input
-  hiddenTotalInput.value = formattedSum;
-};
