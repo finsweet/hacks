@@ -134,7 +134,7 @@ export const copyCode = () => {
   copyButtons.forEach((button) => {
     // listen to ts and js copy buttons
     button.addEventListener('click', () => {
-      const codeTabMenu = document.querySelector('[fs-div-element="code_tab_menu"]');
+      const codeTabMenu = document.querySelector('[fs-div-element="code_tab_content"]');
       const activeTab = codeTabMenu.querySelector('.w--tab-active');
       if (!activeTab) return;
       // Get code of active tab (TS or JS)
