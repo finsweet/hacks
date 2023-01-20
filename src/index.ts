@@ -11,18 +11,22 @@ import {
   copyCode,
   storeUserPreference,
   setActiveTab,
-  displayCodeWrapper,
+  displayCodeSection,
+  displayDemoSection,
 } from '$utils/domUtils';
 
 window.Webflow ||= [];
 window.Webflow.push(() => {
   console.log('Script loads!');
+  // set default JS/TS tab according to user preference
+  setActiveTab();
   const fetchAllElements = async () => {
     try {
       // await before promise prevents highlight code function from running improperly
       await Promise.all([
         // await inside the promise prevents some functions to run before the DOM is ready
         await fetchDemoComponent(),
+
         await fetchTsCode(),
         (async () => {
           const javascript = await fetchJsCode();
@@ -32,17 +36,17 @@ window.Webflow.push(() => {
         // restart webflow to process appended forms (only needed for hacks with forms)
         restartWebflow(),
       ]);
-
       // highlight code
       appendHeadScript(SELECTORS.CODE_HIGHLIGHT_ATTR_URL);
       // copy JSON function
       copyComponentJSON();
       // copy JS/TS code function
       copyCode();
-      // set default JS/TS tab according to user preference
-      setActiveTab();
+
       // display code wrapper after preference was retrieved
-      displayCodeWrapper();
+      displayCodeSection();
+      // display demo container after demo component was fetched
+      displayDemoSection();
       //store user preferences to set JS or TS code as default
       storeUserPreference();
     } catch (error) {

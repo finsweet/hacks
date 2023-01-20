@@ -134,7 +134,8 @@ export const copyCode = () => {
   copyButtons.forEach((button) => {
     // listen to ts and js copy buttons
     button.addEventListener('click', () => {
-      const activeTab = document.querySelector('.w--tab-active');
+      const codeTabMenu = document.querySelector('[fs-div-element="code_tab_menu"]');
+      const activeTab = codeTabMenu.querySelector('.w--tab-active');
       if (!activeTab) return;
       // Get code of active tab (TS or JS)
       const code = activeTab.getElementsByTagName('code')[0].innerText;
@@ -200,8 +201,13 @@ export const setActiveTab = () => {
   }
 };
 
-export const displayCodeWrapper = () => {
-  const codeWrapper = document.querySelector('[fs-div-element="code_tab_wrapper"]');
+export const displayCodeSection = () => {
+  const codeWrapper = document.querySelector('[fs-div-element="section_code"]');
   // make the code wrapper visible after user preferense was retrieved
-  codeWrapper?.setAttribute('style', 'display: block');
+  codeWrapper?.setAttribute('style', 'display: flex');
+};
+export const displayDemoSection = () => {
+  const demoWrapper = document.querySelector('[fs-div-element="section_demo"]');
+  // make the demo wrapper visible after user preferense was retrieved
+  demoWrapper?.setAttribute('style', 'display: flex');
 };
