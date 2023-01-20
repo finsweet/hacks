@@ -182,19 +182,26 @@ export const storeUserPreference = () => {
     });
   });
 };
-export const setDefaultTab = () => {
-  // code to set default tab goes here
+
+// to work properly, active tab on webflow designer must be set to "none"
+// otherwise, restartWebflow() function will mess with active tab
+export const setActiveTab = () => {
   const pref = localStorage.getItem('userPreference');
   if (pref === 'js') {
     const jsTab = document.querySelector('[fs-type-element="js"]') as HTMLElement;
     if (!jsTab) return;
     jsTab.click();
+  } else {
+    // if the user has not set a preference, default to TS
+    // if user has set TS preference, set active tab as TS
+    const tsTab = document.querySelector('[fs-type-element="ts"]') as HTMLElement;
+    if (!tsTab) return;
+    tsTab.click();
   }
 };
 
 export const displayCodeWrapper = () => {
   const codeWrapper = document.querySelector('[fs-div-element="code_tab_wrapper"]');
-  //console.log(codeWrapper);
   // make the code wrapper visible after user preferense was retrieved
   codeWrapper?.setAttribute('style', 'display: block');
 };

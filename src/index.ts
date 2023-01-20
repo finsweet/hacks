@@ -10,7 +10,7 @@ import {
   copyComponentJSON,
   copyCode,
   storeUserPreference,
-  setDefaultTab,
+  setActiveTab,
   displayCodeWrapper,
 } from '$utils/domUtils';
 
@@ -40,7 +40,7 @@ window.Webflow.push(() => {
       // copy JS/TS code function
       copyCode();
       // set default JS/TS tab according to user preference
-      setDefaultTab();
+      setActiveTab();
       // display code wrapper after preference was retrieved
       displayCodeWrapper();
       //store user preferences to set JS or TS code as default
