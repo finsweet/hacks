@@ -9,7 +9,7 @@ import { hackName, copyComponentButton } from '$utils/constants';
  * @param code string
  * @returns string
  */
-const formatCode = (code: string) => {
+export const formatCode = (code: string) => {
   code = code.replace(/ /g, '&nbsp;');
   const script = `<script>\n${code}</script>`.replace(/</g, '&lt;');
   return `<pre><code>${script}</pre></code>`;

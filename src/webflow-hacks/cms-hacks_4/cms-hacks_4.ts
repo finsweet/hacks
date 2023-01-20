@@ -1,3 +1,5 @@
+declare const YT: any;
+
 // inject the youtube api script
 const tag = document.createElement('script');
 tag.src = 'https://www.youtube.com/iframe_api';

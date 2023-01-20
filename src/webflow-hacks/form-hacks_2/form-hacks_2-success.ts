@@ -5,7 +5,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const customSuccessMessage = getCookieValue('successTextCookie');
 
-  successDiv.innerText = "We'll focus on " + customSuccessMessage + " for future F'in sweet Webflow Hacks!";
+  successDiv.innerText =
+    "We'll focus on " + customSuccessMessage + " for future F'in sweet Webflow Hacks!";
 });
 
 /**
