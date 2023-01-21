@@ -19,7 +19,6 @@ window.Webflow ||= [];
 window.Webflow.push(() => {
   console.log('Script loads!');
   // set default JS/TS tab according to user preference
-  setActiveTab();
   const fetchAllElements = async () => {
     try {
       // await before promise prevents highlight code function from running improperly
@@ -36,6 +35,8 @@ window.Webflow.push(() => {
         // restart webflow to process appended forms (only needed for hacks with forms)
         restartWebflow(),
       ]);
+      setActiveTab();
+
       // highlight code
       appendHeadScript(SELECTORS.CODE_HIGHLIGHT_ATTR_URL);
       // copy JSON function
