@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
   const STORAGE_KEY = 'previousTabId';
-  //const tabLinks = document.querySelectorAll<HTMLAnchorElement>('.w-tab-link');
   const tabLinks = document.querySelectorAll<HTMLAnchorElement>('[fs-anchor-element="tab"]');
 
   if (tabLinks.length === 0) return;

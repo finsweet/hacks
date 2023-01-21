@@ -84,7 +84,7 @@ export const fetchDemoComponent = async () => {
 
 export const fetchTsCode = async () => {
   if (!hackName) return;
-  const url = `https://cdn.jsdelivr.net/gh/finsweet/hacks@37578ea2375e13f55ce75061013ef0de7f881df6/src/webflow-hacks/${hackName}/${hackName}.ts`;
+  const url = `https://cdn.jsdelivr.net/gh/finsweet/hacks@9717650026b923ff78bb906b0533c28be2a5f98f/src/webflow-hacks/${hackName}/${hackName}.ts`;
   const code = await fetchCode(url);
   const { formattedCode } = code;
   const tsWrapper = document.querySelector('[fs-div-element="ts_wrapper"]') as HTMLElement;
@@ -93,7 +93,7 @@ export const fetchTsCode = async () => {
 };
 
 export const fetchJsCode = async () => {
-  const url = `https://cdn.jsdelivr.net/gh/finsweet/hacks@37578ea2375e13f55ce75061013ef0de7f881df6/src/webflow-hacks/${hackName}/${hackName}.js`;
+  const url = `https://cdn.jsdelivr.net/gh/finsweet/hacks@9717650026b923ff78bb906b0533c28be2a5f98f/src/webflow-hacks/${hackName}/${hackName}.js`;
   const code = await fetchCode(url);
   const { formattedCode } = code;
   const { unformattedCode } = code;
@@ -106,7 +106,7 @@ export const fetchJsCode = async () => {
 const fetchComponentJSON = async () => {
   if (!hackName) return;
   // !! TO DO: if possible, dynamically fetch the latest commit version, i.e. text after the @
-  const url = `https://cdn.jsdelivr.net/gh/finsweet/hacks@37578ea2375e13f55ce75061013ef0de7f881df6/src/webflow-hacks/${hackName}/${hackName}.json`;
+  const url = `https://cdn.jsdelivr.net/gh/finsweet/hacks@9717650026b923ff78bb906b0533c28be2a5f98f/src/webflow-hacks/${hackName}/${hackName}.json`;
 
   const componentJSON = await fetch(url);
   return componentJSON.json();
