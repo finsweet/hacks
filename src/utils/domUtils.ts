@@ -51,8 +51,8 @@ export const appendJsCode = (formattedCode: string) => {
 };
 
 export const fetchDemoComponent = async () => {
-  const demoContainer = document.querySelector('[fs-div-element="demo_container"]');
-  if (!demoContainer) return;
+  const demoWrapper = document.querySelector('[fs-div-element="demo_wrapper"]');
+  if (!demoWrapper) return;
 
   const currentUrl = window.location.href;
   const isProduction = currentUrl.includes('finsweet.com') ? true : false;
@@ -74,7 +74,7 @@ export const fetchDemoComponent = async () => {
     // Get the demo component
     const demoComponent = doc.querySelector(`[fs-component-name="${hackName}"]`);
     if (!demoComponent) return;
-    demoContainer.prepend(demoComponent);
+    demoWrapper.prepend(demoComponent);
   } else {
     //throw new Error('Could not fetch demo component');
     return;
@@ -201,13 +201,13 @@ export const setActiveTab = () => {
   }
 };
 
-export const displayCodeSection = () => {
-  const codeWrapper = document.querySelector('[fs-div-element="section_code"]');
+export const displayCodeWrapper = () => {
+  const codeWrapper = document.querySelector('[fs-div-element="code_tab_wrapper"]');
   // make the code wrapper visible after user preferense was retrieved
-  codeWrapper?.setAttribute('style', 'display: flex');
+  codeWrapper?.setAttribute('style', 'display: block');
 };
-export const displayDemoSection = () => {
-  const demoWrapper = document.querySelector('[fs-div-element="section_demo"]');
+export const displayDemoWrapper = () => {
+  const demoWrapper = document.querySelector('[fs-div-element="demo_wrapper"]');
   // make the demo wrapper visible after user preferense was retrieved
-  demoWrapper?.setAttribute('style', 'display: flex');
+  demoWrapper?.setAttribute('style', 'display: grid');
 };

@@ -11,8 +11,8 @@ import {
   copyCode,
   storeUserPreference,
   setActiveTab,
-  displayCodeSection,
-  displayDemoSection,
+  displayCodeWrapper,
+  displayDemoWrapper,
 } from '$utils/domUtils';
 
 window.Webflow ||= [];
@@ -44,9 +44,9 @@ window.Webflow.push(() => {
       copyCode();
 
       // display code wrapper after preference was retrieved
-      displayCodeSection();
+      displayCodeWrapper();
       // display demo container after demo component was fetched
-      displayDemoSection();
+      displayDemoWrapper();
       //store user preferences to set JS or TS code as default
       storeUserPreference();
     } catch (error) {
