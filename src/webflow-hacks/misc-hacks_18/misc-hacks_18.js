@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   const STORAGE_KEY = 'previousTabId';
-  const tabLinks = document.querySelectorAll('.w-tab-link');
+  //const tabLinks = document.querySelectorAll<HTMLAnchorElement>('.w-tab-link');
+  const tabLinks = document.querySelectorAll('[fs-anchor-element="tab"]');
   if (tabLinks.length === 0) return;
   // add listeners and click chosen tab
   const chosenTabId = localStorage.getItem(STORAGE_KEY);

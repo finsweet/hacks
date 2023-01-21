@@ -42,6 +42,7 @@ const fetchCode = async (url: string) => {
 
 // append js code to make the demo component functional
 export const appendJsCode = (formattedCode: string) => {
+  console.log(formattedCode);
   const script = document.createElement('script');
   script.innerHTML = formattedCode;
   document.body.appendChild(script);
@@ -83,7 +84,7 @@ export const fetchDemoComponent = async () => {
 
 export const fetchTsCode = async () => {
   if (!hackName) return;
-  const url = `https://cdn.jsdelivr.net/gh/finsweet/hacks@63328a66ee8745471271deb49fea87106073fff4/src/webflow-hacks/${hackName}/${hackName}.ts`;
+  const url = `https://cdn.jsdelivr.net/gh/finsweet/hacks@37578ea2375e13f55ce75061013ef0de7f881df6/src/webflow-hacks/${hackName}/${hackName}.ts`;
   const code = await fetchCode(url);
   const { formattedCode } = code;
   const tsWrapper = document.querySelector('[fs-div-element="ts_wrapper"]') as HTMLElement;
@@ -92,7 +93,7 @@ export const fetchTsCode = async () => {
 };
 
 export const fetchJsCode = async () => {
-  const url = `https://cdn.jsdelivr.net/gh/finsweet/hacks@63328a66ee8745471271deb49fea87106073fff4/src/webflow-hacks/${hackName}/${hackName}.js`;
+  const url = `https://cdn.jsdelivr.net/gh/finsweet/hacks@37578ea2375e13f55ce75061013ef0de7f881df6/src/webflow-hacks/${hackName}/${hackName}.js`;
   const code = await fetchCode(url);
   const { formattedCode } = code;
   const { unformattedCode } = code;
@@ -105,7 +106,7 @@ export const fetchJsCode = async () => {
 const fetchComponentJSON = async () => {
   if (!hackName) return;
   // !! TO DO: if possible, dynamically fetch the latest commit version, i.e. text after the @
-  const url = `https://cdn.jsdelivr.net/gh/finsweet/hacks@e497915603641fbca41c80a50666b1023dd8056d/src/webflow-hacks/${hackName}/${hackName}.json`;
+  const url = `https://cdn.jsdelivr.net/gh/finsweet/hacks@37578ea2375e13f55ce75061013ef0de7f881df6/src/webflow-hacks/${hackName}/${hackName}.json`;
 
   const componentJSON = await fetch(url);
   return componentJSON.json();
