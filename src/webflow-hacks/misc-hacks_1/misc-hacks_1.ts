@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   loadingWrapper.style.display = 'flex';
 
-  setCokie(COOKIE_NAME, 'true', 1);
+  setCookie(COOKIE_NAME, 'true', 1);
 
   setTimeout(async () => {
     loadingWrapper.style.display = 'none';
@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
  * @param cvalue The value to set for the cookie.
  * @param exdays The number of days until the cookie expires.
  */
-function setCokie(cname: string, cvalue: string, exdays: number) {
+function setCookie(cname: string, cvalue: string, exdays: number) {
   const d = new Date();
   d.setTime(d.getTime() + exdays * 24 * 60 * 60 * 1000);
   const expires = 'expires=' + d.toUTCString();

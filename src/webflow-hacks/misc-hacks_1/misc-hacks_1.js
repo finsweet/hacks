@@ -6,10 +6,10 @@ document.addEventListener('DOMContentLoaded', function () {
   const loadingWrapper = document.querySelector(LOADING_WRAPPER_SELECTOR);
   const clearButton = document.querySelector(CLEAR_BUTTON_SELECTOR);
   if (!loadingWrapper || !clearButton) return;
-  const hasSeenPreloader = getCokie(COOKIE_NAME);
+  const hasSeenPreloader = getCookie(COOKIE_NAME);
   if (hasSeenPreloader) return;
   loadingWrapper.style.display = 'flex';
-  setCokie(COOKIE_NAME, 'true', 1);
+  setCookie(COOKIE_NAME, 'true', 1);
   setTimeout(async () => {
     loadingWrapper.style.display = 'none';
   }, WAIT_TIME);
@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function () {
  * @param cvalue The value to set for the cookie.
  * @param exdays The number of days until the cookie expires.
  */
-function setCokie(cname, cvalue, exdays) {
+function setCookie(cname, cvalue, exdays) {
   const d = new Date();
   d.setTime(d.getTime() + exdays * 24 * 60 * 60 * 1000);
   const expires = 'expires=' + d.toUTCString();
@@ -35,7 +35,7 @@ function setCokie(cname, cvalue, exdays) {
  * @returns The value of the cookie.
  * @see https://stackoverflow.com/a/25490531/104380
  */
-function getCokie(name) {
+function getCookie(name) {
   return document.cookie.match('(^|;)\\s*' + name + '\\s*=\\s*([^;]+)')?.pop() || null;
 }
 /**
