@@ -25,7 +25,6 @@ window.Webflow.push(() => {
       await Promise.all([
         // await inside the promise prevents some functions to run before the DOM is ready
         await fetchDemoComponent(),
-
         await fetchTsCode(),
         (async () => {
           const javascript = await fetchJsCode();
@@ -36,19 +35,19 @@ window.Webflow.push(() => {
         restartWebflow(),
       ]);
       setActiveTab();
-
-      // highlight code
-      appendHeadScript(SELECTORS.CODE_HIGHLIGHT_ATTR_URL);
       // copy JSON function
       copyComponentJSON();
       // copy JS/TS code function
       copyCode();
+      // highlight code
+      appendHeadScript(SELECTORS.CODE_HIGHLIGHT_ATTR_URL);
 
-      // display code wrapper after preference was retrieved
-      displayCodeWrapper();
       // display demo container after demo component was fetched
       displayDemoWrapper();
+      // display code wrapper after preference was retrieved
+      displayCodeWrapper();
       //store user preferences to set JS or TS code as default
+
       storeUserPreference();
     } catch (error) {
       console.error(error);

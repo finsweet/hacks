@@ -42,7 +42,6 @@ const fetchCode = async (url: string) => {
 
 // append js code to make the demo component functional
 export const appendJsCode = (formattedCode: string) => {
-  console.log(formattedCode);
   const script = document.createElement('script');
   script.innerHTML = formattedCode;
   document.body.appendChild(script);
