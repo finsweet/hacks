@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const clearButton = document.querySelector<HTMLDivElement>(CLEAR_BUTTON_SELECTOR);
   if (!loadingWrapper || !clearButton) return;
 
-  const hasSeenPreloader = getCokie(COOKIE_NAME);
+  const hasSeenPreloader = getCookie(COOKIE_NAME);
   if (hasSeenPreloader) return;
 
   loadingWrapper.style.display = 'flex';
@@ -43,7 +43,7 @@ function setCokie(cname: string, cvalue: string, exdays: number) {
  * @returns The value of the cookie.
  * @see https://stackoverflow.com/a/25490531/104380
  */
-function getCokie(name: string) {
+function getCookie(name: string) {
   return document.cookie.match('(^|;)\\s*' + name + '\\s*=\\s*([^;]+)')?.pop() || null;
 }
 
