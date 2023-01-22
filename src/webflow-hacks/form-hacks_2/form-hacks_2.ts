@@ -2,22 +2,23 @@
 document.addEventListener('DOMContentLoaded', () => {
   const INTEREST_FIELD_SELECTOR = '[fs-hacks-element="interest-select-field"]';
   const EMAIL_FORM_SELECTOR = '[fs-hacks-element="email-form"]';
-  const interestSelectField = document.querySelector<HTMLSelectElement>(INTEREST_FIELD_SELECTOR);
-  const emailForm = document.querySelector(EMAIL_FORM_SELECTOR);
+  const interestSelectField = document.querySelector(INTEREST_FIELD_SELECTOR) as HTMLSelectElement;
+  const emailForm = document.querySelector(EMAIL_FORM_SELECTOR) as HTMLFormElement;
   if (!interestSelectField || !emailForm) return;
 
   let customSuccessMessage = interestSelectField.value;
 
-  interestSelectField.addEventListener('change', function () {
-    customSuccessMessage = this.value;
+  interestSelectField.addEventListener('change', () => {
+    customSuccessMessage = interestSelectField.value;
   });
 
-  emailForm.addEventListener('submit', function (e) {
+  emailForm.addEventListener('submit', (event: Event) => {
+    event.preventDefault();
+
     if (customSuccessMessage.trim() !== '') {
-      document.cookie = 'successTextCookie=' + customSuccessMessage;
+      document.cookie = `successTextCookie=${customSuccessMessage};expires=Fri, 31 Dec 9999 21:10:10 GMT;path=/`;
     }
 
-    e.stopPropagation();
     interestSelectField.focus();
   });
 });

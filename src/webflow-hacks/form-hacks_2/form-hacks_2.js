@@ -6,14 +6,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const emailForm = document.querySelector(EMAIL_FORM_SELECTOR);
   if (!interestSelectField || !emailForm) return;
   let customSuccessMessage = interestSelectField.value;
-  interestSelectField.addEventListener('change', function () {
-    customSuccessMessage = this.value;
+  interestSelectField.addEventListener('change', () => {
+    customSuccessMessage = interestSelectField.value;
   });
-  emailForm.addEventListener('submit', function (e) {
+  emailForm.addEventListener('submit', (event) => {
+    event.preventDefault();
     if (customSuccessMessage.trim() !== '') {
-      document.cookie = 'successTextCookie=' + customSuccessMessage;
+      document.cookie = `successTextCookie=${customSuccessMessage};expires=Fri, 31 Dec 9999 21:10:10 GMT;path=/`;
     }
-    e.stopPropagation();
     interestSelectField.focus();
   });
 });
