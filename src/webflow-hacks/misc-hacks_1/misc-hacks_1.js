@@ -26,7 +26,7 @@ function getCookie(name) {
 function removeCookie(name) {
   document.cookie = name + '=; path=/; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
 }
-window.onload = () => {
+window.onload = (event) => {
   const WAIT_TIME = 4500;
   const COOKIE_NAME = 'seenGif';
   const LOADING_WRAPPER_SELECTOR = '[fs-hacks-element="loading-wrapper"]';

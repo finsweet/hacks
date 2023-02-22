@@ -57,4 +57,4 @@ window.onload = (event) => {
     console.log('should remove cookie');
     removeCookie(COOKIE_NAME);
   });
-});
+};

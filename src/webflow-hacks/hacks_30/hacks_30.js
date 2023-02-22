@@ -2,7 +2,7 @@
 document.addEventListener('DOMContentLoaded', function () {
   const CMS_LIST_SELECTOR = '[fs-hacks-selector="cms-list"]';
   const CMS_TITLE_SELECTOR = '[fs-hacks-selector="cms-title"]';
-  // get elemnts
+  // get elements
   const cmsList = document.querySelector(CMS_LIST_SELECTOR);
   const cmsTitle = document.querySelector(CMS_TITLE_SELECTOR);
   // if elements are not found, exit
