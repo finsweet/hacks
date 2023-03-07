@@ -8,28 +8,30 @@ document.addEventListener('DOMContentLoaded', function () {
     const newUnorderedList = document.createElement('ul');
     const listItems = originalUnorderedList.querySelectorAll('li');
 
-    for (const item of listItems) {
+    listItems.forEach((item) => {
       const tildeCount = (item.innerText.match(/~/g) || []).length;
       const cleanedList = cleanListItem(item);
       const wrappedList = wrapUnorderedList(cleanedList, tildeCount);
 
       newUnorderedList.appendChild(wrappedList);
-    }
+    });
 
-    originalUnorderedList.replaceChildren(...newUnorderedList.childNodes);
+    Array.from(newUnorderedList.childNodes).forEach((child) => {
+      originalUnorderedList.appendChild(child.cloneNode(true));
+    });
   }
 
   if (originalOrderedList) {
     const orderedListItems = originalOrderedList.querySelectorAll('li');
     let newHtml = '';
 
-    for (const item of orderedListItems) {
+    orderedListItems.forEach((item) => {
       let lines = item.innerText.split('\n');
       // remove empty lines
       lines = lines.filter((line) => line.trim().length > 0);
 
       newHtml += wrapOrderedList(lines);
-    }
+    });
 
     originalOrderedList.innerHTML = newHtml;
   }
