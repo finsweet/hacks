@@ -83,7 +83,7 @@ export const fetchDemoComponent = async () => {
 
 export const fetchTsCode = async () => {
   if (!hackName) return;
-  const url = `https://cdn.jsdelivr.net/gh/finsweet/hacks@0405ba2aaf8082908af6f423a17a770b38e731bc/src/webflow-hacks/${hackName}/${hackName}.ts`;
+  const url = `https://cdn.jsdelivr.net/gh/finsweet/hacks@51508757dd201e1ff56d40803dc58874b9a75663/src/webflow-hacks/${hackName}/${hackName}.ts`;
   const code = await fetchCode(url);
   if (!code) return;
   const { formattedCode } = code;
@@ -93,7 +93,7 @@ export const fetchTsCode = async () => {
 };
 
 export const fetchJsCode = async () => {
-  const url = `https://cdn.jsdelivr.net/gh/finsweet/hacks@0405ba2aaf8082908af6f423a17a770b38e731bc/src/webflow-hacks/${hackName}/${hackName}.js`;
+  const url = `https://cdn.jsdelivr.net/gh/finsweet/hacks@51508757dd201e1ff56d40803dc58874b9a75663/src/webflow-hacks/${hackName}/${hackName}.js`;
   const code = await fetchCode(url);
   if (!code) return;
   const { formattedCode } = code;
@@ -109,7 +109,7 @@ export const fetchJsCode = async () => {
 const fetchComponentJSON = async () => {
   if (!hackName) return;
   // !! TO DO: if possible, dynamically fetch the latest commit version, i.e. text after the @
-  const url = `https://cdn.jsdelivr.net/gh/finsweet/hacks@0405ba2aaf8082908af6f423a17a770b38e731bc/src/webflow-hacks/${hackName}/${hackName}.json`;
+  const url = `https://cdn.jsdelivr.net/gh/finsweet/hacks@51508757dd201e1ff56d40803dc58874b9a75663/src/webflow-hacks/${hackName}/${hackName}.json`;
 
   const componentJSON = await fetch(url);
   return componentJSON.json();

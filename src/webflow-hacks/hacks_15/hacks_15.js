@@ -1,10 +1,10 @@
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', () => {
   const MENU_BUTTON_SELECTOR = '[fs-hacks-element="menu-button"]';
   const menuBtns = document.querySelectorAll(MENU_BUTTON_SELECTOR);
 
-  menuBtns.forEach(function (menuBtn) {
-    menuBtn.addEventListener('click', function () {
-      //  allow hash to be set by adding small delay
+  menuBtns.forEach((menuBtn) => {
+    menuBtn.addEventListener('click', () => {
+      // Allow hash to be set by adding small delay
       setTimeout(removeHash);
     });
   });
@@ -15,8 +15,8 @@ document.addEventListener('DOMContentLoaded', function () {
  */
 function removeHash() {
   history.replaceState(
-    '',
+    null,
     document.title,
-    window.location.origin + window.location.pathname + window.location.search
+    `${window.location.origin}${window.location.pathname}${window.location.search}`
   );
 }
