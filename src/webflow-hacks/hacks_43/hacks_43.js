@@ -14,7 +14,9 @@ document.addEventListener('DOMContentLoaded', function () {
   const radios = document.querySelectorAll(
     `input[name="${BRANDING_GROUP_NAME}"], input[name="${DEVELOPMENT_GROUP_NAME}"]`
   );
+
   if (!totalValueDiv || !hiddenTotalInput) return;
+
   /***
    * This function updates the totals div and the hidden input
    * @param total
@@ -24,24 +26,32 @@ document.addEventListener('DOMContentLoaded', function () {
   const updateTotals = (total, totalValueDiv, hiddenTotalInput) => {
     // format sum e.g. 3500 to 3,500
     const formattedSum = new Intl.NumberFormat().format(total);
+
     totalValueDiv.innerText = formattedSum;
+
     // add the sum value to the hidden input
     hiddenTotalInput.value = formattedSum;
   };
+
   let brandingTotal = 0;
   let developmentTotal = 0;
+
   radios.forEach((radio) => {
     // listen to the radio.
     radio.addEventListener('input', function () {
       const { name, value, checked } = radio;
+
       if (!checked) return;
+
       if (name === BRANDING_GROUP_NAME) {
         brandingTotal = Number(value);
       }
       if (name === DEVELOPMENT_GROUP_NAME) {
         developmentTotal = Number(value);
       }
+
       const total = brandingTotal + developmentTotal;
+
       updateTotals(total, totalValueDiv, hiddenTotalInput);
     });
   });

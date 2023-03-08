@@ -3,8 +3,10 @@ document.addEventListener('DOMContentLoaded', function () {
   // get the heading element
   const BROWSER_NAME_SELECTOR = '[fs-hacks-element="browser-name"]';
   const browserNameElement = document.querySelector(BROWSER_NAME_SELECTOR);
+
   // early return if the element is not found
   if (!browserNameElement) return;
+
   // test for chrome
   if (navigator.vendor.match(/google/i)) {
     browserNameElement.innerText = 'Chrome';

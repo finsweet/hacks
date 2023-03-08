@@ -7,14 +7,17 @@ document.addEventListener('DOMContentLoaded', () => {
   const runTestButton = document.querySelector(BUTTON_SELECTOR);
   const mobileText = document.querySelector(MOBILE_TEXT_SELECTOR);
   const desktopText = document.querySelector(DESKTOP_TEXT_SELECTOR);
+
   // early return
   if (!runTestButton || !mobileText || !desktopText) return;
+
   /**
    * This function will check if user is on a mobile or tablet device.
    * @returns boolean
    * */
   const mobileAndTabletCheck = () => {
     let check = false;
+
     (function (a) {
       if (
         /(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino|android|ipad|playbook|silk/i.test(
@@ -26,16 +29,20 @@ document.addEventListener('DOMContentLoaded', () => {
       )
         check = true;
     })(navigator.userAgent || navigator.vendor);
+
     return check;
   };
+
   // add event listener
   runTestButton.addEventListener('click', () => {
     // check if device is mobile
     if (mobileAndTabletCheck()) {
       mobileText.innerText = 'Hey, mobile user';
+
       desktopText.innerText = '';
     } else {
       mobileText.innerText = '';
+
       desktopText.innerText = 'Hey, desktop user';
     }
   });

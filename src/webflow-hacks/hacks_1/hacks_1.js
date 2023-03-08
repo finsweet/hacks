@@ -6,10 +6,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const interestSelectField = document.querySelector(SELECT_FIELD_SELECTOR);
   const emailForm = document.querySelector(EMAIL_SELECTOR);
   const successText = document.querySelector(SUCCESS_TEXT_SELECTOR);
+
   if (!interestSelectField || !emailForm || !successText) return;
   let customSuccessMessage = interestSelectField.value;
+
   interestSelectField.addEventListener('change', () => {
     customSuccessMessage = interestSelectField.value;
+
     successText.innerText = `Thank you! We'll focus on ${customSuccessMessage} for future F'in sweet Webflow Hacks!`;
   });
 });

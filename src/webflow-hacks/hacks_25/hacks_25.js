@@ -10,7 +10,9 @@ document.addEventListener('DOMContentLoaded', function () {
   const iosHeading = document.querySelector(IOS_SELECTOR);
   const chromeHeading = document.querySelector(CHROME_SELECTOR);
   const otherHeading = document.querySelector(OTHER_SELECTOR);
+
   if (!androidHeading || !iosHeading || !chromeHeading || !otherHeading) return;
+
   // test regex /android/i
   if (testBrowser(/Android/i)) {
     androidHeading.style.display = 'block';
@@ -28,6 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
     otherHeading.style.display = 'block';
   }
 });
+
 /**
  * This function is used to test the userAgent string for a specific browser
  * @param regexp The regex to test the userAgent string against

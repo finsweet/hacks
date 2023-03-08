@@ -5,8 +5,10 @@ document.addEventListener('DOMContentLoaded', function () {
   // get elemnts
   const cmsList = document.querySelector(CMS_LIST_SELECTOR);
   const cmsTitle = document.querySelector(CMS_TITLE_SELECTOR);
+
   // if elements are not found, exit
   if (!cmsList || !cmsTitle) return;
+
   // find child elements
   if (cmsList.childNodes.length === 0) {
     // hide title

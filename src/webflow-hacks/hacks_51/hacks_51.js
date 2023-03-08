@@ -12,11 +12,14 @@ const COLUMN_SELECTORS = [
     total: '[fs-hacks-element="subscription-total-fee"]',
   },
 ];
+
 document.addEventListener('DOMContentLoaded', () => {
   const TABLE_SELECTOR = '[fs-hacks-element="table"]';
   const tables = document.querySelectorAll(TABLE_SELECTOR);
+
   tables.forEach(updateSubTotals);
 });
+
 /**
  * Update the total fees for each column of the table.
  * @param table DOM element of the table
@@ -26,11 +29,15 @@ function updateSubTotals(table) {
     let totalFee = 0;
     const columns = table.querySelectorAll(type);
     const totalDiv = table.querySelector(total);
+
     if (!totalDiv) return;
+
     columns.forEach(({ innerText }) => {
       const toBeAdded = Number(innerText);
+
       if (!isNaN(toBeAdded)) totalFee += toBeAdded;
     });
+
     totalDiv.innerText = totalFee.toString();
   });
 }

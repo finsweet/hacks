@@ -1,1 +1,23 @@
-{ "extends": ["@finsweet"] }
+{
+  "extends": ["eslint:recommended"],
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "rules": {
+    "no-console": "off",
+    "padding-line-between-statements": [
+      "error",
+      { "blankLine": "always", "prev": "*", "next": "function" },
+      { "blankLine": "always", "prev": "function", "next": "*" },
+      { "blankLine": "always", "prev": ["const", "let", "var"], "next": "*" },
+      { "blankLine": "never", "prev": ["const", "let", "var"], "next": ["const", "let", "var"] },
+      { "blankLine": "never", "prev": "*", "next": ["const", "let", "var"] },
+      { "blankLine": "never", "prev": "directive", "next": "*" },
+      { "blankLine": "always", "prev": "*", "next": "expression" },
+      { "blankLine": "always", "prev": "block-like", "next": "*" },
+      { "blankLine": "always", "prev": "*", "next": "block-like" },
+      { "blankLine": "never", "prev": "block-like", "next": "block-like" }
+    ]
+  }
+}

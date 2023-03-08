@@ -5,7 +5,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const form = document.querySelector(FORM_SELECTOR);
   // assign success trigger HTML element to variable successTrigger
   const successTrigger = document.querySelector(SUCCESS_TRIGGER_SELECTOR);
+
   if (!form || !successTrigger) return;
+
   // when form is submitted, execute function triggering submission success
   const submitEvent = () => {
     form.onsubmit = triggerSuccess;
@@ -14,5 +16,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const triggerSuccess = () => {
     successTrigger.click();
   };
+
   window.onload = submitEvent;
 });

@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const DATE_VERSION_TWO_SELECTOR = '[fs-hacks-element="date-version2"]';
   const dateVersionOne = document.querySelector(DATE_VERSION_ONE_SELECTOR);
   const dateVersionTwo = document.querySelector(DATE_VERSION_TWO_SELECTOR);
+
   // early exit if no elements found
   if (!dateVersionOne || !dateVersionTwo) return;
   // Set your formatting options e.g. Version 1 output = "Sat, Dec 25, 2019"
@@ -21,6 +22,8 @@ document.addEventListener('DOMContentLoaded', function () {
     month: '2-digit',
     day: '2-digit',
   };
+
   dateVersionOne.innerText = new Date().toLocaleDateString('en-US', dateVersion1Format);
+
   dateVersionTwo.innerText = new Date().toLocaleDateString('en-US', dateVersion2Format);
 });
