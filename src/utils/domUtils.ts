@@ -83,8 +83,9 @@ export const fetchDemoComponent = async () => {
 
 export const fetchTsCode = async () => {
   if (!hackName) return;
-  const url = `https://cdn.jsdelivr.net/gh/finsweet/hacks@a9f0399ba76409d61ea23b0b6ebab094bb1f07cd/src/webflow-hacks/${hackName}/${hackName}.ts`;
+  const url = `https://cdn.jsdelivr.net/gh/finsweet/hacks@0405ba2aaf8082908af6f423a17a770b38e731bc/src/webflow-hacks/${hackName}/${hackName}.ts`;
   const code = await fetchCode(url);
+  if (!code) return;
   const { formattedCode } = code;
   const tsWrapper = document.querySelector('[fs-div-element="ts_wrapper"]') as HTMLElement;
   if (!tsWrapper) return;
@@ -92,10 +93,13 @@ export const fetchTsCode = async () => {
 };
 
 export const fetchJsCode = async () => {
-  const url = `https://cdn.jsdelivr.net/gh/finsweet/hacks@a9f0399ba76409d61ea23b0b6ebab094bb1f07cd/src/webflow-hacks/${hackName}/${hackName}.js`;
+  const url = `https://cdn.jsdelivr.net/gh/finsweet/hacks@0405ba2aaf8082908af6f423a17a770b38e731bc/src/webflow-hacks/${hackName}/${hackName}.js`;
   const code = await fetchCode(url);
+  if (!code) return;
   const { formattedCode } = code;
+
   const { unformattedCode } = code;
+
   const jsWrapper = document.querySelector('[fs-div-element="js_wrapper"]') as HTMLElement;
   if (!jsWrapper) return;
   jsWrapper.innerHTML = formattedCode;
@@ -105,7 +109,7 @@ export const fetchJsCode = async () => {
 const fetchComponentJSON = async () => {
   if (!hackName) return;
   // !! TO DO: if possible, dynamically fetch the latest commit version, i.e. text after the @
-  const url = `https://cdn.jsdelivr.net/gh/finsweet/hacks@a9f0399ba76409d61ea23b0b6ebab094bb1f07cd/src/webflow-hacks/${hackName}/${hackName}.json`;
+  const url = `https://cdn.jsdelivr.net/gh/finsweet/hacks@0405ba2aaf8082908af6f423a17a770b38e731bc/src/webflow-hacks/${hackName}/${hackName}.json`;
 
   const componentJSON = await fetch(url);
   return componentJSON.json();
@@ -135,6 +139,7 @@ export const copyCode = () => {
     // listen to ts and js copy buttons
     button.addEventListener('click', () => {
       const codeTabMenu = document.querySelector('[fs-div-element="code_tab_content"]');
+      if (!codeTabMenu) return;
       const activeTab = codeTabMenu.querySelector('.w--tab-active');
       if (!activeTab) return;
       // Get code of active tab (TS or JS)

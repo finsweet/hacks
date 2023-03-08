@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', () => {
   const BUTTON_SELECTOR = '[fs-hacks-element="hack-button"]';
   const TEXT_SELECTOR = '[fs-hacks-element="hack-text"]';
   const button = document.querySelector(BUTTON_SELECTOR);
