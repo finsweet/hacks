@@ -5,7 +5,7 @@
     "es6": true
   },
   "rules": {
-    "no-console": "off",
+    "no-console": "on",
     "padding-line-between-statements": [
       "error",
       { "blankLine": "always", "prev": "*", "next": "function" },
