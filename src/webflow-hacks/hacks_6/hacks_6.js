@@ -31,7 +31,8 @@ const removeCookie = (name) => {
   document.cookie = `${name}=;expires=Thu, 01 Jan 1970 00:00:00 UTC;path=/;`;
 };
 
-window.onload = function () {
+document.addEventListener('DOMContentLoaded', function () {
+  console.log('window.onload');
   const WAIT_TIME = 4500;
   const COOKIE_NAME = 'seenGif';
   const LOADING_WRAPPER_SELECTOR = '[fs-hacks-element="loading-wrapper"]';
@@ -56,4 +57,4 @@ window.onload = function () {
   setTimeout(() => {
     loadingWrapper.style.display = 'none';
   }, WAIT_TIME);
-};
+});
