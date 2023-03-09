@@ -26,10 +26,12 @@ const getCookie = (name) => {
  * @param name The name of the cookie to remove.
  */
 const removeCookie = (name) => {
-  document.cookie = `${name}=; path=/; expires=Thu, 01 Jan 1970 00:00:01 GMT;`;
+  console.log('removing cookie');
+
+  document.cookie = `${name}=;expires=Thu, 01 Jan 1970 00:00:00 UTC;path=/;`;
 };
 
-window.addEventListener('load', (event) => {
+window.addEventListener('load', () => {
   const WAIT_TIME = 4500;
   const COOKIE_NAME = 'seenGif';
   const LOADING_WRAPPER_SELECTOR = '[fs-hacks-element="loading-wrapper"]';
@@ -37,12 +39,14 @@ window.addEventListener('load', (event) => {
   const loadingWrapper = document.querySelector(LOADING_WRAPPER_SELECTOR);
   const clearButton = document.querySelector(CLEAR_BUTTON_SELECTOR);
 
-  console.log(clearButton);
-
-  console.log(loadingWrapper);
   if (!loadingWrapper || !clearButton) return;
   const hasSeenPreloader = getCookie(COOKIE_NAME);
 
+  console.log(hasSeenPreloader);
+
+  clearButton.addEventListener('click', () => {
+    removeCookie(COOKIE_NAME);
+  });
   if (hasSeenPreloader) return;
 
   loadingWrapper.style.display = 'flex';
@@ -52,10 +56,4 @@ window.addEventListener('load', (event) => {
   setTimeout(() => {
     loadingWrapper.style.display = 'none';
   }, WAIT_TIME);
-
-  clearButton.addEventListener('click', () => {
-    console.log('should remove cookie');
-
-    removeCookie(COOKIE_NAME);
-  });
 });
