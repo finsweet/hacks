@@ -4,12 +4,12 @@
  * @param cvalue The value to set for the cookie.
  * @param exdays The number of days until the cookie expires.
  */
-function setCookie(cname: string, cvalue: string, exdays: number) {
+const setCookie = (cname: string, cvalue: string, exdays: number): void => {
   const d = new Date();
   d.setTime(d.getTime() + exdays * 24 * 60 * 60 * 1000);
   const expires = 'expires=' + d.toUTCString();
-  document.cookie = cname + '=' + cvalue + ';' + expires + ';path=/';
-}
+  document.cookie = `${cname}=${cvalue};${expires};path=/`;
+};
 
 /**
  * Get a cookie by name.
@@ -17,19 +17,19 @@ function setCookie(cname: string, cvalue: string, exdays: number) {
  * @returns The value of the cookie.
  * @see https://stackoverflow.com/a/25490531/104380
  */
-function getCookie(name: string) {
-  return document.cookie.match('(^|;)\\s*' + name + '\\s*=\\s*([^;]+)')?.pop() || null;
-}
+const getCookie = (name: string): string | null => {
+  return (document.cookie.match(`(^|;)\\s*${name}\\s*=\\s*([^;]+)`) || [])[2] || null;
+};
 
 /**
  * Remove a cookie by setting it to an empty value and setting its expiration date in the past.
  * @param name The name of the cookie to remove.
  */
-function removeCookie(name: string) {
-  document.cookie = name + '=; path=/; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
-}
+const removeCookie = (name: string): void => {
+  document.cookie = `${name}=; path=/; expires=Thu, 01 Jan 1970 00:00:01 GMT;`;
+};
 
-window.onload = (event) => {
+window.addEventListener('load', (event) => {
   const WAIT_TIME = 4500;
   const COOKIE_NAME = 'seenGif';
 
@@ -53,8 +53,8 @@ window.onload = (event) => {
     loadingWrapper.style.display = 'none';
   }, WAIT_TIME);
 
-  clearButton.addEventListener('click', function () {
+  clearButton.addEventListener('click', () => {
     console.log('should remove cookie');
     removeCookie(COOKIE_NAME);
   });
-};
+});
