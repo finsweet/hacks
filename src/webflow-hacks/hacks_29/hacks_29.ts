@@ -1,8 +1,8 @@
 // when DOM is ready
 document.addEventListener('DOMContentLoaded', function () {
   // declare constant selectors
-  const FORM_SELECTOR = '[fs-hacks-element="hack29-form"]';
-  const NAME_INPUT_SELECTOR = '[fs-hacks-element="hack29-name-input"]';
+  const FORM_SELECTOR = '[fs-hacks-element="form"]';
+  const NAME_INPUT_SELECTOR = '[fs-hacks-element="name-input"]';
   const MESSAGE_SELECTOR = '[fs-hacks-element="custom-message"]';
   const form = document.querySelector<HTMLFormElement>(FORM_SELECTOR);
   // early return
