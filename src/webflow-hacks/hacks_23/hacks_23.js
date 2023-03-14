@@ -1,7 +1,7 @@
 // on DOM ready
 document.addEventListener('DOMContentLoaded', function () {
-  const TIME_VERSION_ONE_SELECTOR = '[fs-hacks-element="time-version1"]';
-  const TIME_VERSION_TWO_SELECTOR = '[fs-hacks-element="time-version2"]';
+  const TIME_VERSION_ONE_SELECTOR = '[fs-hacks-element="time-version-1"]';
+  const TIME_VERSION_TWO_SELECTOR = '[fs-hacks-element="time-version-2"]';
   // get the heading element
   const timeVersionOne = document.querySelector(TIME_VERSION_ONE_SELECTOR);
   const timeVersionTwo = document.querySelector(TIME_VERSION_TWO_SELECTOR);
