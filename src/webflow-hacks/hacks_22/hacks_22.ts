@@ -1,8 +1,8 @@
 // on DOM ready
 document.addEventListener('DOMContentLoaded', function () {
   // selectors
-  const DATE_VERSION_ONE_SELECTOR = '[fs-hacks-element="date-version1"]';
-  const DATE_VERSION_TWO_SELECTOR = '[fs-hacks-element="date-version2"]';
+  const DATE_VERSION_ONE_SELECTOR = '[fs-hacks-element="date-version-1"]';
+  const DATE_VERSION_TWO_SELECTOR = '[fs-hacks-element="date-version-2"]';
   const dateVersionOne = document.querySelector<HTMLHeadingElement>(DATE_VERSION_ONE_SELECTOR);
   const dateVersionTwo = document.querySelector<HTMLHeadingElement>(DATE_VERSION_TWO_SELECTOR);
   // early exit if no elements found

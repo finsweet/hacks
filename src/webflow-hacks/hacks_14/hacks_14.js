@@ -1,7 +1,7 @@
 // when the DOM is ready
 document.addEventListener('DOMContentLoaded', function () {
   // set the fs-hacks selector
-  const YEAR_SELECTOR = '[fs-hacks-element="hack14-year"]';
+  const YEAR_SELECTOR = '[fs-hacks-element="year"]';
   // get the the span element
   const yearSpan = document.querySelector(YEAR_SELECTOR);
 
