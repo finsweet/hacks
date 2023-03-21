@@ -1,6 +1,7 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
+    "moduleResolution": "node",
     "target": "ESNext",
     "rootDir": "./src/webflow-hacks",
     "removeComments": false,
