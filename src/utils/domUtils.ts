@@ -91,15 +91,21 @@ const getLatestCommitSHA = async () => {
   const latestCommitSHA = commits[0].sha;
   return latestCommitSHA;
 };
+// New utility function to fetch resources (TS, JS, or JSON)
+const fetchResource = async (resourceType, commitSHA) => {
+  if (!hackName) return;
+  const url = `https://cdn.jsdelivr.net/gh/finsweet/hacks@${commitSHA}/src/webflow-hacks/${hackName}/${hackName}.${resourceType}`;
+  const res = await fetch(url);
+  return res.ok ? res : null;
+};
 
 // Update the fetchTsCode, fetchJsCode, and fetchComponentJSON functions
 export const fetchTsCode = async () => {
-  if (!hackName) return;
   const latestCommitSHA = await getLatestCommitSHA();
-  const url = `https://cdn.jsdelivr.net/gh/finsweet/hacks@${latestCommitSHA}/src/webflow-hacks/${hackName}/${hackName}.ts`;
-  const code = await fetchCode(url);
-  if (!code) return;
-  const { formattedCode } = code;
+  const res = await fetchResource('ts', latestCommitSHA);
+  if (!res) return;
+  const unformattedCode = await res.text();
+  const formattedCode = formatCode(unformattedCode);
   const tsWrapper = document.querySelector('[fs-div-element="ts_wrapper"]') as HTMLElement;
   if (!tsWrapper) return;
   tsWrapper.innerHTML = formattedCode;
@@ -107,13 +113,10 @@ export const fetchTsCode = async () => {
 
 export const fetchJsCode = async () => {
   const latestCommitSHA = await getLatestCommitSHA();
-  const url = `https://cdn.jsdelivr.net/gh/finsweet/hacks@${latestCommitSHA}/src/webflow-hacks/${hackName}/${hackName}.js`;
-  const code = await fetchCode(url);
-  if (!code) return;
-  const { formattedCode } = code;
-
-  const { unformattedCode } = code;
-
+  const res = await fetchResource('js', latestCommitSHA);
+  if (!res) return;
+  const unformattedCode = await res.text();
+  const formattedCode = formatCode(unformattedCode);
   const jsWrapper = document.querySelector('[fs-div-element="js_wrapper"]') as HTMLElement;
   if (!jsWrapper) return;
   jsWrapper.innerHTML = formattedCode;
@@ -121,12 +124,9 @@ export const fetchJsCode = async () => {
 };
 
 const fetchComponentJSON = async () => {
-  if (!hackName) return;
   const latestCommitSHA = await getLatestCommitSHA();
-  const url = `https://cdn.jsdelivr.net/gh/finsweet/hacks@${latestCommitSHA}/src/webflow-hacks/${hackName}/${hackName}.json`;
-
-  const componentJSON = await fetch(url);
-  return componentJSON.json();
+  const res = await fetchResource('json', latestCommitSHA);
+  return res ? res.json() : null;
 };
 
 export const copyComponentJSON = async () => {
