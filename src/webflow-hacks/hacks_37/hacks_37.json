@@ -3,39 +3,41 @@
   "payload": {
     "nodes": [
       {
-        "_id": "7350ca48-0033-c2f3-ebd5-ef102ce282a9",
+        "_id": "b8baa8b6-d958-9937-ee4d-a5d56057b67d",
         "type": "Block",
         "tag": "div",
         "classes": ["4a44386d-cf38-1623-cdcd-312d92de0e1a"],
-        "children": ["b8c6c602-043f-c712-2081-5215f45c3f0a"],
+        "children": ["b8baa8b6-d958-9937-ee4d-a5d56057b67e"],
         "data": {
           "search": { "exclude": false },
-          "xattr": [],
+          "xattr": [{ "name": "fs-component-name", "value": "hacks_37" }],
           "text": false,
           "displayName": "",
+          "devlink": { "runtimeProps": {}, "slot": "" },
           "attr": { "id": "" },
           "visibility": { "conditions": [] },
           "tag": "div"
         }
       },
       {
-        "_id": "b8c6c602-043f-c712-2081-5215f45c3f0a",
+        "_id": "b8baa8b6-d958-9937-ee4d-a5d56057b67e",
         "type": "TabsWrapper",
         "tag": "div",
         "classes": ["af3fb4f3-4f7b-0824-a294-cc5c2a87436e"],
         "children": [
-          "b8c6c602-043f-c712-2081-5215f45c3f0b",
-          "b8c6c602-043f-c712-2081-5215f45c3f15"
+          "b8baa8b6-d958-9937-ee4d-a5d56057b67f",
+          "b8baa8b6-d958-9937-ee4d-a5d56057b689"
         ],
         "data": {
-          "displayName": "",
-          "attr": { "id": "" },
-          "xattr": [],
           "search": { "exclude": false },
+          "xattr": [],
+          "displayName": "",
+          "devlink": { "runtimeProps": {}, "slot": "" },
+          "attr": { "id": "" },
           "visibility": { "conditions": [] },
           "tabs": {
             "type": "wrapper",
-            "current": "Tab 2",
+            "current": "Tab 3",
             "easing": "ease",
             "fadeIn": 300,
             "fadeOut": 100
@@ -43,19 +45,20 @@
         }
       },
       {
-        "_id": "b8c6c602-043f-c712-2081-5215f45c3f0b",
+        "_id": "b8baa8b6-d958-9937-ee4d-a5d56057b67f",
         "type": "TabsMenu",
         "tag": "div",
         "classes": [],
         "children": [
-          "b8c6c602-043f-c712-2081-5215f45c3f0c",
-          "b8c6c602-043f-c712-2081-5215f45c3f0f",
-          "b8c6c602-043f-c712-2081-5215f45c3f12"
+          "b8baa8b6-d958-9937-ee4d-a5d56057b680",
+          "b8baa8b6-d958-9937-ee4d-a5d56057b683",
+          "b8baa8b6-d958-9937-ee4d-a5d56057b686"
         ],
         "data": {
           "search": { "exclude": false },
           "xattr": [],
           "displayName": "",
+          "devlink": { "runtimeProps": {}, "slot": "" },
           "attr": { "id": "" },
           "visibility": { "conditions": [] },
           "tag": "div",
@@ -63,118 +66,125 @@
         }
       },
       {
-        "_id": "b8c6c602-043f-c712-2081-5215f45c3f0c",
+        "_id": "b8baa8b6-d958-9937-ee4d-a5d56057b680",
         "type": "TabsLink",
         "tag": "a",
         "classes": [],
-        "children": ["b8c6c602-043f-c712-2081-5215f45c3f0d"],
+        "children": ["b8baa8b6-d958-9937-ee4d-a5d56057b681"],
         "data": {
           "search": { "exclude": false },
-          "xattr": [],
+          "xattr": [{ "name": "fs-anchor-element", "value": "tab" }],
           "block": "inline",
           "displayName": "",
-          "attr": { "id": "", "data-w-tab": "Tab 1" },
+          "devlink": { "runtimeProps": {}, "slot": "" },
+          "attr": { "data-w-tab": "Tab 1", "id": "" },
           "visibility": { "conditions": [] },
           "tabs": { "type": "link" }
         }
       },
       {
-        "_id": "b8c6c602-043f-c712-2081-5215f45c3f0d",
+        "_id": "b8baa8b6-d958-9937-ee4d-a5d56057b681",
         "type": "Block",
         "tag": "div",
         "classes": [],
-        "children": ["b8c6c602-043f-c712-2081-5215f45c3f0e"],
+        "children": ["b8baa8b6-d958-9937-ee4d-a5d56057b682"],
         "data": {
           "search": { "exclude": false },
           "xattr": [],
           "text": true,
           "displayName": "",
+          "devlink": { "runtimeProps": {}, "slot": "" },
           "attr": { "id": "" },
           "visibility": { "conditions": [] },
           "tag": "div"
         }
       },
-      { "_id": "b8c6c602-043f-c712-2081-5215f45c3f0e", "text": true, "v": "Tab 1" },
+      { "_id": "b8baa8b6-d958-9937-ee4d-a5d56057b682", "text": true, "v": "Tab 1" },
       {
-        "_id": "b8c6c602-043f-c712-2081-5215f45c3f0f",
+        "_id": "b8baa8b6-d958-9937-ee4d-a5d56057b683",
         "type": "TabsLink",
         "tag": "a",
         "classes": [],
-        "children": ["b8c6c602-043f-c712-2081-5215f45c3f10"],
+        "children": ["b8baa8b6-d958-9937-ee4d-a5d56057b684"],
         "data": {
           "search": { "exclude": false },
-          "xattr": [],
+          "xattr": [{ "name": "fs-anchor-element", "value": "tab" }],
           "block": "inline",
           "displayName": "",
-          "attr": { "id": "", "data-w-tab": "Tab 2" },
+          "devlink": { "runtimeProps": {}, "slot": "" },
+          "attr": { "data-w-tab": "Tab 2", "id": "" },
           "visibility": { "conditions": [] },
           "tabs": { "type": "link" }
         }
       },
       {
-        "_id": "b8c6c602-043f-c712-2081-5215f45c3f10",
+        "_id": "b8baa8b6-d958-9937-ee4d-a5d56057b684",
         "type": "Block",
         "tag": "div",
         "classes": [],
-        "children": ["b8c6c602-043f-c712-2081-5215f45c3f11"],
+        "children": ["b8baa8b6-d958-9937-ee4d-a5d56057b685"],
         "data": {
           "search": { "exclude": false },
           "xattr": [],
           "text": true,
           "displayName": "",
+          "devlink": { "runtimeProps": {}, "slot": "" },
           "attr": { "id": "" },
           "visibility": { "conditions": [] },
           "tag": "div"
         }
       },
-      { "_id": "b8c6c602-043f-c712-2081-5215f45c3f11", "text": true, "v": "Tab 2" },
+      { "_id": "b8baa8b6-d958-9937-ee4d-a5d56057b685", "text": true, "v": "Tab 2" },
       {
-        "_id": "b8c6c602-043f-c712-2081-5215f45c3f12",
+        "_id": "b8baa8b6-d958-9937-ee4d-a5d56057b686",
         "type": "TabsLink",
         "tag": "a",
         "classes": [],
-        "children": ["b8c6c602-043f-c712-2081-5215f45c3f13"],
+        "children": ["b8baa8b6-d958-9937-ee4d-a5d56057b687"],
         "data": {
           "search": { "exclude": false },
-          "xattr": [],
+          "xattr": [{ "name": "fs-anchor-element", "value": "tab" }],
           "block": "inline",
           "displayName": "",
-          "attr": { "id": "", "data-w-tab": "Tab 3" },
+          "devlink": { "runtimeProps": {}, "slot": "" },
+          "attr": { "data-w-tab": "Tab 3", "id": "" },
           "visibility": { "conditions": [] },
           "tabs": { "type": "link" }
         }
       },
       {
-        "_id": "b8c6c602-043f-c712-2081-5215f45c3f13",
+        "_id": "b8baa8b6-d958-9937-ee4d-a5d56057b687",
         "type": "Block",
         "tag": "div",
         "classes": [],
-        "children": ["b8c6c602-043f-c712-2081-5215f45c3f14"],
+        "children": ["b8baa8b6-d958-9937-ee4d-a5d56057b688"],
         "data": {
           "search": { "exclude": false },
           "xattr": [],
           "text": true,
           "displayName": "",
+          "devlink": { "runtimeProps": {}, "slot": "" },
           "attr": { "id": "" },
           "visibility": { "conditions": [] },
           "tag": "div"
         }
       },
-      { "_id": "b8c6c602-043f-c712-2081-5215f45c3f14", "text": true, "v": "Tab 3" },
+      { "_id": "b8baa8b6-d958-9937-ee4d-a5d56057b688", "text": true, "v": "Tab 3" },
       {
-        "_id": "b8c6c602-043f-c712-2081-5215f45c3f15",
+        "_id": "b8baa8b6-d958-9937-ee4d-a5d56057b689",
         "type": "TabsContent",
         "tag": "div",
         "classes": [],
         "children": [
-          "b8c6c602-043f-c712-2081-5215f45c3f16",
-          "b8c6c602-043f-c712-2081-5215f45c3f19",
-          "b8c6c602-043f-c712-2081-5215f45c3f1c"
+          "b8baa8b6-d958-9937-ee4d-a5d56057b68a",
+          "b8baa8b6-d958-9937-ee4d-a5d56057b68d",
+          "b8baa8b6-d958-9937-ee4d-a5d56057b690"
         ],
         "data": {
           "search": { "exclude": false },
           "xattr": [],
           "displayName": "",
+          "devlink": { "runtimeProps": {}, "slot": "" },
           "attr": { "id": "" },
           "visibility": { "conditions": [] },
           "tag": "div",
@@ -182,104 +192,110 @@
         }
       },
       {
-        "_id": "b8c6c602-043f-c712-2081-5215f45c3f16",
+        "_id": "b8baa8b6-d958-9937-ee4d-a5d56057b68a",
         "type": "TabsPane",
         "tag": "div",
         "classes": [],
-        "children": ["b8c6c602-043f-c712-2081-5215f45c3f17"],
+        "children": ["b8baa8b6-d958-9937-ee4d-a5d56057b68b"],
         "data": {
           "search": { "exclude": false },
           "xattr": [],
           "displayName": "",
-          "attr": { "id": "", "data-w-tab": "Tab 1" },
+          "devlink": { "runtimeProps": {}, "slot": "" },
+          "attr": { "data-w-tab": "Tab 1", "id": "" },
           "visibility": { "conditions": [] },
           "tag": "div",
           "tabs": { "type": "pane" }
         }
       },
       {
-        "_id": "b8c6c602-043f-c712-2081-5215f45c3f17",
+        "_id": "b8baa8b6-d958-9937-ee4d-a5d56057b68b",
         "type": "Block",
         "tag": "div",
         "classes": [],
-        "children": ["b8c6c602-043f-c712-2081-5215f45c3f18"],
+        "children": ["b8baa8b6-d958-9937-ee4d-a5d56057b68c"],
         "data": {
           "search": { "exclude": false },
           "xattr": [],
           "text": true,
           "displayName": "",
+          "devlink": { "runtimeProps": {}, "slot": "" },
           "attr": { "id": "" },
           "visibility": { "conditions": [] },
           "tag": "div"
         }
       },
-      { "_id": "b8c6c602-043f-c712-2081-5215f45c3f18", "text": true, "v": "I'm Tab 1" },
+      { "_id": "b8baa8b6-d958-9937-ee4d-a5d56057b68c", "text": true, "v": "I'm Tab 1" },
       {
-        "_id": "b8c6c602-043f-c712-2081-5215f45c3f19",
+        "_id": "b8baa8b6-d958-9937-ee4d-a5d56057b68d",
         "type": "TabsPane",
         "tag": "div",
         "classes": [],
-        "children": ["b8c6c602-043f-c712-2081-5215f45c3f1a"],
+        "children": ["b8baa8b6-d958-9937-ee4d-a5d56057b68e"],
         "data": {
           "search": { "exclude": false },
           "xattr": [],
           "displayName": "",
-          "attr": { "id": "", "data-w-tab": "Tab 2" },
+          "devlink": { "runtimeProps": {}, "slot": "" },
+          "attr": { "data-w-tab": "Tab 2", "id": "" },
           "visibility": { "conditions": [] },
           "tag": "div",
           "tabs": { "type": "pane" }
         }
       },
       {
-        "_id": "b8c6c602-043f-c712-2081-5215f45c3f1a",
+        "_id": "b8baa8b6-d958-9937-ee4d-a5d56057b68e",
         "type": "Block",
         "tag": "div",
         "classes": [],
-        "children": ["b8c6c602-043f-c712-2081-5215f45c3f1b"],
+        "children": ["b8baa8b6-d958-9937-ee4d-a5d56057b68f"],
         "data": {
           "search": { "exclude": false },
           "xattr": [],
           "text": true,
           "displayName": "",
+          "devlink": { "runtimeProps": {}, "slot": "" },
           "attr": { "id": "" },
           "visibility": { "conditions": [] },
           "tag": "div"
         }
       },
-      { "_id": "b8c6c602-043f-c712-2081-5215f45c3f1b", "text": true, "v": "I'm Tab 2" },
+      { "_id": "b8baa8b6-d958-9937-ee4d-a5d56057b68f", "text": true, "v": "I'm Tab 2" },
       {
-        "_id": "b8c6c602-043f-c712-2081-5215f45c3f1c",
+        "_id": "b8baa8b6-d958-9937-ee4d-a5d56057b690",
         "type": "TabsPane",
         "tag": "div",
         "classes": [],
-        "children": ["b8c6c602-043f-c712-2081-5215f45c3f1d"],
+        "children": ["b8baa8b6-d958-9937-ee4d-a5d56057b691"],
         "data": {
           "search": { "exclude": false },
           "xattr": [],
           "displayName": "",
-          "attr": { "id": "", "data-w-tab": "Tab 3" },
+          "devlink": { "runtimeProps": {}, "slot": "" },
+          "attr": { "data-w-tab": "Tab 3", "id": "" },
           "visibility": { "conditions": [] },
           "tag": "div",
           "tabs": { "type": "pane" }
         }
       },
       {
-        "_id": "b8c6c602-043f-c712-2081-5215f45c3f1d",
+        "_id": "b8baa8b6-d958-9937-ee4d-a5d56057b691",
         "type": "Block",
         "tag": "div",
         "classes": [],
-        "children": ["b8c6c602-043f-c712-2081-5215f45c3f1e"],
+        "children": ["b8baa8b6-d958-9937-ee4d-a5d56057b692"],
         "data": {
           "search": { "exclude": false },
           "xattr": [],
           "text": true,
           "displayName": "",
+          "devlink": { "runtimeProps": {}, "slot": "" },
           "attr": { "id": "" },
           "visibility": { "conditions": [] },
           "tag": "div"
         }
       },
-      { "_id": "b8c6c602-043f-c712-2081-5215f45c3f1e", "text": true, "v": "I'm Tab 3" }
+      { "_id": "b8baa8b6-d958-9937-ee4d-a5d56057b692", "text": true, "v": "I'm Tab 3" }
     ],
     "styles": [
       {
@@ -289,7 +305,7 @@
         "name": "example_block",
         "namespace": "",
         "comb": "",
-        "styleLess": "display: grid; width: 100%; padding-top: 3rem; padding-right: 3rem; padding-bottom: 3rem; padding-left: 3rem; grid-auto-columns: 1fr; grid-column-gap: 2rem; grid-row-gap: 2rem; grid-template-columns: 1fr; grid-template-rows: auto; border-top-style: solid; border-top-width: 1rem; border-top-color: hsla(219.99999999999997, 4.68%, 7.18%, 1.00); border-right-style: solid; border-right-width: 1rem; border-right-color: hsla(219.99999999999997, 4.68%, 7.18%, 1.00); border-bottom-style: solid; border-bottom-width: 1rem; border-bottom-color: hsla(219.99999999999997, 4.68%, 7.18%, 1.00); border-left-style: solid; border-left-width: 1rem; border-left-color: hsla(219.99999999999997, 4.68%, 7.18%, 1.00); border-top-left-radius: 0.25rem; border-top-right-radius: 0.25rem; border-bottom-left-radius: 0.25rem; border-bottom-right-radius: 0.25rem; background-color: hsla(219.99999999999997, 5.66%, 10.39%, 1.00);",
+        "styleLess": "width: 100%; padding-top: 3rem; padding-right: 3rem; padding-bottom: 3rem; padding-left: 3rem; grid-auto-columns: 1fr; grid-column-gap: 3rem; grid-row-gap: 3rem; grid-template-columns: 1fr; grid-template-rows: auto; border-top-left-radius: 0.25rem; border-top-right-radius: 0.25rem; border-bottom-left-radius: 0.25rem; border-bottom-right-radius: 0.25rem; background-color: hsla(0, 0.00%, 24.43%, 1.00);",
         "variants": {
           "small": {
             "styleLess": "padding-top: 1.5rem; padding-right: 1.5rem; padding-bottom: 1.5rem; padding-left: 1.5rem;"
@@ -298,7 +314,7 @@
             "styleLess": "padding-top: 1.5rem; padding-right: 1.5rem; padding-bottom: 1.5rem; padding-left: 1.5rem;"
           }
         },
-        "children": [],
+        "children": ["168fe6e0-342e-ffef-82bc-9a743bde1374"],
         "createdBy": "57380bb111b9c4825e447f0d",
         "selector": null
       },
@@ -306,10 +322,10 @@
         "_id": "af3fb4f3-4f7b-0824-a294-cc5c2a87436e",
         "fake": false,
         "type": "class",
-        "name": "demo-14_tab",
+        "name": "hacks-14_tab",
         "namespace": "",
         "comb": "",
-        "styleLess": "display: grid; grid-auto-columns: 1fr; grid-column-gap: 2rem; grid-row-gap: 2rem; grid-template-columns: 1fr; grid-template-rows: auto; text-align: center;",
+        "styleLess": "display: grid; grid-auto-columns: 1fr; grid-column-gap: 2rem; grid-row-gap: 2rem; grid-template-columns: 1fr; grid-template-rows: auto; color: hsla(0, 0.00%, 100.00%, 1.00); text-align: center;",
         "variants": {},
         "children": [],
         "createdBy": "54441c96b0981db6504faf03",

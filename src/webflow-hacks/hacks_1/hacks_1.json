@@ -3,64 +3,64 @@
   "payload": {
     "nodes": [
       {
-        "_id": "7350ca48-0033-c2f3-ebd5-ef102ce282a9",
+        "_id": "ebc5b06d-d810-2b21-a180-e9d63cdb1d5a",
         "type": "Block",
         "tag": "div",
         "classes": ["4a44386d-cf38-1623-cdcd-312d92de0e1a"],
-        "children": ["339a3ea6-51c4-9480-a575-25dae3b79671"],
+        "children": ["ebc5b06d-d810-2b21-a180-e9d63cdb1d5b"],
         "data": {
           "search": { "exclude": false },
-          "xattr": [],
+          "xattr": [{ "name": "fs-component-name", "value": "hacks_1" }],
           "text": false,
           "displayName": "",
+          "devlink": { "runtimeProps": {}, "slot": "" },
           "attr": { "id": "" },
           "visibility": { "conditions": [] },
           "tag": "div"
         }
       },
       {
-        "_id": "339a3ea6-51c4-9480-a575-25dae3b79671",
+        "_id": "ebc5b06d-d810-2b21-a180-e9d63cdb1d5b",
         "type": "FormWrapper",
         "tag": "div",
-        "classes": ["2ecf3d23-4e88-2230-f1e4-e9ae3b195165"],
+        "classes": ["85428aed-0eeb-f49e-55c6-676da7902076"],
         "children": [
-          "339a3ea6-51c4-9480-a575-25dae3b79672",
-          "339a3ea6-51c4-9480-a575-25dae3b79676",
-          "339a3ea6-51c4-9480-a575-25dae3b79679"
+          "ebc5b06d-d810-2b21-a180-e9d63cdb1d5c",
+          "ebc5b06d-d810-2b21-a180-e9d63cdb1d60",
+          "ebc5b06d-d810-2b21-a180-e9d63cdb1d63"
         ],
         "data": {
           "form": { "type": "wrapper" },
-          "displayName": "",
-          "attr": { "id": "" },
-          "xattr": [],
           "search": { "exclude": true },
+          "xattr": [],
+          "displayName": "",
+          "devlink": { "runtimeProps": {}, "slot": "" },
+          "attr": { "id": "" },
           "visibility": { "conditions": [] }
         }
       },
       {
-        "_id": "339a3ea6-51c4-9480-a575-25dae3b79672",
+        "_id": "ebc5b06d-d810-2b21-a180-e9d63cdb1d5c",
         "type": "FormForm",
         "tag": "form",
-        "classes": ["4a83b52c-1477-83c0-dde0-a995bfe05222"],
+        "classes": ["85428aed-0eeb-f49e-55c6-676da7902077"],
         "children": [
-          "339a3ea6-51c4-9480-a575-25dae3b79673",
-          "339a3ea6-51c4-9480-a575-25dae3b79674",
-          "339a3ea6-51c4-9480-a575-25dae3b79675"
+          "ebc5b06d-d810-2b21-a180-e9d63cdb1d5d",
+          "ebc5b06d-d810-2b21-a180-e9d63cdb1d5e",
+          "ebc5b06d-d810-2b21-a180-e9d63cdb1d5f"
         ],
         "data": {
-          "form": { "type": "form", "name": "Email Form", "redirect": "/success/2" },
+          "form": { "type": "form", "name": "Email Form" },
           "search": { "exclude": false },
-          "xattr": [
-            { "name": "autocomplete", "value": "off" },
-            { "name": "fs-hacks-element", "value": "email-form" }
-          ],
+          "xattr": [{ "name": "fs-hacks-element", "value": "email-form" }],
           "displayName": "",
+          "devlink": { "runtimeProps": {}, "slot": "" },
           "attr": {
             "id": "email-form",
             "name": "email-form",
             "data-name": "Email Form",
-            "redirect": "https://www.finsweet.com/hacks-typescript/success/webflow-custom-success-message-using-url-redirect/",
-            "data-redirect": "https://www.finsweet.com/hacks-typescript/success/webflow-custom-success-message-using-url-redirect/",
+            "redirect": "",
+            "data-redirect": "",
             "action": "",
             "method": "get"
           },
@@ -69,50 +69,48 @@
         }
       },
       {
-        "_id": "339a3ea6-51c4-9480-a575-25dae3b79673",
+        "_id": "ebc5b06d-d810-2b21-a180-e9d63cdb1d5d",
         "type": "FormTextInput",
         "tag": "input",
-        "classes": ["2ecf3d23-4e88-2230-f1e4-e9ae3b195166"],
+        "classes": ["85428aed-0eeb-f49e-55c6-676da7902078"],
         "children": [],
         "data": {
-          "displayName": "",
           "attr": {
-            "id": "name-2",
-            "name": "name-2",
+            "id": "Name",
+            "name": "Name",
             "maxlength": 256,
-            "data-name": "Name 2",
+            "data-name": "Name",
             "placeholder": "Name",
             "disabled": false,
             "type": "text",
             "required": false,
             "autofocus": false
           },
+          "form": { "name": "Name", "type": "input", "passwordPage": false },
+          "displayName": "",
           "xattr": [],
           "search": { "exclude": false },
           "visibility": { "conditions": [] },
-          "form": { "name": "Name 2", "type": "input", "passwordPage": false }
+          "devlink": { "runtimeProps": {}, "slot": "" }
         }
       },
       {
-        "_id": "339a3ea6-51c4-9480-a575-25dae3b79674",
+        "_id": "ebc5b06d-d810-2b21-a180-e9d63cdb1d5e",
         "type": "FormSelect",
         "tag": "select",
-        "classes": ["2ecf3d23-4e88-2230-f1e4-e9ae3b195167"],
+        "classes": ["85428aed-0eeb-f49e-55c6-676da7902079"],
         "children": [],
         "data": {
-          "displayName": "",
           "attr": {
-            "id": "interest-select-field",
-            "name": "Interest",
-            "data-name": "Interest",
+            "id": "field",
+            "name": "field",
+            "data-name": "Field",
             "required": false,
             "multiple": false
           },
           "xattr": [{ "name": "fs-hacks-element", "value": "interest-select-field" }],
-          "search": { "exclude": false },
-          "visibility": { "conditions": [] },
           "form": {
-            "name": "Interest",
+            "name": "Field",
             "opts": [
               { "t": "Select your biggest interest...", "v": "" },
               { "t": "Webflow CMS", "v": "Webflow CMS" },
@@ -120,93 +118,102 @@
               { "t": "Advanced CSS", "v": "Advanced CSS" }
             ],
             "type": "select"
-          }
+          },
+          "displayName": "",
+          "search": { "exclude": false },
+          "visibility": { "conditions": [] },
+          "devlink": { "runtimeProps": {}, "slot": "" }
         }
       },
       {
-        "_id": "339a3ea6-51c4-9480-a575-25dae3b79675",
+        "_id": "ebc5b06d-d810-2b21-a180-e9d63cdb1d5f",
         "type": "FormButton",
         "tag": "input",
-        "classes": ["57951d0a-8797-3662-e82c-37469e19a06d"],
+        "classes": ["85428aed-0eeb-f49e-55c6-676da790207a"],
         "children": [],
         "data": {
+          "attr": { "type": "submit", "value": "Submit", "data-wait": "Please wait...", "id": "" },
+          "form": { "type": "button", "wait": "Please wait..." },
           "displayName": "",
-          "attr": { "id": "", "type": "submit", "value": "Submit", "data-wait": "Please wait..." },
           "xattr": [],
           "search": { "exclude": false },
           "visibility": { "conditions": [] },
-          "form": { "type": "button", "wait": "Please wait..." }
+          "devlink": { "runtimeProps": {}, "slot": "" }
         }
       },
       {
-        "_id": "339a3ea6-51c4-9480-a575-25dae3b79676",
+        "_id": "ebc5b06d-d810-2b21-a180-e9d63cdb1d60",
         "type": "FormSuccessMessage",
         "tag": "div",
-        "classes": ["2ecf3d23-4e88-2230-f1e4-e9ae3b195169"],
-        "children": ["339a3ea6-51c4-9480-a575-25dae3b79677"],
+        "classes": ["85428aed-0eeb-f49e-55c6-676da790207b"],
+        "children": ["ebc5b06d-d810-2b21-a180-e9d63cdb1d61"],
         "data": {
           "form": { "type": "msg-done" },
-          "displayName": "",
-          "attr": { "id": "" },
-          "xattr": [],
           "search": { "exclude": false },
+          "xattr": [],
+          "displayName": "",
+          "devlink": { "runtimeProps": {}, "slot": "" },
+          "attr": { "id": "" },
           "visibility": { "conditions": [] }
         }
       },
       {
-        "_id": "339a3ea6-51c4-9480-a575-25dae3b79677",
+        "_id": "ebc5b06d-d810-2b21-a180-e9d63cdb1d61",
         "type": "Block",
         "tag": "div",
         "classes": [],
-        "children": ["339a3ea6-51c4-9480-a575-25dae3b79678"],
+        "children": ["ebc5b06d-d810-2b21-a180-e9d63cdb1d62"],
         "data": {
           "search": { "exclude": false },
-          "xattr": [],
+          "xattr": [{ "name": "fs-hacks-element", "value": "success-text" }],
           "text": true,
           "displayName": "",
+          "devlink": { "runtimeProps": {}, "slot": "" },
           "attr": { "id": "" },
           "visibility": { "conditions": [] },
           "tag": "div"
         }
       },
       {
-        "_id": "339a3ea6-51c4-9480-a575-25dae3b79678",
+        "_id": "ebc5b06d-d810-2b21-a180-e9d63cdb1d62",
         "text": true,
         "v": "Thank you! Your submission has been received!"
       },
       {
-        "_id": "339a3ea6-51c4-9480-a575-25dae3b79679",
+        "_id": "ebc5b06d-d810-2b21-a180-e9d63cdb1d63",
         "type": "FormErrorMessage",
         "tag": "div",
         "classes": [],
-        "children": ["339a3ea6-51c4-9480-a575-25dae3b7967a"],
+        "children": ["ebc5b06d-d810-2b21-a180-e9d63cdb1d64"],
         "data": {
           "form": { "type": "msg-fail" },
-          "displayName": "",
-          "attr": { "id": "" },
-          "xattr": [],
           "search": { "exclude": false },
+          "xattr": [],
+          "displayName": "",
+          "devlink": { "runtimeProps": {}, "slot": "" },
+          "attr": { "id": "" },
           "visibility": { "conditions": [] }
         }
       },
       {
-        "_id": "339a3ea6-51c4-9480-a575-25dae3b7967a",
+        "_id": "ebc5b06d-d810-2b21-a180-e9d63cdb1d64",
         "type": "Block",
         "tag": "div",
         "classes": [],
-        "children": ["339a3ea6-51c4-9480-a575-25dae3b7967b"],
+        "children": ["ebc5b06d-d810-2b21-a180-e9d63cdb1d65"],
         "data": {
           "search": { "exclude": false },
           "xattr": [],
           "text": true,
           "displayName": "",
+          "devlink": { "runtimeProps": {}, "slot": "" },
           "attr": { "id": "" },
           "visibility": { "conditions": [] },
           "tag": "div"
         }
       },
       {
-        "_id": "339a3ea6-51c4-9480-a575-25dae3b7967b",
+        "_id": "ebc5b06d-d810-2b21-a180-e9d63cdb1d65",
         "text": true,
         "v": "Oops! Something went wrong while submitting the form."
       }
@@ -219,7 +226,7 @@
         "name": "example_block",
         "namespace": "",
         "comb": "",
-        "styleLess": "display: grid; width: 100%; padding-top: 3rem; padding-right: 3rem; padding-bottom: 3rem; padding-left: 3rem; grid-auto-columns: 1fr; grid-column-gap: 2rem; grid-row-gap: 2rem; grid-template-columns: 1fr; grid-template-rows: auto; border-top-style: solid; border-top-width: 1rem; border-top-color: hsla(219.99999999999997, 4.68%, 7.18%, 1.00); border-right-style: solid; border-right-width: 1rem; border-right-color: hsla(219.99999999999997, 4.68%, 7.18%, 1.00); border-bottom-style: solid; border-bottom-width: 1rem; border-bottom-color: hsla(219.99999999999997, 4.68%, 7.18%, 1.00); border-left-style: solid; border-left-width: 1rem; border-left-color: hsla(219.99999999999997, 4.68%, 7.18%, 1.00); border-top-left-radius: 0.25rem; border-top-right-radius: 0.25rem; border-bottom-left-radius: 0.25rem; border-bottom-right-radius: 0.25rem; background-color: hsla(219.99999999999997, 5.66%, 10.39%, 1.00);",
+        "styleLess": "width: 100%; padding-top: 3rem; padding-right: 3rem; padding-bottom: 3rem; padding-left: 3rem; grid-auto-columns: 1fr; grid-column-gap: 3rem; grid-row-gap: 3rem; grid-template-columns: 1fr; grid-template-rows: auto; border-top-left-radius: 0.25rem; border-top-right-radius: 0.25rem; border-bottom-left-radius: 0.25rem; border-bottom-right-radius: 0.25rem; background-color: hsla(0, 0.00%, 24.43%, 1.00);",
         "variants": {
           "small": {
             "styleLess": "padding-top: 1.5rem; padding-right: 1.5rem; padding-bottom: 1.5rem; padding-left: 1.5rem;"
@@ -228,43 +235,43 @@
             "styleLess": "padding-top: 1.5rem; padding-right: 1.5rem; padding-bottom: 1.5rem; padding-left: 1.5rem;"
           }
         },
-        "children": [],
+        "children": ["168fe6e0-342e-ffef-82bc-9a743bde1374"],
         "createdBy": "57380bb111b9c4825e447f0d",
         "selector": null
       },
       {
-        "_id": "2ecf3d23-4e88-2230-f1e4-e9ae3b195165",
+        "_id": "85428aed-0eeb-f49e-55c6-676da7902076",
         "fake": false,
         "type": "class",
-        "name": "demo-2_component",
+        "name": "hacks-1_component",
         "namespace": "",
         "comb": "",
-        "styleLess": "margin-bottom: 0px;",
+        "styleLess": "margin-bottom: 0px; color: hsla(0, 0.00%, 100.00%, 1.00);",
         "variants": {},
         "children": [],
         "selector": null
       },
       {
-        "_id": "4a83b52c-1477-83c0-dde0-a995bfe05222",
+        "_id": "85428aed-0eeb-f49e-55c6-676da7902077",
         "fake": false,
         "type": "class",
-        "name": "demo-2_form",
+        "name": "hacks-1_form",
         "namespace": "",
         "comb": "",
-        "styleLess": "display: grid; grid-auto-columns: 1fr; grid-column-gap: 1rem; grid-row-gap: 1rem; grid-template-columns: 1fr; grid-template-rows: auto;",
+        "styleLess": "display: grid; justify-items: stretch; align-items: center; grid-auto-columns: 1fr; grid-column-gap: 1rem; grid-row-gap: 1rem; grid-template-columns: 1fr; grid-template-rows: auto; text-align: left;",
         "variants": {},
         "children": [],
-        "createdBy": "54441c96b0981db6504faf03",
+        "createdBy": "5f85f8d1e466777548de0e17",
         "selector": null
       },
       {
-        "_id": "2ecf3d23-4e88-2230-f1e4-e9ae3b195166",
+        "_id": "85428aed-0eeb-f49e-55c6-676da7902078",
         "fake": false,
         "type": "class",
-        "name": "demo-2_input",
+        "name": "hacks-1_input",
         "namespace": "",
         "comb": "",
-        "styleLess": "margin-bottom: 0px; border-top-width: 0rem; border-right-width: 0rem; border-bottom-style: solid; border-bottom-width: 0.125rem; border-bottom-color: #240c2e; border-left-width: 0rem; border-top-left-radius: 0rem; border-top-right-radius: 0rem; border-bottom-left-radius: 0rem; border-bottom-right-radius: 0rem; transition-property: border-color; transition-duration: 100ms; transition-timing-function: ease; font-size: 1.125rem;",
+        "styleLess": "margin-bottom: 0px; border-top-style: none; border-top-width: 1px; border-top-color: black; border-right-style: none; border-right-width: 1px; border-right-color: black; border-bottom-style: none; border-bottom-width: 1px; border-bottom-color: black; border-left-style: none; border-left-width: 1px; border-left-color: black;",
         "variants": {
           "main_placeholder": { "styleLess": "color: rgba(36, 12, 46, 0.9); font-size: 0.875rem;" },
           "main_focus": { "styleLess": "border-bottom-color: #e9e6ed;" }
@@ -273,10 +280,10 @@
         "selector": null
       },
       {
-        "_id": "2ecf3d23-4e88-2230-f1e4-e9ae3b195167",
+        "_id": "85428aed-0eeb-f49e-55c6-676da7902079",
         "fake": false,
         "type": "class",
-        "name": "demo-2_select",
+        "name": "hacks-1_select",
         "namespace": "",
         "comb": "",
         "styleLess": "margin-bottom: 0px;",
@@ -285,26 +292,29 @@
         "selector": null
       },
       {
-        "_id": "57951d0a-8797-3662-e82c-37469e19a06d",
+        "_id": "85428aed-0eeb-f49e-55c6-676da790207a",
         "fake": false,
         "type": "class",
-        "name": "demo-2_submit",
+        "name": "hacks-1_submit",
         "namespace": "",
         "comb": "",
-        "styleLess": "",
-        "variants": {},
+        "styleLess": "transition-property: background-color; transition-duration: 100ms; transition-timing-function: ease;",
+        "variants": {
+          "main_hover": { "styleLess": "color: hsla(177.88235294117646, 0.00%, 100.00%, 1.00);" },
+          "small": { "styleLess": "padding-right: 1.875rem; padding-left: 1.875rem;" },
+          "main_active": { "styleLess": "transform: translate(0rem, 0.0625rem);" }
+        },
         "children": [],
-        "createdBy": "54441c96b0981db6504faf03",
         "selector": null
       },
       {
-        "_id": "2ecf3d23-4e88-2230-f1e4-e9ae3b195169",
+        "_id": "85428aed-0eeb-f49e-55c6-676da790207b",
         "fake": false,
         "type": "class",
-        "name": "demo-2_success",
+        "name": "hacks-1_success",
         "namespace": "",
         "comb": "",
-        "styleLess": "background-color: whitesmoke; color: hsla(0, 0.00%, 0.00%, 1.00);",
+        "styleLess": "color: hsla(0, 0.00%, 0.00%, 1.00);",
         "variants": {},
         "children": [],
         "selector": null
