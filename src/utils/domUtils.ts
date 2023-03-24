@@ -80,10 +80,23 @@ export const fetchDemoComponent = async () => {
     return;
   }
 };
+// Utility function to get the latest commit SHA
+const getLatestCommitSHA = async () => {
+  const repoUrl = 'https://api.github.com/repos/finsweet/hacks/commits';
+  const res = await fetch(repoUrl);
+  if (!res.ok) {
+    throw new Error('Error fetching the latest commit SHA');
+  }
+  const commits = await res.json();
+  const latestCommitSHA = commits[0].sha;
+  return latestCommitSHA;
+};
 
+// Update the fetchTsCode, fetchJsCode, and fetchComponentJSON functions
 export const fetchTsCode = async () => {
   if (!hackName) return;
-  const url = `https://cdn.jsdelivr.net/gh/finsweet/hacks@5de53b7023dbc208cc757e6587b82568498fe42d/src/webflow-hacks/${hackName}/${hackName}.ts`;
+  const latestCommitSHA = await getLatestCommitSHA();
+  const url = `https://cdn.jsdelivr.net/gh/finsweet/hacks@${latestCommitSHA}/src/webflow-hacks/${hackName}/${hackName}.ts`;
   const code = await fetchCode(url);
   if (!code) return;
   const { formattedCode } = code;
@@ -93,7 +106,8 @@ export const fetchTsCode = async () => {
 };
 
 export const fetchJsCode = async () => {
-  const url = `https://cdn.jsdelivr.net/gh/finsweet/hacks@5de53b7023dbc208cc757e6587b82568498fe42d/src/webflow-hacks/${hackName}/${hackName}.js`;
+  const latestCommitSHA = await getLatestCommitSHA();
+  const url = `https://cdn.jsdelivr.net/gh/finsweet/hacks@${latestCommitSHA}/src/webflow-hacks/${hackName}/${hackName}.js`;
   const code = await fetchCode(url);
   if (!code) return;
   const { formattedCode } = code;
@@ -108,8 +122,8 @@ export const fetchJsCode = async () => {
 
 const fetchComponentJSON = async () => {
   if (!hackName) return;
-  // !! TO DO: if possible, dynamically fetch the latest commit version, i.e. text after the @
-  const url = `https://cdn.jsdelivr.net/gh/finsweet/hacks@5de53b7023dbc208cc757e6587b82568498fe42d/src/webflow-hacks/${hackName}/${hackName}.json`;
+  const latestCommitSHA = await getLatestCommitSHA();
+  const url = `https://cdn.jsdelivr.net/gh/finsweet/hacks@${latestCommitSHA}/src/webflow-hacks/${hackName}/${hackName}.json`;
 
   const componentJSON = await fetch(url);
   return componentJSON.json();
