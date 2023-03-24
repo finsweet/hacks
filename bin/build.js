@@ -1,4 +1,5 @@
 /* eslint-disable no-console */
+import { exec } from 'child_process';
 import esbuild from 'esbuild';
 
 const buildDirectory = 'dist';
@@ -23,6 +24,13 @@ const defaultSettings = {
 // Files building
 if (production) {
   esbuild.build(defaultSettings);
+
+  // Transpile and format webflow-hacks
+  exec('tsc --project tsconfig.hacks.json', () => {
+    exec('eslint --ignore-path .gitignore ./src/webflow-hacks --fix', () => {
+      exec('prettier --write ./src/webflow-hacks');
+    });
+  });
 }
 
 // Files serving

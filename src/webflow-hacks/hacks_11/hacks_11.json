@@ -1,0 +1,307 @@
+{
+  "type": "@webflow/XscpData",
+  "payload": {
+    "nodes": [
+      {
+        "_id": "557f136f-14e5-a7ba-0762-40d1259a61fa",
+        "type": "Block",
+        "tag": "div",
+        "classes": ["4a44386d-cf38-1623-cdcd-312d92de0e1a"],
+        "children": ["557f136f-14e5-a7ba-0762-40d1259a61fb"],
+        "data": {
+          "search": { "exclude": false },
+          "xattr": [{ "name": "fs-component-name", "value": "hacks_11" }],
+          "text": false,
+          "displayName": "",
+          "devlink": { "runtimeProps": {}, "slot": "" },
+          "attr": { "id": "" },
+          "visibility": { "conditions": [] },
+          "tag": "div"
+        }
+      },
+      {
+        "_id": "557f136f-14e5-a7ba-0762-40d1259a61fb",
+        "type": "FormWrapper",
+        "tag": "div",
+        "classes": ["74b4cf8a-09e7-d8d1-8892-d13116543baa"],
+        "children": [
+          "557f136f-14e5-a7ba-0762-40d1259a61fc",
+          "557f136f-14e5-a7ba-0762-40d1259a6202",
+          "557f136f-14e5-a7ba-0762-40d1259a6205"
+        ],
+        "data": {
+          "form": { "type": "wrapper" },
+          "search": { "exclude": true },
+          "xattr": [],
+          "displayName": "",
+          "devlink": { "runtimeProps": {}, "slot": "" },
+          "attr": { "id": "" },
+          "visibility": { "conditions": [] }
+        }
+      },
+      {
+        "_id": "557f136f-14e5-a7ba-0762-40d1259a61fc",
+        "type": "FormForm",
+        "tag": "form",
+        "classes": ["e79fae7d-a43c-2038-d96f-f8fc6b80f4e1"],
+        "children": [
+          "557f136f-14e5-a7ba-0762-40d1259a61fd",
+          "557f136f-14e5-a7ba-0762-40d1259a61fe",
+          "557f136f-14e5-a7ba-0762-40d1259a61ff",
+          "557f136f-14e5-a7ba-0762-40d1259a6201"
+        ],
+        "data": {
+          "form": { "type": "form", "name": "Email Form" },
+          "search": { "exclude": false },
+          "xattr": [],
+          "displayName": "",
+          "devlink": { "runtimeProps": {}, "slot": "" },
+          "attr": {
+            "id": "email-form",
+            "name": "email-form",
+            "data-name": "Email Form",
+            "redirect": "",
+            "data-redirect": "",
+            "action": "",
+            "method": "get"
+          },
+          "visibility": { "conditions": [] },
+          "Source": { "tag": "Default form", "val": {} }
+        }
+      },
+      {
+        "_id": "557f136f-14e5-a7ba-0762-40d1259a61fd",
+        "type": "FormTextInput",
+        "tag": "input",
+        "classes": ["ce9815a1-474f-2227-8e3b-403958c73763"],
+        "children": [],
+        "data": {
+          "attr": {
+            "autofocus": false,
+            "maxlength": 256,
+            "name": "Name",
+            "data-name": "Name",
+            "placeholder": "Name",
+            "type": "text",
+            "id": "Name",
+            "disabled": false,
+            "required": false
+          },
+          "form": { "type": "input", "name": "Name", "passwordPage": false }
+        }
+      },
+      {
+        "_id": "557f136f-14e5-a7ba-0762-40d1259a61fe",
+        "type": "FormTextInput",
+        "tag": "input",
+        "classes": ["ce9815a1-474f-2227-8e3b-403958c73763"],
+        "children": [],
+        "data": {
+          "attr": {
+            "autofocus": false,
+            "maxlength": 256,
+            "name": "Page-URL",
+            "data-name": "Page URL",
+            "placeholder": "Page URL",
+            "type": "text",
+            "id": "Page-URL",
+            "disabled": false,
+            "required": false
+          },
+          "xattr": [{ "name": "fs-hacks-element", "value": "page-url-input" }],
+          "form": { "name": "Page URL", "type": "input", "passwordPage": false }
+        }
+      },
+      {
+        "_id": "557f136f-14e5-a7ba-0762-40d1259a61ff",
+        "type": "Block",
+        "tag": "div",
+        "classes": ["ce9815a1-474f-2227-8e3b-403958c73765"],
+        "children": ["557f136f-14e5-a7ba-0762-40d1259a6200"],
+        "data": {
+          "search": { "exclude": false },
+          "xattr": [{ "name": "fs-hacks-element", "value": "show-page-url" }],
+          "text": true,
+          "displayName": "",
+          "devlink": { "runtimeProps": {}, "slot": "" },
+          "attr": { "id": "" },
+          "visibility": { "conditions": [] },
+          "tag": "div"
+        }
+      },
+      { "_id": "557f136f-14e5-a7ba-0762-40d1259a6200", "text": true, "v": "insertpageurl" },
+      {
+        "_id": "557f136f-14e5-a7ba-0762-40d1259a6201",
+        "type": "FormButton",
+        "tag": "input",
+        "classes": [],
+        "children": [],
+        "data": {
+          "attr": { "type": "submit", "value": "Submit", "data-wait": "Please wait..." },
+          "form": { "type": "button", "wait": "Please wait..." }
+        }
+      },
+      {
+        "_id": "557f136f-14e5-a7ba-0762-40d1259a6202",
+        "type": "FormSuccessMessage",
+        "tag": "div",
+        "classes": [],
+        "children": ["557f136f-14e5-a7ba-0762-40d1259a6203"],
+        "data": {
+          "form": { "type": "msg-done" },
+          "search": { "exclude": false },
+          "xattr": [],
+          "displayName": "",
+          "devlink": { "runtimeProps": {}, "slot": "" },
+          "attr": { "id": "" },
+          "visibility": { "conditions": [] }
+        }
+      },
+      {
+        "_id": "557f136f-14e5-a7ba-0762-40d1259a6203",
+        "type": "Block",
+        "tag": "div",
+        "classes": [],
+        "children": ["557f136f-14e5-a7ba-0762-40d1259a6204"],
+        "data": {
+          "search": { "exclude": false },
+          "xattr": [],
+          "text": true,
+          "displayName": "",
+          "devlink": { "runtimeProps": {}, "slot": "" },
+          "attr": { "id": "" },
+          "visibility": { "conditions": [] },
+          "tag": "div"
+        }
+      },
+      {
+        "_id": "557f136f-14e5-a7ba-0762-40d1259a6204",
+        "text": true,
+        "v": "Thank you! Your submission has been received!"
+      },
+      {
+        "_id": "557f136f-14e5-a7ba-0762-40d1259a6205",
+        "type": "FormErrorMessage",
+        "tag": "div",
+        "classes": [],
+        "children": ["557f136f-14e5-a7ba-0762-40d1259a6206"],
+        "data": {
+          "form": { "type": "msg-fail" },
+          "search": { "exclude": false },
+          "xattr": [],
+          "displayName": "",
+          "devlink": { "runtimeProps": {}, "slot": "" },
+          "attr": { "id": "" },
+          "visibility": { "conditions": [] }
+        }
+      },
+      {
+        "_id": "557f136f-14e5-a7ba-0762-40d1259a6206",
+        "type": "Block",
+        "tag": "div",
+        "classes": [],
+        "children": ["557f136f-14e5-a7ba-0762-40d1259a6207"],
+        "data": {
+          "search": { "exclude": false },
+          "xattr": [],
+          "text": true,
+          "displayName": "",
+          "devlink": { "runtimeProps": {}, "slot": "" },
+          "attr": { "id": "" },
+          "visibility": { "conditions": [] },
+          "tag": "div"
+        }
+      },
+      {
+        "_id": "557f136f-14e5-a7ba-0762-40d1259a6207",
+        "text": true,
+        "v": "Oops! Something went wrong while submitting the form."
+      }
+    ],
+    "styles": [
+      {
+        "_id": "4a44386d-cf38-1623-cdcd-312d92de0e1a",
+        "fake": false,
+        "type": "class",
+        "name": "example_block",
+        "namespace": "",
+        "comb": "",
+        "styleLess": "width: 100%; padding-top: 3rem; padding-right: 3rem; padding-bottom: 3rem; padding-left: 3rem; grid-auto-columns: 1fr; grid-column-gap: 3rem; grid-row-gap: 3rem; grid-template-columns: 1fr; grid-template-rows: auto; border-top-left-radius: 0.25rem; border-top-right-radius: 0.25rem; border-bottom-left-radius: 0.25rem; border-bottom-right-radius: 0.25rem; background-color: hsla(0, 0.00%, 24.43%, 1.00);",
+        "variants": {
+          "small": {
+            "styleLess": "padding-top: 1.5rem; padding-right: 1.5rem; padding-bottom: 1.5rem; padding-left: 1.5rem;"
+          },
+          "tiny": {
+            "styleLess": "padding-top: 1.5rem; padding-right: 1.5rem; padding-bottom: 1.5rem; padding-left: 1.5rem;"
+          }
+        },
+        "children": ["168fe6e0-342e-ffef-82bc-9a743bde1374"],
+        "createdBy": "57380bb111b9c4825e447f0d",
+        "selector": null
+      },
+      {
+        "_id": "74b4cf8a-09e7-d8d1-8892-d13116543baa",
+        "fake": false,
+        "type": "class",
+        "name": "hacks-4_component",
+        "namespace": "",
+        "comb": "",
+        "styleLess": "color: hsla(0, 0.00%, 100.00%, 1.00);",
+        "variants": {},
+        "children": [],
+        "createdBy": "54441c96b0981db6504faf03",
+        "selector": null
+      },
+      {
+        "_id": "e79fae7d-a43c-2038-d96f-f8fc6b80f4e1",
+        "fake": false,
+        "type": "class",
+        "name": "hacks-4_form",
+        "namespace": "",
+        "comb": "",
+        "styleLess": "display: grid; justify-content: start; justify-items: stretch; grid-auto-columns: 1fr; grid-column-gap: 1rem; grid-row-gap: 1rem; grid-template-columns: 1fr; grid-template-rows: auto; text-align: center;",
+        "variants": {},
+        "children": [],
+        "createdBy": "54441c96b0981db6504faf03",
+        "selector": null
+      },
+      {
+        "_id": "ce9815a1-474f-2227-8e3b-403958c73763",
+        "fake": false,
+        "type": "class",
+        "name": "hacks-4_input",
+        "namespace": "",
+        "comb": "",
+        "styleLess": "margin-bottom: 0px; border-top-width: 0rem; border-right-width: 0rem; border-bottom-style: solid; border-bottom-width: 0.125rem; border-bottom-color: #240c2e; border-left-width: 0rem; border-top-left-radius: 0rem; border-top-right-radius: 0rem; border-bottom-left-radius: 0rem; border-bottom-right-radius: 0rem; transition-property: border-color; transition-duration: 100ms; transition-timing-function: ease; font-size: 1.125rem; text-align: center;",
+        "variants": {
+          "main_placeholder": { "styleLess": "color: rgba(36, 12, 46, 0.9); font-size: 0.875rem;" },
+          "main_focus": { "styleLess": "border-bottom-color: #e9e6ed;" }
+        },
+        "children": [],
+        "selector": null
+      },
+      {
+        "_id": "ce9815a1-474f-2227-8e3b-403958c73765",
+        "fake": false,
+        "type": "class",
+        "name": "hacks-4_page-url",
+        "namespace": "",
+        "comb": "",
+        "styleLess": "",
+        "variants": {},
+        "children": [],
+        "selector": null
+      }
+    ],
+    "assets": [],
+    "ix1": [],
+    "ix2": { "interactions": [], "events": [], "actionLists": [] }
+  },
+  "meta": {
+    "unlinkedSymbolCount": 0,
+    "droppedLinks": 0,
+    "dynBindRemovedCount": 0,
+    "dynListBindRemovedCount": 0,
+    "paginationRemovedCount": 0
+  }
+}

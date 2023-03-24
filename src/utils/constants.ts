@@ -4,3 +4,8 @@ export const SELECTORS = {
   CODE_LISTING: '[fs-codehighlight-element]',
   COPY_COMPONENT: 'fs-copy-component',
 };
+
+export const copyComponentButton = document.querySelector('[fs-copy-component]') as HTMLElement;
+
+const hackNameElement = document.querySelector('[fs-div-element="hack_name"]') as HTMLElement;
+export const hackName = hackNameElement.innerHTML;

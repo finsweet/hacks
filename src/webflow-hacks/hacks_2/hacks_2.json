@@ -1,0 +1,339 @@
+{
+  "type": "@webflow/XscpData",
+  "payload": {
+    "nodes": [
+      {
+        "_id": "16f60a09-4520-730a-c115-912d5bad4d81",
+        "type": "Block",
+        "tag": "div",
+        "classes": ["4a44386d-cf38-1623-cdcd-312d92de0e1a"],
+        "children": ["16f60a09-4520-730a-c115-912d5bad4d82"],
+        "data": {
+          "search": { "exclude": false },
+          "xattr": [{ "name": "fs-component-name", "value": "hacks_2" }],
+          "text": false,
+          "displayName": "",
+          "devlink": { "runtimeProps": {}, "slot": "" },
+          "attr": { "id": "" },
+          "visibility": { "conditions": [] },
+          "tag": "div"
+        }
+      },
+      {
+        "_id": "16f60a09-4520-730a-c115-912d5bad4d82",
+        "type": "FormWrapper",
+        "tag": "div",
+        "classes": ["06c425f4-72b1-e035-f0c1-bb3f04d6ff0b"],
+        "children": [
+          "16f60a09-4520-730a-c115-912d5bad4d83",
+          "16f60a09-4520-730a-c115-912d5bad4d87",
+          "16f60a09-4520-730a-c115-912d5bad4d8a"
+        ],
+        "data": {
+          "form": { "type": "wrapper" },
+          "search": { "exclude": true },
+          "xattr": [],
+          "displayName": "",
+          "devlink": { "runtimeProps": {}, "slot": "" },
+          "attr": { "id": "" },
+          "visibility": { "conditions": [] }
+        }
+      },
+      {
+        "_id": "16f60a09-4520-730a-c115-912d5bad4d83",
+        "type": "FormForm",
+        "tag": "form",
+        "classes": ["1f762123-74b7-cc99-86a5-c2425ddf3bb6"],
+        "children": [
+          "16f60a09-4520-730a-c115-912d5bad4d84",
+          "16f60a09-4520-730a-c115-912d5bad4d85",
+          "16f60a09-4520-730a-c115-912d5bad4d86"
+        ],
+        "data": {
+          "form": { "type": "form", "name": "Email Form" },
+          "search": { "exclude": false },
+          "xattr": [{ "name": "fs-hacks-element", "value": "email-form" }],
+          "displayName": "",
+          "devlink": { "runtimeProps": {}, "slot": "" },
+          "attr": {
+            "id": "email-form",
+            "name": "email-form",
+            "data-name": "Email Form",
+            "redirect": "https://finsweet.com/hacks-typescript/success/webflow-custom-success-message-using-url-redirect",
+            "data-redirect": "https://finsweet.com/hacks-typescript/success/webflow-custom-success-message-using-url-redirect",
+            "action": "",
+            "method": "get"
+          },
+          "visibility": { "conditions": [] },
+          "Source": { "tag": "Default form", "val": {} }
+        }
+      },
+      {
+        "_id": "16f60a09-4520-730a-c115-912d5bad4d84",
+        "type": "FormTextInput",
+        "tag": "input",
+        "classes": ["af5e4c41-f046-2c89-e689-84f65b26e31b"],
+        "children": [],
+        "data": {
+          "attr": {
+            "id": "Name-3",
+            "name": "Name-3",
+            "maxlength": 256,
+            "data-name": "Name 3",
+            "placeholder": "Name",
+            "disabled": false,
+            "type": "text",
+            "required": false,
+            "autofocus": false
+          },
+          "form": { "name": "Name 3", "type": "input", "passwordPage": false },
+          "displayName": "",
+          "xattr": [],
+          "search": { "exclude": false },
+          "visibility": { "conditions": [] },
+          "devlink": { "runtimeProps": {}, "slot": "" }
+        }
+      },
+      {
+        "_id": "16f60a09-4520-730a-c115-912d5bad4d85",
+        "type": "FormSelect",
+        "tag": "select",
+        "classes": ["61b7903e-5863-adba-736d-e1de2a53b8ad"],
+        "children": [],
+        "data": {
+          "attr": {
+            "id": "field-2",
+            "name": "field-2",
+            "data-name": "Field 2",
+            "required": false,
+            "multiple": false
+          },
+          "xattr": [{ "name": "fs-hacks-element", "value": "interest-select-field" }],
+          "form": {
+            "name": "Field 2",
+            "opts": [
+              { "t": "Select your biggest interest...", "v": "" },
+              { "t": "Webflow CMS", "v": "Webflow CMS" },
+              { "t": "Javascript", "v": "Javascript" },
+              { "t": "Advanced CSS", "v": "Advanced CSS" }
+            ],
+            "type": "select"
+          },
+          "displayName": "",
+          "search": { "exclude": false },
+          "visibility": { "conditions": [] },
+          "devlink": { "runtimeProps": {}, "slot": "" }
+        }
+      },
+      {
+        "_id": "16f60a09-4520-730a-c115-912d5bad4d86",
+        "type": "FormButton",
+        "tag": "input",
+        "classes": ["19b9f018-cff4-506b-73b8-b2e1cdc175ad"],
+        "children": [],
+        "data": {
+          "attr": { "type": "submit", "value": "Submit", "data-wait": "Please wait...", "id": "" },
+          "form": { "type": "button", "wait": "Please wait..." },
+          "displayName": "",
+          "xattr": [],
+          "search": { "exclude": false },
+          "visibility": { "conditions": [] },
+          "devlink": { "runtimeProps": {}, "slot": "" }
+        }
+      },
+      {
+        "_id": "16f60a09-4520-730a-c115-912d5bad4d87",
+        "type": "FormSuccessMessage",
+        "tag": "div",
+        "classes": ["c84e44b2-db50-fa71-652e-3975c4590126"],
+        "children": ["16f60a09-4520-730a-c115-912d5bad4d88"],
+        "data": {
+          "form": { "type": "msg-done" },
+          "search": { "exclude": false },
+          "xattr": [],
+          "displayName": "",
+          "devlink": { "runtimeProps": {}, "slot": "" },
+          "attr": { "id": "" },
+          "visibility": { "conditions": [] }
+        }
+      },
+      {
+        "_id": "16f60a09-4520-730a-c115-912d5bad4d88",
+        "type": "Block",
+        "tag": "div",
+        "classes": [],
+        "children": ["16f60a09-4520-730a-c115-912d5bad4d89"],
+        "data": {
+          "search": { "exclude": false },
+          "xattr": [{ "name": "fs-hacks-element", "value": "success-text" }],
+          "text": true,
+          "displayName": "",
+          "devlink": { "runtimeProps": {}, "slot": "" },
+          "attr": { "id": "" },
+          "visibility": { "conditions": [] },
+          "tag": "div"
+        }
+      },
+      {
+        "_id": "16f60a09-4520-730a-c115-912d5bad4d89",
+        "text": true,
+        "v": "Thank you! Your submission has been received!"
+      },
+      {
+        "_id": "16f60a09-4520-730a-c115-912d5bad4d8a",
+        "type": "FormErrorMessage",
+        "tag": "div",
+        "classes": [],
+        "children": ["16f60a09-4520-730a-c115-912d5bad4d8b"],
+        "data": {
+          "form": { "type": "msg-fail" },
+          "search": { "exclude": false },
+          "xattr": [],
+          "displayName": "",
+          "devlink": { "runtimeProps": {}, "slot": "" },
+          "attr": { "id": "" },
+          "visibility": { "conditions": [] }
+        }
+      },
+      {
+        "_id": "16f60a09-4520-730a-c115-912d5bad4d8b",
+        "type": "Block",
+        "tag": "div",
+        "classes": [],
+        "children": ["16f60a09-4520-730a-c115-912d5bad4d8c"],
+        "data": {
+          "search": { "exclude": false },
+          "xattr": [],
+          "text": true,
+          "displayName": "",
+          "devlink": { "runtimeProps": {}, "slot": "" },
+          "attr": { "id": "" },
+          "visibility": { "conditions": [] },
+          "tag": "div"
+        }
+      },
+      {
+        "_id": "16f60a09-4520-730a-c115-912d5bad4d8c",
+        "text": true,
+        "v": "Oops! Something went wrong while submitting the form."
+      }
+    ],
+    "styles": [
+      {
+        "_id": "4a44386d-cf38-1623-cdcd-312d92de0e1a",
+        "fake": false,
+        "type": "class",
+        "name": "example_block",
+        "namespace": "",
+        "comb": "",
+        "styleLess": "width: 100%; padding-top: 3rem; padding-right: 3rem; padding-bottom: 3rem; padding-left: 3rem; grid-auto-columns: 1fr; grid-column-gap: 3rem; grid-row-gap: 3rem; grid-template-columns: 1fr; grid-template-rows: auto; border-top-left-radius: 0.25rem; border-top-right-radius: 0.25rem; border-bottom-left-radius: 0.25rem; border-bottom-right-radius: 0.25rem; background-color: hsla(0, 0.00%, 24.43%, 1.00);",
+        "variants": {
+          "small": {
+            "styleLess": "padding-top: 1.5rem; padding-right: 1.5rem; padding-bottom: 1.5rem; padding-left: 1.5rem;"
+          },
+          "tiny": {
+            "styleLess": "padding-top: 1.5rem; padding-right: 1.5rem; padding-bottom: 1.5rem; padding-left: 1.5rem;"
+          }
+        },
+        "children": ["168fe6e0-342e-ffef-82bc-9a743bde1374"],
+        "createdBy": "57380bb111b9c4825e447f0d",
+        "selector": null
+      },
+      {
+        "_id": "06c425f4-72b1-e035-f0c1-bb3f04d6ff0b",
+        "fake": false,
+        "type": "class",
+        "name": "hacks-2_component",
+        "namespace": "",
+        "comb": "",
+        "styleLess": "margin-bottom: 0px; color: hsla(0, 0.00%, 100.00%, 1.00);",
+        "variants": {},
+        "children": [],
+        "createdBy": "61128b87b55ff1b813b5a7b7",
+        "selector": null
+      },
+      {
+        "_id": "1f762123-74b7-cc99-86a5-c2425ddf3bb6",
+        "fake": false,
+        "type": "class",
+        "name": "hacks-2_form",
+        "namespace": "",
+        "comb": "",
+        "styleLess": "display: grid; justify-items: stretch; align-items: center; grid-auto-columns: 1fr; grid-column-gap: 1rem; grid-row-gap: 1rem; grid-template-columns: 1fr; grid-template-rows: auto; text-align: left;",
+        "variants": {},
+        "children": [],
+        "createdBy": "61128b87b55ff1b813b5a7b7",
+        "selector": null
+      },
+      {
+        "_id": "af5e4c41-f046-2c89-e689-84f65b26e31b",
+        "fake": false,
+        "type": "class",
+        "name": "hacks-2_input",
+        "namespace": "",
+        "comb": "",
+        "styleLess": "margin-bottom: 0px; border-top-style: none; border-top-width: 1px; border-top-color: black; border-right-style: none; border-right-width: 1px; border-right-color: black; border-bottom-style: none; border-bottom-width: 1px; border-bottom-color: black; border-left-style: none; border-left-width: 1px; border-left-color: black;",
+        "variants": {
+          "main_placeholder": { "styleLess": "color: rgba(36, 12, 46, 0.9); font-size: 0.875rem;" },
+          "main_focus": { "styleLess": "border-bottom-color: #e9e6ed;" }
+        },
+        "children": [],
+        "createdBy": "61128b87b55ff1b813b5a7b7",
+        "selector": null
+      },
+      {
+        "_id": "61b7903e-5863-adba-736d-e1de2a53b8ad",
+        "fake": false,
+        "type": "class",
+        "name": "hacks-2_select",
+        "namespace": "",
+        "comb": "",
+        "styleLess": "margin-bottom: 0px;",
+        "variants": { "small": { "styleLess": "font-size: 0.875rem;" } },
+        "children": [],
+        "createdBy": "61128b87b55ff1b813b5a7b7",
+        "selector": null
+      },
+      {
+        "_id": "19b9f018-cff4-506b-73b8-b2e1cdc175ad",
+        "fake": false,
+        "type": "class",
+        "name": "hacks-2_submit",
+        "namespace": "",
+        "comb": "",
+        "styleLess": "transition-property: background-color; transition-duration: 100ms; transition-timing-function: ease;",
+        "variants": {
+          "main_hover": { "styleLess": "color: hsla(177.88235294117646, 0.00%, 100.00%, 1.00);" },
+          "small": { "styleLess": "padding-right: 1.875rem; padding-left: 1.875rem;" },
+          "main_active": { "styleLess": "transform: translate(0rem, 0.0625rem);" }
+        },
+        "children": [],
+        "createdBy": "61128b87b55ff1b813b5a7b7",
+        "selector": null
+      },
+      {
+        "_id": "c84e44b2-db50-fa71-652e-3975c4590126",
+        "fake": false,
+        "type": "class",
+        "name": "hacks-2_success",
+        "namespace": "",
+        "comb": "",
+        "styleLess": "color: hsla(0, 0.00%, 0.00%, 1.00);",
+        "variants": {},
+        "children": [],
+        "createdBy": "61128b87b55ff1b813b5a7b7",
+        "selector": null
+      }
+    ],
+    "assets": [],
+    "ix1": [],
+    "ix2": { "interactions": [], "events": [], "actionLists": [] }
+  },
+  "meta": {
+    "unlinkedSymbolCount": 0,
+    "droppedLinks": 0,
+    "dynBindRemovedCount": 0,
+    "dynListBindRemovedCount": 0,
+    "paginationRemovedCount": 0
+  }
+}

@@ -1,0 +1,291 @@
+{
+  "type": "@webflow/XscpData",
+  "payload": {
+    "nodes": [
+      {
+        "_id": "c1cfc685-145f-b00c-0620-db62a368b1eb",
+        "type": "Block",
+        "tag": "div",
+        "classes": ["4a44386d-cf38-1623-cdcd-312d92de0e1a"],
+        "children": ["c1cfc685-145f-b00c-0620-db62a368b1ec"],
+        "data": {
+          "search": { "exclude": false },
+          "xattr": [{ "name": "fs-component-name", "value": "hacks_29" }],
+          "text": false,
+          "displayName": "",
+          "devlink": { "runtimeProps": {}, "slot": "" },
+          "attr": { "id": "" },
+          "visibility": { "conditions": [] },
+          "tag": "div"
+        }
+      },
+      {
+        "_id": "c1cfc685-145f-b00c-0620-db62a368b1ec",
+        "type": "FormWrapper",
+        "tag": "div",
+        "classes": ["384d2300-75d6-efbd-3bc9-daeb99e7c2bf"],
+        "children": [
+          "c1cfc685-145f-b00c-0620-db62a368b1ed",
+          "c1cfc685-145f-b00c-0620-db62a368b1f0",
+          "c1cfc685-145f-b00c-0620-db62a368b1f3"
+        ],
+        "data": {
+          "form": { "type": "wrapper" },
+          "search": { "exclude": true },
+          "xattr": [],
+          "displayName": "",
+          "devlink": { "runtimeProps": {}, "slot": "" },
+          "attr": { "id": "" },
+          "visibility": { "conditions": [] }
+        }
+      },
+      {
+        "_id": "c1cfc685-145f-b00c-0620-db62a368b1ed",
+        "type": "FormForm",
+        "tag": "form",
+        "classes": ["47902e44-d50d-5130-8811-ea77ac5d89af"],
+        "children": [
+          "c1cfc685-145f-b00c-0620-db62a368b1ee",
+          "c1cfc685-145f-b00c-0620-db62a368b1ef"
+        ],
+        "data": {
+          "form": { "type": "form", "name": "Email Form" },
+          "search": { "exclude": false },
+          "xattr": [
+            { "name": "autocomplete", "value": "off" },
+            { "name": "fs-hacks-element", "value": "form" }
+          ],
+          "displayName": "",
+          "devlink": { "runtimeProps": {}, "slot": "" },
+          "attr": {
+            "data-name": "Email Form",
+            "name": "email-form",
+            "id": "email-form",
+            "redirect": "",
+            "data-redirect": "",
+            "action": "",
+            "method": "get"
+          },
+          "visibility": { "conditions": [] },
+          "Source": { "tag": "Default form", "val": {} }
+        }
+      },
+      {
+        "_id": "c1cfc685-145f-b00c-0620-db62a368b1ee",
+        "type": "FormTextInput",
+        "tag": "input",
+        "classes": ["47902e44-d50d-5130-8811-ea77ac5d89b0"],
+        "children": [],
+        "data": {
+          "attr": {
+            "autofocus": false,
+            "maxlength": 256,
+            "name": "name",
+            "data-name": "Name",
+            "placeholder": "Name",
+            "type": "text",
+            "id": "hack29-name-input",
+            "disabled": false,
+            "required": true
+          },
+          "form": { "type": "input", "name": "name", "passwordPage": false },
+          "xattr": [{ "name": "fs-hacks-element", "value": "name-input" }],
+          "displayName": "",
+          "search": { "exclude": false },
+          "visibility": { "conditions": [] },
+          "devlink": { "runtimeProps": {}, "slot": "" }
+        }
+      },
+      {
+        "_id": "c1cfc685-145f-b00c-0620-db62a368b1ef",
+        "type": "FormButton",
+        "tag": "input",
+        "classes": ["b6bc7ed9-2bbb-0453-5825-2b64b25ecce8"],
+        "children": [],
+        "data": {
+          "attr": { "type": "submit", "value": "Submit", "data-wait": "Please wait..." },
+          "form": { "type": "button", "wait": "Please wait..." },
+          "displayName": "",
+          "xattr": [],
+          "search": { "exclude": false },
+          "visibility": { "conditions": [] },
+          "devlink": { "runtimeProps": {}, "slot": "" }
+        }
+      },
+      {
+        "_id": "c1cfc685-145f-b00c-0620-db62a368b1f0",
+        "type": "FormSuccessMessage",
+        "tag": "div",
+        "classes": ["58021a75-b713-008e-5b57-39983d2fdaa4"],
+        "children": ["c1cfc685-145f-b00c-0620-db62a368b1f1"],
+        "data": {
+          "form": { "type": "msg-done" },
+          "search": { "exclude": false },
+          "xattr": [{ "name": "fs-hacks-element", "value": "custom-message" }],
+          "displayName": "",
+          "devlink": { "runtimeProps": {}, "slot": "" },
+          "attr": { "id": "" },
+          "visibility": { "conditions": [] }
+        }
+      },
+      {
+        "_id": "c1cfc685-145f-b00c-0620-db62a368b1f1",
+        "type": "Block",
+        "tag": "div",
+        "classes": [],
+        "children": ["c1cfc685-145f-b00c-0620-db62a368b1f2"],
+        "data": {
+          "search": { "exclude": false },
+          "xattr": [{ "name": "fs-hacks-element", "value": "custom-message" }],
+          "text": true,
+          "displayName": "",
+          "devlink": { "runtimeProps": {}, "slot": "" },
+          "attr": { "id": "" },
+          "visibility": { "conditions": [] },
+          "tag": "div"
+        }
+      },
+      {
+        "_id": "c1cfc685-145f-b00c-0620-db62a368b1f2",
+        "text": true,
+        "v": "Thank you.! Your submission has been received!"
+      },
+      {
+        "_id": "c1cfc685-145f-b00c-0620-db62a368b1f3",
+        "type": "FormErrorMessage",
+        "tag": "div",
+        "classes": [],
+        "children": ["c1cfc685-145f-b00c-0620-db62a368b1f4"],
+        "data": {
+          "form": { "type": "msg-fail" },
+          "search": { "exclude": false },
+          "xattr": [],
+          "displayName": "",
+          "devlink": { "runtimeProps": {}, "slot": "" },
+          "attr": { "id": "" },
+          "visibility": { "conditions": [] }
+        }
+      },
+      {
+        "_id": "c1cfc685-145f-b00c-0620-db62a368b1f4",
+        "type": "Block",
+        "tag": "div",
+        "classes": [],
+        "children": ["c1cfc685-145f-b00c-0620-db62a368b1f5"],
+        "data": {
+          "search": { "exclude": false },
+          "xattr": [],
+          "text": true,
+          "displayName": "",
+          "devlink": { "runtimeProps": {}, "slot": "" },
+          "attr": { "id": "" },
+          "visibility": { "conditions": [] },
+          "tag": "div"
+        }
+      },
+      {
+        "_id": "c1cfc685-145f-b00c-0620-db62a368b1f5",
+        "text": true,
+        "v": "Oops! Something went wrong while submitting the form."
+      }
+    ],
+    "styles": [
+      {
+        "_id": "4a44386d-cf38-1623-cdcd-312d92de0e1a",
+        "fake": false,
+        "type": "class",
+        "name": "example_block",
+        "namespace": "",
+        "comb": "",
+        "styleLess": "width: 100%; padding-top: 3rem; padding-right: 3rem; padding-bottom: 3rem; padding-left: 3rem; grid-auto-columns: 1fr; grid-column-gap: 3rem; grid-row-gap: 3rem; grid-template-columns: 1fr; grid-template-rows: auto; border-top-left-radius: 0.25rem; border-top-right-radius: 0.25rem; border-bottom-left-radius: 0.25rem; border-bottom-right-radius: 0.25rem; background-color: hsla(0, 0.00%, 24.43%, 1.00);",
+        "variants": {
+          "small": {
+            "styleLess": "padding-top: 1.5rem; padding-right: 1.5rem; padding-bottom: 1.5rem; padding-left: 1.5rem;"
+          },
+          "tiny": {
+            "styleLess": "padding-top: 1.5rem; padding-right: 1.5rem; padding-bottom: 1.5rem; padding-left: 1.5rem;"
+          }
+        },
+        "children": ["168fe6e0-342e-ffef-82bc-9a743bde1374"],
+        "createdBy": "57380bb111b9c4825e447f0d",
+        "selector": null
+      },
+      {
+        "_id": "384d2300-75d6-efbd-3bc9-daeb99e7c2bf",
+        "fake": false,
+        "type": "class",
+        "name": "hacks-13_component",
+        "namespace": "",
+        "comb": "",
+        "styleLess": "color: hsla(0, 0.00%, 100.00%, 1.00);",
+        "variants": {},
+        "children": [],
+        "createdBy": "54441c96b0981db6504faf03",
+        "selector": null
+      },
+      {
+        "_id": "47902e44-d50d-5130-8811-ea77ac5d89af",
+        "fake": false,
+        "type": "class",
+        "name": "hacks-13_form",
+        "namespace": "",
+        "comb": "",
+        "styleLess": "",
+        "variants": {},
+        "children": [],
+        "selector": null
+      },
+      {
+        "_id": "47902e44-d50d-5130-8811-ea77ac5d89b0",
+        "fake": false,
+        "type": "class",
+        "name": "hacks-13_input",
+        "namespace": "",
+        "comb": "",
+        "styleLess": "border-top-width: 0rem; border-right-width: 0rem; border-bottom-style: solid; border-bottom-width: 0.125rem; border-bottom-color: #240c2e; border-left-width: 0rem; border-top-left-radius: 0rem; border-top-right-radius: 0rem; border-bottom-left-radius: 0rem; border-bottom-right-radius: 0rem; transition-property: border-color; transition-duration: 100ms; transition-timing-function: ease;",
+        "variants": {
+          "main_placeholder": { "styleLess": "color: rgba(36, 12, 46, 0.9); font-size: 0.875rem;" },
+          "main_focus": { "styleLess": "border-bottom-color: #e9e6ed;" }
+        },
+        "children": [],
+        "selector": null
+      },
+      {
+        "_id": "b6bc7ed9-2bbb-0453-5825-2b64b25ecce8",
+        "fake": false,
+        "type": "class",
+        "name": "hacks-13_submit",
+        "namespace": "",
+        "comb": "",
+        "styleLess": "",
+        "variants": {},
+        "children": [],
+        "createdBy": "54441c96b0981db6504faf03",
+        "selector": null
+      },
+      {
+        "_id": "58021a75-b713-008e-5b57-39983d2fdaa4",
+        "fake": false,
+        "type": "class",
+        "name": "Success Message 2",
+        "namespace": "",
+        "comb": "",
+        "styleLess": "color: hsla(219.99999999999997, 4.68%, 7.18%, 1.00);",
+        "variants": {},
+        "children": [],
+        "createdBy": "5f85f8d1e466777548de0e17",
+        "selector": null
+      }
+    ],
+    "assets": [],
+    "ix1": [],
+    "ix2": { "interactions": [], "events": [], "actionLists": [] }
+  },
+  "meta": {
+    "unlinkedSymbolCount": 0,
+    "droppedLinks": 0,
+    "dynBindRemovedCount": 0,
+    "dynListBindRemovedCount": 0,
+    "paginationRemovedCount": 0
+  }
+}

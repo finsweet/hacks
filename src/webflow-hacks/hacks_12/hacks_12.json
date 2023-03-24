@@ -1,0 +1,156 @@
+{
+  "type": "@webflow/XscpData",
+  "payload": {
+    "nodes": [
+      {
+        "_id": "0cf39b63-06e7-8142-3f21-d02c3fa9e04c",
+        "type": "Block",
+        "tag": "div",
+        "classes": ["4a44386d-cf38-1623-cdcd-312d92de0e1a"],
+        "children": ["0cf39b63-06e7-8142-3f21-d02c3fa9e04d"],
+        "data": {
+          "search": { "exclude": false },
+          "xattr": [{ "name": "fs-component-name", "value": "hacks_12" }],
+          "text": false,
+          "displayName": "",
+          "devlink": { "runtimeProps": {}, "slot": "" },
+          "attr": { "id": "" },
+          "visibility": { "conditions": [] },
+          "tag": "div"
+        }
+      },
+      {
+        "_id": "0cf39b63-06e7-8142-3f21-d02c3fa9e04d",
+        "type": "Block",
+        "tag": "div",
+        "classes": ["4529f0a8-d0e7-d638-6ddd-537e45edfe46"],
+        "children": [
+          "0cf39b63-06e7-8142-3f21-d02c3fa9e04e",
+          "0cf39b63-06e7-8142-3f21-d02c3fa9e050",
+          "0cf39b63-06e7-8142-3f21-d02c3fa9e052"
+        ],
+        "data": {
+          "search": { "exclude": false },
+          "xattr": [],
+          "text": false,
+          "displayName": "",
+          "devlink": { "runtimeProps": {}, "slot": "" },
+          "attr": { "id": "" },
+          "visibility": { "conditions": [] },
+          "tag": "div"
+        }
+      },
+      {
+        "_id": "0cf39b63-06e7-8142-3f21-d02c3fa9e04e",
+        "type": "Heading",
+        "tag": "h4",
+        "classes": [],
+        "children": ["0cf39b63-06e7-8142-3f21-d02c3fa9e04f"],
+        "data": {
+          "search": { "exclude": false },
+          "xattr": [],
+          "displayName": "",
+          "devlink": { "runtimeProps": {}, "slot": "" },
+          "attr": { "id": "" },
+          "visibility": { "conditions": [] },
+          "tag": "h4"
+        }
+      },
+      {
+        "_id": "0cf39b63-06e7-8142-3f21-d02c3fa9e04f",
+        "text": true,
+        "v": "Clicking this button will run our function using javascript"
+      },
+      {
+        "_id": "0cf39b63-06e7-8142-3f21-d02c3fa9e050",
+        "type": "Link",
+        "tag": "a",
+        "classes": [],
+        "children": ["0cf39b63-06e7-8142-3f21-d02c3fa9e051"],
+        "data": {
+          "search": { "exclude": true },
+          "xattr": [{ "name": "fs-hacks-element", "value": "hack-button" }],
+          "block": "",
+          "displayName": "",
+          "devlink": { "runtimeProps": {}, "slot": "" },
+          "attr": { "id": "" },
+          "visibility": { "conditions": [] },
+          "button": true,
+          "link": { "mode": "external", "url": "#" }
+        }
+      },
+      {
+        "_id": "0cf39b63-06e7-8142-3f21-d02c3fa9e051",
+        "text": true,
+        "v": "Click me to run function"
+      },
+      {
+        "_id": "0cf39b63-06e7-8142-3f21-d02c3fa9e052",
+        "type": "Block",
+        "tag": "div",
+        "classes": [],
+        "children": ["0cf39b63-06e7-8142-3f21-d02c3fa9e053"],
+        "data": {
+          "search": { "exclude": false },
+          "xattr": [{ "name": "fs-hacks-element", "value": "hack-text" }],
+          "text": true,
+          "displayName": "",
+          "devlink": { "runtimeProps": {}, "slot": "" },
+          "attr": { "id": "" },
+          "visibility": { "conditions": [] },
+          "tag": "div"
+        }
+      },
+      {
+        "_id": "0cf39b63-06e7-8142-3f21-d02c3fa9e053",
+        "text": true,
+        "v": "This is the old me. Sad, sorry, and depressed."
+      }
+    ],
+    "styles": [
+      {
+        "_id": "4a44386d-cf38-1623-cdcd-312d92de0e1a",
+        "fake": false,
+        "type": "class",
+        "name": "example_block",
+        "namespace": "",
+        "comb": "",
+        "styleLess": "width: 100%; padding-top: 3rem; padding-right: 3rem; padding-bottom: 3rem; padding-left: 3rem; grid-auto-columns: 1fr; grid-column-gap: 3rem; grid-row-gap: 3rem; grid-template-columns: 1fr; grid-template-rows: auto; border-top-left-radius: 0.25rem; border-top-right-radius: 0.25rem; border-bottom-left-radius: 0.25rem; border-bottom-right-radius: 0.25rem; background-color: hsla(0, 0.00%, 24.43%, 1.00);",
+        "variants": {
+          "small": {
+            "styleLess": "padding-top: 1.5rem; padding-right: 1.5rem; padding-bottom: 1.5rem; padding-left: 1.5rem;"
+          },
+          "tiny": {
+            "styleLess": "padding-top: 1.5rem; padding-right: 1.5rem; padding-bottom: 1.5rem; padding-left: 1.5rem;"
+          }
+        },
+        "children": ["168fe6e0-342e-ffef-82bc-9a743bde1374"],
+        "createdBy": "57380bb111b9c4825e447f0d",
+        "selector": null
+      },
+      {
+        "_id": "4529f0a8-d0e7-d638-6ddd-537e45edfe46",
+        "fake": false,
+        "type": "class",
+        "name": "hacks-5_component",
+        "namespace": "",
+        "comb": "",
+        "styleLess": "display: grid; justify-content: start; justify-items: stretch; grid-auto-columns: 1fr; grid-column-gap: 1rem; grid-row-gap: 1rem; grid-template-columns: 1fr; grid-template-rows: auto; color: hsla(0, 0.00%, 100.00%, 1.00); text-align: center;",
+        "variants": {},
+        "children": [],
+        "createdBy": "54441c96b0981db6504faf03",
+        "selector": null
+      }
+    ],
+    "assets": [],
+    "ix1": [],
+    "ix2": { "interactions": [], "events": [], "actionLists": [] }
+  },
+  "meta": {
+    "unlinkedSymbolCount": 0,
+    "droppedLinks": 0,
+    "dynBindRemovedCount": 0,
+    "dynListBindRemovedCount": 0,
+    "paginationRemovedCount": 0
+  }
+}

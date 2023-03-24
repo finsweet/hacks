@@ -1,0 +1,688 @@
+{
+  "type": "@webflow/XscpData",
+  "payload": {
+    "nodes": [
+      {
+        "_id": "d5f4c1dc-6eaa-10d8-7983-5e26f66fb2da",
+        "type": "Block",
+        "tag": "div",
+        "classes": ["4a44386d-cf38-1623-cdcd-312d92de0e1a"],
+        "children": ["d5f4c1dc-6eaa-10d8-7983-5e26f66fb2db"],
+        "data": {
+          "search": { "exclude": false },
+          "xattr": [{ "name": "fs-component-name", "value": "hacks_42" }],
+          "text": false,
+          "displayName": "",
+          "devlink": { "runtimeProps": {}, "slot": "" },
+          "attr": { "id": "" },
+          "visibility": { "conditions": [] },
+          "tag": "div"
+        }
+      },
+      {
+        "_id": "d5f4c1dc-6eaa-10d8-7983-5e26f66fb2db",
+        "type": "FormWrapper",
+        "tag": "div",
+        "classes": ["f7281af0-73a3-37aa-fc22-3d4788401652"],
+        "children": [
+          "d5f4c1dc-6eaa-10d8-7983-5e26f66fb2dc",
+          "d5f4c1dc-6eaa-10d8-7983-5e26f66fb2f6",
+          "d5f4c1dc-6eaa-10d8-7983-5e26f66fb2f9"
+        ],
+        "data": {
+          "form": { "type": "wrapper" },
+          "search": { "exclude": true },
+          "xattr": [],
+          "displayName": "",
+          "devlink": { "runtimeProps": {}, "slot": "" },
+          "attr": { "id": "" },
+          "visibility": { "conditions": [] }
+        }
+      },
+      {
+        "_id": "d5f4c1dc-6eaa-10d8-7983-5e26f66fb2dc",
+        "type": "FormForm",
+        "tag": "form",
+        "classes": ["011da83c-b761-17e3-b760-9998dc6ce13e"],
+        "children": [
+          "d5f4c1dc-6eaa-10d8-7983-5e26f66fb2dd",
+          "d5f4c1dc-6eaa-10d8-7983-5e26f66fb2ee"
+        ],
+        "data": {
+          "form": { "type": "form", "name": "Email Form" },
+          "search": { "exclude": false },
+          "xattr": [],
+          "displayName": "",
+          "devlink": { "runtimeProps": {}, "slot": "" },
+          "attr": {
+            "id": "email-form",
+            "name": "email-form",
+            "data-name": "Email Form",
+            "redirect": "",
+            "data-redirect": "",
+            "action": "",
+            "method": "get"
+          },
+          "visibility": { "conditions": [] },
+          "Source": { "tag": "Default form", "val": {} }
+        }
+      },
+      {
+        "_id": "d5f4c1dc-6eaa-10d8-7983-5e26f66fb2dd",
+        "type": "Block",
+        "tag": "div",
+        "classes": ["47254c1f-184e-252b-5b2e-61698ba0910d"],
+        "children": [
+          "d5f4c1dc-6eaa-10d8-7983-5e26f66fb2de",
+          "d5f4c1dc-6eaa-10d8-7983-5e26f66fb2e2",
+          "d5f4c1dc-6eaa-10d8-7983-5e26f66fb2e6",
+          "d5f4c1dc-6eaa-10d8-7983-5e26f66fb2ea"
+        ],
+        "data": {
+          "search": { "exclude": false },
+          "xattr": [],
+          "text": false,
+          "displayName": "",
+          "devlink": { "runtimeProps": {}, "slot": "" },
+          "attr": { "id": "" },
+          "visibility": { "conditions": [] },
+          "tag": "div"
+        }
+      },
+      {
+        "_id": "d5f4c1dc-6eaa-10d8-7983-5e26f66fb2de",
+        "type": "FormCheckboxWrapper",
+        "tag": "div",
+        "classes": ["1edc8d74-76ec-e21f-e029-bd4c869e4077"],
+        "children": [
+          "d5f4c1dc-6eaa-10d8-7983-5e26f66fb2df",
+          "d5f4c1dc-6eaa-10d8-7983-5e26f66fb2e0"
+        ],
+        "data": {
+          "form": { "type": "checkbox" },
+          "search": { "exclude": false },
+          "xattr": [],
+          "displayName": "",
+          "devlink": { "runtimeProps": {}, "slot": "" },
+          "attr": { "id": "" },
+          "visibility": { "conditions": [] }
+        }
+      },
+      {
+        "_id": "d5f4c1dc-6eaa-10d8-7983-5e26f66fb2df",
+        "type": "FormCheckboxInput",
+        "tag": "input",
+        "classes": ["011da83c-b761-17e3-b760-9998dc6ce140"],
+        "children": [],
+        "data": {
+          "attr": {
+            "type": "checkbox",
+            "id": "checkbox",
+            "name": "checkbox",
+            "data-name": "Checkbox",
+            "required": false,
+            "checked": false
+          },
+          "form": { "type": "checkbox-input", "name": "Checkbox" },
+          "inputType": "custom",
+          "xattr": [
+            { "name": "add-value", "value": "200" },
+            { "name": "fs-hacks-element", "value": "checkbox" }
+          ]
+        }
+      },
+      {
+        "_id": "d5f4c1dc-6eaa-10d8-7983-5e26f66fb2e0",
+        "type": "FormInlineLabel",
+        "tag": "label",
+        "classes": ["011da83c-b761-17e3-b760-9998dc6ce145"],
+        "children": ["d5f4c1dc-6eaa-10d8-7983-5e26f66fb2e1"],
+        "data": {
+          "form": { "type": "checkbox-label" },
+          "search": { "exclude": false },
+          "xattr": [],
+          "displayName": "",
+          "devlink": { "runtimeProps": {}, "slot": "" },
+          "attr": { "id": "" },
+          "visibility": { "conditions": [] }
+        }
+      },
+      { "_id": "d5f4c1dc-6eaa-10d8-7983-5e26f66fb2e1", "text": true, "v": "Service 1 - $200" },
+      {
+        "_id": "d5f4c1dc-6eaa-10d8-7983-5e26f66fb2e2",
+        "type": "FormCheckboxWrapper",
+        "tag": "div",
+        "classes": ["1edc8d74-76ec-e21f-e029-bd4c869e4077"],
+        "children": [
+          "d5f4c1dc-6eaa-10d8-7983-5e26f66fb2e3",
+          "d5f4c1dc-6eaa-10d8-7983-5e26f66fb2e4"
+        ],
+        "data": {
+          "form": { "type": "checkbox" },
+          "search": { "exclude": false },
+          "xattr": [],
+          "displayName": "",
+          "devlink": { "runtimeProps": {}, "slot": "" },
+          "attr": { "id": "" },
+          "visibility": { "conditions": [] }
+        }
+      },
+      {
+        "_id": "d5f4c1dc-6eaa-10d8-7983-5e26f66fb2e3",
+        "type": "FormCheckboxInput",
+        "tag": "input",
+        "classes": ["011da83c-b761-17e3-b760-9998dc6ce140"],
+        "children": [],
+        "data": {
+          "attr": {
+            "type": "checkbox",
+            "id": "checkbox-2",
+            "name": "checkbox-2",
+            "data-name": "Checkbox 2",
+            "required": false,
+            "checked": false
+          },
+          "form": { "type": "checkbox-input", "name": "Checkbox 2" },
+          "inputType": "custom",
+          "xattr": [
+            { "name": "add-value", "value": "325" },
+            { "name": "fs-hacks-element", "value": "checkbox" }
+          ]
+        }
+      },
+      {
+        "_id": "d5f4c1dc-6eaa-10d8-7983-5e26f66fb2e4",
+        "type": "FormInlineLabel",
+        "tag": "label",
+        "classes": ["011da83c-b761-17e3-b760-9998dc6ce145"],
+        "children": ["d5f4c1dc-6eaa-10d8-7983-5e26f66fb2e5"],
+        "data": {
+          "form": { "type": "checkbox-label" },
+          "search": { "exclude": false },
+          "xattr": [],
+          "displayName": "",
+          "devlink": { "runtimeProps": {}, "slot": "" },
+          "attr": { "id": "" },
+          "visibility": { "conditions": [] }
+        }
+      },
+      { "_id": "d5f4c1dc-6eaa-10d8-7983-5e26f66fb2e5", "text": true, "v": "Service 2 - $325" },
+      {
+        "_id": "d5f4c1dc-6eaa-10d8-7983-5e26f66fb2e6",
+        "type": "FormCheckboxWrapper",
+        "tag": "div",
+        "classes": ["1edc8d74-76ec-e21f-e029-bd4c869e4077"],
+        "children": [
+          "d5f4c1dc-6eaa-10d8-7983-5e26f66fb2e7",
+          "d5f4c1dc-6eaa-10d8-7983-5e26f66fb2e8"
+        ],
+        "data": {
+          "form": { "type": "checkbox" },
+          "search": { "exclude": false },
+          "xattr": [],
+          "displayName": "",
+          "devlink": { "runtimeProps": {}, "slot": "" },
+          "attr": { "id": "" },
+          "visibility": { "conditions": [] }
+        }
+      },
+      {
+        "_id": "d5f4c1dc-6eaa-10d8-7983-5e26f66fb2e7",
+        "type": "FormCheckboxInput",
+        "tag": "input",
+        "classes": ["011da83c-b761-17e3-b760-9998dc6ce140"],
+        "children": [],
+        "data": {
+          "attr": {
+            "type": "checkbox",
+            "id": "checkbox-3",
+            "name": "checkbox-3",
+            "data-name": "Checkbox 3",
+            "required": false,
+            "checked": false
+          },
+          "form": { "type": "checkbox-input", "name": "Checkbox 3" },
+          "inputType": "custom",
+          "xattr": [
+            { "name": "add-value", "value": "800" },
+            { "name": "fs-hacks-element", "value": "checkbox" }
+          ]
+        }
+      },
+      {
+        "_id": "d5f4c1dc-6eaa-10d8-7983-5e26f66fb2e8",
+        "type": "FormInlineLabel",
+        "tag": "label",
+        "classes": ["011da83c-b761-17e3-b760-9998dc6ce145"],
+        "children": ["d5f4c1dc-6eaa-10d8-7983-5e26f66fb2e9"],
+        "data": {
+          "form": { "type": "checkbox-label" },
+          "search": { "exclude": false },
+          "xattr": [],
+          "displayName": "",
+          "devlink": { "runtimeProps": {}, "slot": "" },
+          "attr": { "id": "" },
+          "visibility": { "conditions": [] }
+        }
+      },
+      { "_id": "d5f4c1dc-6eaa-10d8-7983-5e26f66fb2e9", "text": true, "v": "Service 3 - $800" },
+      {
+        "_id": "d5f4c1dc-6eaa-10d8-7983-5e26f66fb2ea",
+        "type": "FormCheckboxWrapper",
+        "tag": "div",
+        "classes": ["1edc8d74-76ec-e21f-e029-bd4c869e4077"],
+        "children": [
+          "d5f4c1dc-6eaa-10d8-7983-5e26f66fb2eb",
+          "d5f4c1dc-6eaa-10d8-7983-5e26f66fb2ec"
+        ],
+        "data": {
+          "form": { "type": "checkbox" },
+          "search": { "exclude": false },
+          "xattr": [],
+          "displayName": "",
+          "devlink": { "runtimeProps": {}, "slot": "" },
+          "attr": { "id": "" },
+          "visibility": { "conditions": [] }
+        }
+      },
+      {
+        "_id": "d5f4c1dc-6eaa-10d8-7983-5e26f66fb2eb",
+        "type": "FormCheckboxInput",
+        "tag": "input",
+        "classes": ["011da83c-b761-17e3-b760-9998dc6ce140"],
+        "children": [],
+        "data": {
+          "attr": {
+            "type": "checkbox",
+            "id": "checkbox-4",
+            "name": "checkbox-4",
+            "data-name": "Checkbox 4",
+            "required": false,
+            "checked": true
+          },
+          "form": { "type": "checkbox-input", "name": "Checkbox 4" },
+          "inputType": "custom",
+          "xattr": [
+            { "name": "add-value", "value": "1374" },
+            { "name": "fs-hacks-element", "value": "checkbox" }
+          ]
+        }
+      },
+      {
+        "_id": "d5f4c1dc-6eaa-10d8-7983-5e26f66fb2ec",
+        "type": "FormInlineLabel",
+        "tag": "label",
+        "classes": ["011da83c-b761-17e3-b760-9998dc6ce145"],
+        "children": ["d5f4c1dc-6eaa-10d8-7983-5e26f66fb2ed"],
+        "data": {
+          "form": { "type": "checkbox-label" },
+          "search": { "exclude": false },
+          "xattr": [],
+          "displayName": "",
+          "devlink": { "runtimeProps": {}, "slot": "" },
+          "attr": { "id": "" },
+          "visibility": { "conditions": [] }
+        }
+      },
+      { "_id": "d5f4c1dc-6eaa-10d8-7983-5e26f66fb2ed", "text": true, "v": "Service 4 - $1,374" },
+      {
+        "_id": "d5f4c1dc-6eaa-10d8-7983-5e26f66fb2ee",
+        "type": "Block",
+        "tag": "div",
+        "classes": ["011da83c-b761-17e3-b760-9998dc6ce141"],
+        "children": [
+          "d5f4c1dc-6eaa-10d8-7983-5e26f66fb2ef",
+          "d5f4c1dc-6eaa-10d8-7983-5e26f66fb2f5"
+        ],
+        "data": {
+          "search": { "exclude": false },
+          "xattr": [],
+          "text": false,
+          "displayName": "",
+          "devlink": { "runtimeProps": {}, "slot": "" },
+          "attr": { "id": "" },
+          "visibility": { "conditions": [] },
+          "tag": "div"
+        }
+      },
+      {
+        "_id": "d5f4c1dc-6eaa-10d8-7983-5e26f66fb2ef",
+        "type": "Block",
+        "tag": "div",
+        "classes": ["011da83c-b761-17e3-b760-9998dc6ce13f"],
+        "children": [
+          "d5f4c1dc-6eaa-10d8-7983-5e26f66fb2f0",
+          "d5f4c1dc-6eaa-10d8-7983-5e26f66fb2f2",
+          "d5f4c1dc-6eaa-10d8-7983-5e26f66fb2f4"
+        ],
+        "data": {
+          "search": { "exclude": false },
+          "xattr": [],
+          "text": false,
+          "displayName": "",
+          "devlink": { "runtimeProps": {}, "slot": "" },
+          "attr": { "id": "" },
+          "visibility": { "conditions": [] },
+          "tag": "div"
+        }
+      },
+      {
+        "_id": "d5f4c1dc-6eaa-10d8-7983-5e26f66fb2f0",
+        "type": "Block",
+        "tag": "div",
+        "classes": [],
+        "children": ["d5f4c1dc-6eaa-10d8-7983-5e26f66fb2f1"],
+        "data": {
+          "search": { "exclude": false },
+          "xattr": [],
+          "text": true,
+          "displayName": "",
+          "devlink": { "runtimeProps": {}, "slot": "" },
+          "attr": { "id": "" },
+          "visibility": { "conditions": [] },
+          "tag": "div"
+        }
+      },
+      { "_id": "d5f4c1dc-6eaa-10d8-7983-5e26f66fb2f1", "text": true, "v": "$" },
+      {
+        "_id": "d5f4c1dc-6eaa-10d8-7983-5e26f66fb2f2",
+        "type": "Block",
+        "tag": "div",
+        "classes": ["011da83c-b761-17e3-b760-9998dc6ce143"],
+        "children": ["d5f4c1dc-6eaa-10d8-7983-5e26f66fb2f3"],
+        "data": {
+          "search": { "exclude": false },
+          "xattr": [{ "name": "fs-hacks-element", "value": "total-value" }],
+          "text": true,
+          "displayName": "",
+          "devlink": { "runtimeProps": {}, "slot": "" },
+          "attr": { "id": "" },
+          "visibility": { "conditions": [] },
+          "tag": "div"
+        }
+      },
+      { "_id": "d5f4c1dc-6eaa-10d8-7983-5e26f66fb2f3", "text": true, "v": "0" },
+      {
+        "_id": "d5f4c1dc-6eaa-10d8-7983-5e26f66fb2f4",
+        "type": "HtmlEmbed",
+        "tag": "div",
+        "classes": ["be5137c1-7306-d7e2-a74b-9a6d5334e289"],
+        "children": [],
+        "v": "<input type=\"hidden\" class=\"hack42-send-value\" val=\"\" fs-hacks-element=\"hidden-total\">",
+        "data": {
+          "insideRTE": false,
+          "search": { "exclude": true },
+          "embed": {
+            "type": "html",
+            "meta": {
+              "html": "<input type=\"hidden\" class=\"hack42-send-value\" val=\"\" fs-hacks-element=\"hidden-total\">",
+              "div": false,
+              "iframe": false,
+              "script": false,
+              "compilable": false
+            }
+          }
+        }
+      },
+      {
+        "_id": "d5f4c1dc-6eaa-10d8-7983-5e26f66fb2f5",
+        "type": "FormButton",
+        "tag": "input",
+        "classes": [],
+        "children": [],
+        "data": {
+          "attr": { "type": "submit", "value": "Submit", "data-wait": "Please wait..." },
+          "form": { "type": "button", "wait": "Please wait..." }
+        }
+      },
+      {
+        "_id": "d5f4c1dc-6eaa-10d8-7983-5e26f66fb2f6",
+        "type": "FormSuccessMessage",
+        "tag": "div",
+        "classes": ["7400958c-1446-1f5b-6365-30b17469556d"],
+        "children": ["d5f4c1dc-6eaa-10d8-7983-5e26f66fb2f7"],
+        "data": {
+          "form": { "type": "msg-done" },
+          "search": { "exclude": false },
+          "xattr": [],
+          "displayName": "",
+          "devlink": { "runtimeProps": {}, "slot": "" },
+          "attr": { "id": "" },
+          "visibility": { "conditions": [] }
+        }
+      },
+      {
+        "_id": "d5f4c1dc-6eaa-10d8-7983-5e26f66fb2f7",
+        "type": "Block",
+        "tag": "div",
+        "classes": [],
+        "children": ["d5f4c1dc-6eaa-10d8-7983-5e26f66fb2f8"],
+        "data": {
+          "search": { "exclude": false },
+          "xattr": [],
+          "text": true,
+          "displayName": "",
+          "devlink": { "runtimeProps": {}, "slot": "" },
+          "attr": { "id": "" },
+          "visibility": { "conditions": [] },
+          "tag": "div"
+        }
+      },
+      {
+        "_id": "d5f4c1dc-6eaa-10d8-7983-5e26f66fb2f8",
+        "text": true,
+        "v": "Thank you! Your submission has been received!"
+      },
+      {
+        "_id": "d5f4c1dc-6eaa-10d8-7983-5e26f66fb2f9",
+        "type": "FormErrorMessage",
+        "tag": "div",
+        "classes": [],
+        "children": ["d5f4c1dc-6eaa-10d8-7983-5e26f66fb2fa"],
+        "data": {
+          "form": { "type": "msg-fail" },
+          "search": { "exclude": false },
+          "xattr": [],
+          "displayName": "",
+          "devlink": { "runtimeProps": {}, "slot": "" },
+          "attr": { "id": "" },
+          "visibility": { "conditions": [] }
+        }
+      },
+      {
+        "_id": "d5f4c1dc-6eaa-10d8-7983-5e26f66fb2fa",
+        "type": "Block",
+        "tag": "div",
+        "classes": [],
+        "children": ["d5f4c1dc-6eaa-10d8-7983-5e26f66fb2fb"],
+        "data": {
+          "search": { "exclude": false },
+          "xattr": [],
+          "text": true,
+          "displayName": "",
+          "devlink": { "runtimeProps": {}, "slot": "" },
+          "attr": { "id": "" },
+          "visibility": { "conditions": [] },
+          "tag": "div"
+        }
+      },
+      {
+        "_id": "d5f4c1dc-6eaa-10d8-7983-5e26f66fb2fb",
+        "text": true,
+        "v": "Oops! Something went wrong while submitting the form."
+      }
+    ],
+    "styles": [
+      {
+        "_id": "011da83c-b761-17e3-b760-9998dc6ce140",
+        "fake": false,
+        "type": "class",
+        "name": "hacks-15_checkbox",
+        "namespace": "",
+        "comb": "",
+        "styleLess": "width: 1.5rem; height: 1.5rem; margin-top: 0rem; margin-right: 1rem;",
+        "variants": { "tiny": { "styleLess": "flex-grow: 0; flex-shrink: 0; flex-basis: auto;" } },
+        "children": [],
+        "selector": null
+      },
+      {
+        "_id": "011da83c-b761-17e3-b760-9998dc6ce143",
+        "fake": false,
+        "type": "class",
+        "name": "hacks-15_value-added",
+        "namespace": "",
+        "comb": "",
+        "styleLess": "font-size: 2.5rem; line-height: 3.125rem;",
+        "variants": {},
+        "children": [],
+        "selector": null
+      },
+      {
+        "_id": "f7281af0-73a3-37aa-fc22-3d4788401652",
+        "fake": false,
+        "type": "class",
+        "name": "hacks-15_component",
+        "namespace": "",
+        "comb": "",
+        "styleLess": "color: hsla(0, 0.00%, 100.00%, 1.00);",
+        "variants": {},
+        "children": [],
+        "createdBy": "54441c96b0981db6504faf03",
+        "selector": null
+      },
+      {
+        "_id": "be5137c1-7306-d7e2-a74b-9a6d5334e289",
+        "fake": false,
+        "type": "class",
+        "name": "hacks-15_embed",
+        "namespace": "",
+        "comb": "",
+        "styleLess": "",
+        "variants": {},
+        "children": [],
+        "createdBy": "54441c96b0981db6504faf03",
+        "selector": null
+      },
+      {
+        "_id": "011da83c-b761-17e3-b760-9998dc6ce145",
+        "fake": false,
+        "type": "class",
+        "name": "hacks-15_checkbox-label",
+        "namespace": "",
+        "comb": "",
+        "styleLess": "margin-bottom: 0rem;",
+        "variants": {},
+        "children": [],
+        "selector": null
+      },
+      {
+        "_id": "1edc8d74-76ec-e21f-e029-bd4c869e4077",
+        "fake": false,
+        "type": "class",
+        "name": "hacks-15_checkbox-field",
+        "namespace": "",
+        "comb": "",
+        "styleLess": "display: flex; align-items: center;",
+        "variants": {},
+        "children": [],
+        "createdBy": "54441c96b0981db6504faf03",
+        "selector": null
+      },
+      {
+        "_id": "011da83c-b761-17e3-b760-9998dc6ce13f",
+        "fake": false,
+        "type": "class",
+        "name": "hacks-15_value-block",
+        "namespace": "",
+        "comb": "",
+        "styleLess": "display: flex; flex-direction: row; justify-content: center; align-items: center;",
+        "variants": {},
+        "children": [],
+        "selector": null
+      },
+      {
+        "_id": "011da83c-b761-17e3-b760-9998dc6ce141",
+        "fake": false,
+        "type": "class",
+        "name": "hacks-15_results",
+        "namespace": "",
+        "comb": "",
+        "styleLess": "display: grid; grid-auto-columns: 1fr; grid-column-gap: 16px; grid-row-gap: 16px; grid-template-columns: 1fr 1fr; grid-template-rows: auto;",
+        "variants": { "tiny": { "styleLess": "grid-template-columns: 1fr;" } },
+        "children": [],
+        "selector": null
+      },
+      {
+        "_id": "011da83c-b761-17e3-b760-9998dc6ce13e",
+        "fake": false,
+        "type": "class",
+        "name": "hacks-15_form",
+        "namespace": "",
+        "comb": "",
+        "styleLess": "display: grid; justify-content: space-between; grid-auto-columns: 1fr; grid-column-gap: 2rem; grid-row-gap: 2rem; grid-template-columns: 1fr; grid-template-rows: auto;",
+        "variants": { "tiny": { "styleLess": "flex-direction: column; align-items: center;" } },
+        "children": [],
+        "selector": null
+      },
+      {
+        "_id": "7400958c-1446-1f5b-6365-30b17469556d",
+        "fake": false,
+        "type": "class",
+        "name": "hacks-15_success",
+        "namespace": "",
+        "comb": "",
+        "styleLess": "color: hsla(0, 0.00%, 0.00%, 1.00);",
+        "variants": {},
+        "children": [],
+        "createdBy": "54441c96b0981db6504faf03",
+        "selector": null
+      },
+      {
+        "_id": "4a44386d-cf38-1623-cdcd-312d92de0e1a",
+        "fake": false,
+        "type": "class",
+        "name": "example_block",
+        "namespace": "",
+        "comb": "",
+        "styleLess": "width: 100%; padding-top: 3rem; padding-right: 3rem; padding-bottom: 3rem; padding-left: 3rem; grid-auto-columns: 1fr; grid-column-gap: 3rem; grid-row-gap: 3rem; grid-template-columns: 1fr; grid-template-rows: auto; border-top-left-radius: 0.25rem; border-top-right-radius: 0.25rem; border-bottom-left-radius: 0.25rem; border-bottom-right-radius: 0.25rem; background-color: hsla(0, 0.00%, 24.43%, 1.00);",
+        "variants": {
+          "small": {
+            "styleLess": "padding-top: 1.5rem; padding-right: 1.5rem; padding-bottom: 1.5rem; padding-left: 1.5rem;"
+          },
+          "tiny": {
+            "styleLess": "padding-top: 1.5rem; padding-right: 1.5rem; padding-bottom: 1.5rem; padding-left: 1.5rem;"
+          }
+        },
+        "children": ["168fe6e0-342e-ffef-82bc-9a743bde1374"],
+        "createdBy": "57380bb111b9c4825e447f0d",
+        "selector": null
+      },
+      {
+        "_id": "47254c1f-184e-252b-5b2e-61698ba0910d",
+        "fake": false,
+        "type": "class",
+        "name": "hacks-15_panel",
+        "namespace": "",
+        "comb": "",
+        "styleLess": "display: flex; padding-top: 2rem; padding-right: 2rem; padding-bottom: 2rem; padding-left: 2rem; justify-content: space-between; flex-wrap: wrap; grid-auto-columns: 1fr; grid-column-gap: 1rem; grid-row-gap: 1rem; grid-template-columns: 1fr 1fr 1fr 1fr; grid-template-rows: auto; background-color: hsla(0, 0.00%, 24.43%, 1.00);",
+        "variants": {
+          "tiny": {
+            "styleLess": "margin-right: 0rem; padding-top: 1rem; padding-right: 1rem; padding-bottom: 1rem; padding-left: 1rem;"
+          }
+        },
+        "children": [],
+        "selector": null
+      }
+    ],
+    "assets": [],
+    "ix1": [],
+    "ix2": { "interactions": [], "events": [], "actionLists": [] }
+  },
+  "meta": {
+    "unlinkedSymbolCount": 0,
+    "droppedLinks": 0,
+    "dynBindRemovedCount": 0,
+    "dynListBindRemovedCount": 0,
+    "paginationRemovedCount": 0
+  }
+}
