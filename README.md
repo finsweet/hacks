@@ -1,3 +1,88 @@
+# Finsweet Hacks
+
+This project provides a set of utility functions to fetch and display TypeScript and JavaScript code, as well as demo components, from a GitHub repository. It also allows users to copy the fetched code to their clipboard and manages user preferences for code display (TypeScript or JavaScript). It enables a those functionalities inside [Finsweet Hacks in TypeScript](https://finsweet.com/hacks-typescript).
+
+## Dependencies
+
+- `@finsweet/ts-utils`: A utility package used for the `CopyJSONButton` component.
+
+## Functions
+
+### formatCode(code: string)
+
+- Prepares code for display on the DOM by replacing spaces and angle brackets with their corresponding HTML entities.
+- **Input:** code (string)
+- **Output:** formatted code (string)
+
+### appendHeadScript(url: string)
+
+- Appends a script tag to the head of the document with the specified URL as the source.
+- **Input:** url (string)
+
+### fetchCode(url: string)
+
+- Fetches and formats the code from the specified URL.
+- **Input:** url (string)
+- **Output:** unformatted code (string) and formatted code (string)
+
+### appendJsCode(formattedCode: string)
+
+- Appends a script tag containing the provided formatted JavaScript code to the body of the document.
+- **Input:** formatted code (string)
+
+### fetchDemoComponent()
+
+- Fetches and inserts a demo component into the page based on the `hackName` constant.
+
+### getLatestCommitSHA()
+
+- Fetches the latest commit SHA from the GitHub repository.
+- **Output:** latest commit SHA (string)
+
+### fetchResource(resourceType, commitSHA)
+
+- Fetches a specified resource (TS, JS, or JSON) from the GitHub repository using the commit SHA.
+- **Input:** resourceType (string), commitSHA (string)
+- **Output:** resource response or null
+
+### fetchTsCode()
+
+- Fetches and displays the TypeScript code on the page.
+
+### fetchJsCode()
+
+- Fetches and displays the JavaScript code on the page.
+- **Output:** unformatted code (string)
+
+### fetchComponentJSON()
+
+- Fetches the component JSON from the GitHub repository.
+- **Output:** JSON data or null
+
+### copyComponentJSON()
+
+- Copies the component JSON to the clipboard using the `CopyJSONButton` component from `@finsweet/ts-utils`.
+
+### copyCode()
+
+- Copies the TypeScript or JavaScript code to the clipboard when the corresponding copy button is clicked.
+
+### storeUserPreference()
+
+- Stores the user's preference for viewing TypeScript or JavaScript code in local storage when the user clicks on a tab button.
+
+### setActiveTab()
+
+- Sets the active code tab (TypeScript or JavaScript) based on the user's stored preference in local storage.
+
+### displayCodeWrapper()
+
+- Makes the code wrapper visible after the user preference has been retrieved.
+
+### displayDemoWrapper()
+
+- Makes the demo wrapper visible after the user preference has been retrieved.
+
 # Finsweet Developer Starter
 
 A starter template for both Client & Power projects.
